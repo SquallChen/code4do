@@ -1,0 +1,21 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"id":"do_ALayout_root",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"x":"34",
+				"width":"544",
+				"y":"15",
+				"fontSize":"28",
+				"id":"do_TextField_Name",
+				"type":"do_TextField",
+				"height":"57"
+			}
+		],
+		"height":"88"
+	}
+}
