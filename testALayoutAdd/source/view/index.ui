@@ -1,0 +1,22 @@
+{
+	"RootView":{
+		"bgColor":"FFFFFFFF",
+		"width":"750",
+		"id":"ALayout_1",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"CCCCCCFF",
+				"textAlign":"center",
+				"width":"750",
+				"y":"128",
+				"fontSize":"60",
+				"id":"do_Label_1",
+				"text":"我是首页",
+				"type":"do_Label",
+				"height":"1206"
+			}
+		],
+		"height":"1334"
+	}
+}
