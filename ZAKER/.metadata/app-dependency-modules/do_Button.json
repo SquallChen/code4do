@@ -4,7 +4,7 @@
   "Type": "UI",
   "Name": "按钮控件",
   "Version": "Internal",
-  "Description": "按钮控件，支持通常按钮的属性，方法和事件，缺省是透明无边框",
+  "Description": "按钮控件，支持通常按钮的属性，方法和事件，缺省是透明无边框。",
   "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150730/eb14ed68-49e5-4046-ae0e-47d4fc544333.png",
   "IOS": {
     "Support": 1,
@@ -42,12 +42,12 @@
     },
     {
       "ID": "enabled",
-      "Name": "是否响应已注册的事件",
+      "Name": "是否有效",
       "Type": "Bool",
       "DefaultValue": "true",
       "EditType": "1",
       "Group": "",
-      "Description": "控制button是否可是否响应已注册的事件，如果enable为true，则button是可以响应已注册的事件，否则不可以",
+      "Description": "控制button的点击事件，缺省为true，表示用户如果点击按钮会触发button的三种touch事件",
       "Design": {
         "Type": "Boolean",
         "Data": []
@@ -60,7 +60,7 @@
       "DefaultValue": "000000FF",
       "EditType": "1",
       "Group": "",
-      "Description": "获取或设置字体前景色，为8位16进制整数，前6位为rgb颜色值，后两位为透明度",
+      "Description": "设置字体显示颜色，值格式为：8位16进制字符，前6位是RGB颜色值，后两位是透明度（Alpha），例如：000000FF",
       "Design": {
         "Type": "Color",
         "Data": []
@@ -86,7 +86,7 @@
       "DefaultValue": "normal",
       "EditType": "1",
       "Group": "",
-      "Description": "包含4种类型：normal：常规 bold：粗体 italic：斜体  underline：下划线",
+      "Description": "包含4种类型：normal：常规bold：粗体italic：斜体bold_italic：粗斜体（iOS平台不支持）",
       "Design": {
         "Type": "List",
         "Data": [
@@ -116,7 +116,7 @@
       "DefaultValue": "0",
       "EditType": "0",
       "Group": "",
-      "Description": "像素值，为0时表示不是圆角按钮",
+      "Description": "像素值，为0时表示不是圆角按钮；@deprecated，该属性为不建议使用，建议使用UI的基础属性border来替代",
       "Design": {
         "Type": "UInteger",
         "Data": []
@@ -142,7 +142,7 @@
       "DefaultValue": "normal",
       "EditType": "0",
       "Group": "",
-      "Description": "包含3种类型：\\r\\nnormal：常规\\r\\nunderline ：下划线\\r\\nstrikethrough ：删除线",
+      "Description": "包含3种类型：normal：常规underline ：下划线strikethrough ：删除线",
       "Design": {
         "Type": "List",
         "Data": [

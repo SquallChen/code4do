@@ -4,8 +4,8 @@
   "Type": "SM",
   "Name": "数据缓存",
   "Version": "Internal",
-  "Description": "数据缓存到本地，程序退出再重新进去还能获取到数据",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150624/b14da354-48e3-4b7d-828c-947dbac9c051.png",
+  "Description": "缓存一些数据到本地文件，即使程序退出再进入还能获取到值，要确保设置的value值不要过大",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_DataCache/缓存管理.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
@@ -30,15 +30,57 @@
   "Events": [],
   "syncMethodes": [
     {
-      "ID": "loadData",
-      "Name": "加载数据",
-      "Description": "",
-      "ReturnType": "String",
-      "ReturnDesc": "返回数据值",
+      "ID": "hasData",
+      "Name": "是否有数据",
+      "Description": "判断是否有数据",
+      "ReturnType": "Bool",
+      "ReturnDesc": "true有数据，false没有",
       "Paras": [
         {
           "ID": "key",
-          "Name": "数据键",
+          "Name": "",
+          "Type": "String",
+          "Required": 1,
+          "DefaultValue": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "ID": "loadData",
+      "Name": "读数据",
+      "Description": "把数据从缓存取出",
+      "ReturnType": "String",
+      "ReturnDesc": "返回读取的数据值",
+      "Paras": [
+        {
+          "ID": "key",
+          "Name": "",
+          "Type": "String",
+          "Required": 1,
+          "DefaultValue": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "ID": "removeAll",
+      "Name": "删除全部数据",
+      "Description": "",
+      "ReturnType": "Bool",
+      "ReturnDesc": "true为成功，false为失败",
+      "Paras": []
+    },
+    {
+      "ID": "removeData",
+      "Name": "删除数据",
+      "Description": "清楚某个key的数据",
+      "ReturnType": "Bool",
+      "ReturnDesc": "true/false表明删除是否成功",
+      "Paras": [
+        {
+          "ID": "key",
+          "Name": "",
           "Type": "String",
           "Required": 1,
           "DefaultValue": "",
@@ -48,14 +90,14 @@
     },
     {
       "ID": "saveData",
-      "Name": "缓存数据",
-      "Description": "",
+      "Name": "写数据",
+      "Description": "把数据写入缓存",
       "ReturnType": "Bool",
-      "ReturnDesc": "",
+      "ReturnDesc": "true/false表明写数据是否成功",
       "Paras": [
         {
           "ID": "key",
-          "Name": "数据键",
+          "Name": "",
           "Type": "String",
           "Required": 1,
           "DefaultValue": "",
@@ -63,7 +105,7 @@
         },
         {
           "ID": "value",
-          "Name": "数据值",
+          "Name": "",
           "Type": "String",
           "Required": 1,
           "DefaultValue": "",
