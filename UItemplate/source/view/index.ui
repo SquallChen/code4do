@@ -67,6 +67,7 @@
 				"y":"148",
 				"id":"do_ListView_component",
 				"type":"do_ListView",
+				"selectedColor":"E0E0E0FF",
 				"height":"1186"
 			}
 		],

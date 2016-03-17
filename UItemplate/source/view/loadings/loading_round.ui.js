@@ -5,7 +5,7 @@ var root = ui("$");
 var animloadingshow = mm("do_Animation");
 animloadingshow.fillAfter = true;
 animloadingshow.scale({
-	duration : 260,
+	duration : 200,
 	scaleFromX : 0,
     scaleFromY : 0,
     curve : "EaseInOut",
@@ -15,7 +15,7 @@ animloadingshow.scale({
     pivotY : 0.5
 },"idsc");
 animloadingshow.alpha({
-    duration : 260,
+    duration : 200,
     curve : "EaseInOut",
     alphaFrom : 0,
     alphaTo : 1
@@ -24,7 +24,7 @@ animloadingshow.alpha({
 var animloadinghide = mm("do_Animation");
 animloadinghide.fillAfter = true;
 animloadinghide.scale({
-	duration : 260,
+	duration : 200,
 	scaleFromX : 1,
     scaleFromY : 1,
     curve : "EaseInOut",
@@ -34,7 +34,7 @@ animloadinghide.scale({
     pivotY : 0.5
 },"idsc");
 animloadinghide.alpha({
-    duration : 260,
+    duration : 200,
     curve : "EaseInOut",
     alphaFrom : 1,
     alphaTo : 0

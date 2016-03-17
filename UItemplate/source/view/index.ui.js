@@ -27,13 +27,12 @@ storage.readFile("data://componentList.json",function(data){
 	dataComponent.addData(data);
 	listviewComponent.refreshItems();
 });
-
 listviewComponent.on("touch",function(index){
 	var cell = dataComponent.getOne(index);
 	var paths = cell.path;
 	app.openPage({
 		source : paths,
-		animationType : "slide_r2l_1",
+		animationType : "push_r2l_1",
     	statusBarState : "transparent",
     	statusBarFgColor : "black"
 	});
