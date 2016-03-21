@@ -5,7 +5,7 @@
   "Name": "进度条",
   "Version": "Internal",
   "Description": "可以设置基于值填充的进度条和显示重复模式的进度条",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150617/28474b34-7e50-4bd1-ab0d-224eab0a62a4.png",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_ProgressBar/进度条progress.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
@@ -16,11 +16,11 @@
   },
   "Windows": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "WindowsPhone": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "Html": {
     "Support": 1,
@@ -31,7 +31,7 @@
       "ID": "progress",
       "Name": "进度值",
       "Type": "Number",
-      "DefaultValue": "",
+      "DefaultValue": "无",
       "EditType": "1",
       "Group": "",
       "Description": "设置进度值,取值范围是0-100的Number(style=horizontal有效)",

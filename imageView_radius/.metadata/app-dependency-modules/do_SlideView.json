@@ -5,14 +5,14 @@
   "Name": "滑动视图",
   "Version": "Internal",
   "Description": "这个UI组件包含多个子视图(UI文件），实现多个子视图之间左右平缓滑动效果，通过设置looping属性支持无限循环滑动，该组件还支持设置多个不同模板视图",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150617/5993c9b7-7962-49f3-9a6d-dc6ccc32409e.png",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_SlideView/滑动视图.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
-    "MinVersion": "14"
+    "MinVersion": "4.0"
   },
   "Windows": {
     "Support": 1,
@@ -27,6 +27,19 @@
     "MinVersion": "5.0"
   },
   "Properties": [
+    {
+      "ID": "allowGesture",
+      "Name": "是否支持手势滑动",
+      "Type": "Bool",
+      "DefaultValue": "true",
+      "EditType": "0",
+      "Group": "",
+      "Description": "当属性值为true时，组件可通过手势左右滑动来切换页面；为false时，手势无法滑动，只能通过修改index来切换页面",
+      "Design": {
+        "Type": "Boolean",
+        "Data": []
+      }
+    },
     {
       "ID": "index",
       "Name": "当前滑动UIView索引",
@@ -60,7 +73,7 @@
       "DefaultValue": "false",
       "EditType": "0",
       "Group": "",
-      "Description": "左右无限循环滑动视图，设置值为true表示支持无限循环滑动，默认为false",
+      "Description": "左右无限循环滑动视图，设置值为true表示支持无限循环滑动，默认为false，windows不支持",
       "Design": {
         "Type": "Boolean",
         "Data": []

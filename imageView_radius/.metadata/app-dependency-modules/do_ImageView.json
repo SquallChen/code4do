@@ -5,7 +5,7 @@
   "Name": "图片控件",
   "Version": "Internal",
   "Description": "图片控件，可以设置图片背景，也可以设置点击事件作为特殊的按钮使用，当不清楚原图大小时可设置宽高为-1，会显示原始大小的宽高",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150617/9c142df7-abcf-45d6-8394-f1d73fb4feb1.png",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_ImageView/图片.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "iOS 7.0"
@@ -16,17 +16,39 @@
   },
   "Windows": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "WindowsPhone": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "Html": {
     "Support": 1,
     "MinVersion": "5.0"
   },
   "Properties": [
+    {
+      "ID": "animation",
+      "Name": "动画效果",
+      "Type": "String",
+      "DefaultValue": "none",
+      "EditType": "1",
+      "Group": "",
+      "Description": "加载图片时的动画效果，支持none没有动画效果和fade淡入淡出效果",
+      "Design": {
+        "Type": "List",
+        "Data": [
+          {
+            "id": "none",
+            "value": "没有动画效果"
+          },
+          {
+            "id": "fade",
+            "value": "淡入淡出"
+          }
+        ]
+      }
+    },
     {
       "ID": "cacheType",
       "Name": "是否支持网络图片的本地cache",
@@ -57,7 +79,7 @@
       "ID": "defaultImage",
       "Name": "默认图片",
       "Type": "String",
-      "DefaultValue": "0",
+      "DefaultValue": "",
       "EditType": "1",
       "Group": "",
       "Description": "支持data://和source://",

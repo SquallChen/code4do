@@ -5,7 +5,7 @@
   "Name": "多行文本编辑框",
   "Version": "Internal",
   "Description": "通常只能输入多行数据",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150617/e96012c5-0f63-40fc-8f06-39d2e4e82be7.png",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_TextBox/多编辑文本.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "iOS 7.0"
@@ -27,6 +27,19 @@
     "MinVersion": "5.0"
   },
   "Properties": [
+    {
+      "ID": "cursorColor",
+      "Name": "光标颜色",
+      "Type": "String",
+      "DefaultValue": "000000FF",
+      "EditType": "1",
+      "Group": "",
+      "Description": "修改输入框光标颜色，暂只支持iOS平台",
+      "Design": {
+        "Type": "Color",
+        "Data": []
+      }
+    },
     {
       "ID": "enabled",
       "Name": "是否可编辑",
@@ -110,6 +123,19 @@
       }
     },
     {
+      "ID": "hintColor",
+      "Name": "提示信息字体颜色",
+      "Type": "String",
+      "DefaultValue": "808080FF",
+      "EditType": "1",
+      "Group": "",
+      "Description": "text为空时显示的文字提示信息字体颜色，windows平台不支持",
+      "Design": {
+        "Type": "Color",
+        "Data": []
+      }
+    },
+    {
       "ID": "maxLength",
       "Name": "可允许输入的最大长度",
       "Type": "Number",
@@ -164,10 +190,16 @@
   ],
   "Events": [
     {
-      "ID": "focusIn",
-      "Description": "进入编辑状态",
+      "ID": "enter",
+      "Description": "点击键盘右下角按钮时触发",
       "ReturnType": "String",
       "ReturnDesc": ""
+    },
+    {
+      "ID": "focusIn",
+      "Description": "进入编辑状态",
+      "ReturnType": "Node",
+      "ReturnDesc": "返回键盘高度，{keybordHeight:'25'}"
     },
     {
       "ID": "focusOut",
@@ -197,6 +229,23 @@
           "Required": 1,
           "DefaultValue": "false",
           "Description": "为true时有焦点，false时无焦点"
+        }
+      ]
+    },
+    {
+      "ID": "setSelection",
+      "Name": "设置光标位置",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnDesc": "",
+      "Paras": [
+        {
+          "ID": "position",
+          "Name": "光标位置",
+          "Type": "Number",
+          "Required": 1,
+          "DefaultValue": "0",
+          "Description": "表示在已有字符的第几个位置，从0开始，比如文本框内有5个字符，position设置为3，光标即在第4个字符之前"
         }
       ]
     }

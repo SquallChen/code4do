@@ -5,7 +5,7 @@
   "Name": "单行文本编辑框",
   "Version": "Internal",
   "Description": "通常只允许输入一行",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150617/a56789e9-4e45-4e31-8821-7d061075405f.png",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_TextField/单行文本框.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "iOS 7.0"
@@ -37,6 +37,19 @@
       "Description": "默认值为false，设置成true时在文本框右侧显示一个叉号标记，点击叉号可以删除所有文本内容",
       "Design": {
         "Type": "Boolean",
+        "Data": []
+      }
+    },
+    {
+      "ID": "cursorColor",
+      "Name": "光标颜色",
+      "Type": "String",
+      "DefaultValue": "000000FF",
+      "EditType": "1",
+      "Group": "",
+      "Description": "修改输入框光标颜色，暂只支持iOS平台",
+      "Design": {
+        "Type": "Color",
         "Data": []
       }
     },
@@ -161,6 +174,19 @@
       }
     },
     {
+      "ID": "hintColor",
+      "Name": "提示信息字体颜色",
+      "Type": "String",
+      "DefaultValue": "808080FF",
+      "EditType": "1",
+      "Group": "",
+      "Description": "text为空时显示的文字提示信息字体颜色，windows平台不支持",
+      "Design": {
+        "Type": "Color",
+        "Data": []
+      }
+    },
+    {
       "ID": "inputType",
       "Name": "输入类型",
       "Type": "String",
@@ -230,6 +256,32 @@
       }
     },
     {
+      "ID": "textAlign",
+      "Name": "文本对齐方式",
+      "Type": "String",
+      "DefaultValue": "left",
+      "EditType": "0",
+      "Group": "",
+      "Description": "对齐方式为以下3种：left 左对齐（默认）；center 居中；right 右对齐。",
+      "Design": {
+        "Type": "List",
+        "Data": [
+          {
+            "id": "left",
+            "value": "左对齐"
+          },
+          {
+            "id": "center",
+            "value": "居中"
+          },
+          {
+            "id": "right",
+            "value": "右对齐"
+          }
+        ]
+      }
+    },
+    {
       "ID": "textFlag",
       "Name": "字体标示",
       "Type": "String",
@@ -266,8 +318,8 @@
     {
       "ID": "focusIn",
       "Description": "进入编辑状态",
-      "ReturnType": "String",
-      "ReturnDesc": ""
+      "ReturnType": "Node",
+      "ReturnDesc": "返回键盘高度，{keybordHeight:'25'}"
     },
     {
       "ID": "focusOut",
@@ -297,6 +349,23 @@
           "Required": 1,
           "DefaultValue": "false",
           "Description": "为true时有焦点，false时无焦点"
+        }
+      ]
+    },
+    {
+      "ID": "setSelection",
+      "Name": "设置光标位置",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnDesc": "",
+      "Paras": [
+        {
+          "ID": "position",
+          "Name": "光标位置",
+          "Type": "Number",
+          "Required": 1,
+          "DefaultValue": "0",
+          "Description": "表示在已有字符的第几个位置，从0开始，比如文本框内有5个字符，position设置为3，光标即在第4个字符之前"
         }
       ]
     }

@@ -5,7 +5,7 @@
   "Name": "图片预览",
   "Version": "Internal",
   "Description": "这个组件用于浏览大量网络或本地图片，图片路径可以http://链接或本地data://，支持放大后缩放原图，多图片支持左右滑动预览，进入浏览界面单击一下屏幕退出",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150624/af3ea180-5a31-4e50-be14-b1a2627403a5.png",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_ImageBrowser/图片预览.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
@@ -16,11 +16,11 @@
   },
   "Windows": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "WindowsPhone": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "Html": {
     "Support": 1,

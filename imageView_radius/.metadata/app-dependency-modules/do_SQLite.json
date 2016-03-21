@@ -4,8 +4,8 @@
   "Type": "MM",
   "Name": "SQLite3数据库",
   "Version": "Internal",
-  "Description": "",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150624/e2fa476b-9f0d-4ece-af6a-d53a6dfd820b.png",
+  "Description": "提供SQLite3数据库的访问接口",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_SQLite/sqlite.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
@@ -16,11 +16,11 @@
   },
   "Windows": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "WindowsPhone": {
     "Support": 1,
-    "MinVersion": "8.1"
+    "MinVersion": "10"
   },
   "Html": {
     "Support": 1,
@@ -70,6 +70,23 @@
           "Description": ""
         }
       ]
+    },
+    {
+      "ID": "querySync",
+      "Name": "执行SQL查询语句",
+      "Description": "用于执行查询语句的同步方法；使用需谨慎，若查询的数据较多会导致UI卡顿",
+      "ReturnType": "Node",
+      "ReturnDesc": "返回的每一个元素都是json node，node的每一个节点都是column名比如[ {column1:'value1',clolumn2:'value2'},{column1:'value1',clolumn2:'value2'},...]",
+      "Paras": [
+        {
+          "ID": "sql",
+          "Name": "SQL字符串",
+          "Type": "String",
+          "Required": 1,
+          "DefaultValue": "",
+          "Description": ""
+        }
+      ]
     }
   ],
   "asyncMethodes": [
@@ -95,7 +112,7 @@
       "Name": "执行SQL查询语句",
       "Description": "用于执行查询语句",
       "ReturnType": "Node",
-      "ReturnDesc": "返回的每一个元素都是json node，node的每一个节点都是column名\r\n比如\r\n[\r\n{\"column1\":\"value1\",\"clolumn2\":\"value2\"}\r\n,\r\n{\"column1\":\"value3\",\"clolumn2\":\"value4\"}\r\n,\r\n...\r\n}",
+      "ReturnDesc": "返回的每一个元素都是json node，node的每一个节点都是column名比如[ {column1:'value1',clolumn2:'value2'},{column1:'value1',clolumn2:'value2'},...]",
       "Paras": [
         {
           "ID": "sql",
