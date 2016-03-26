@@ -10,7 +10,7 @@ var headerTitleStyle = ui("titleHeader");
 //一.标题样式(显示标题类型)
 var hdtype=1;
 //二.标题
-var hdtitle = "button(按钮)";
+var hdtitle = "banner(轮播图)";
 //三.0.close方式(0.layer||1.ID) 1.传递内容 2.关闭动画 3.(layer层数|ID)
 var closeEvent = [0,"传递数据","",1];
 //四.0.closeimg 1.rightrightImg 2.rightleftImg
@@ -33,20 +33,13 @@ headerRR.on("touch","",300,function(){
 });
 
 /*
- * button
+ * 因为slideview目前无法直接通过index操作切换过渡.组件支持后增加!
+ * banner轮播( 高度300px ) .默认设置最多6个圆点. 需要增加在banner.ui中增加 圆点数量
  */
-var buttonb = rootview.add("bbutton","source://view/buttons/buttonB.ui",0,200);
-var buttonbd = ui("bbutton");
-//0:默认true(true,false)1:文字 2:字体大小3:文字颜色  4:背景颜色 5:按钮宽 6:按钮高
-var btnf = {isShow:true,ftxt:"哈哈哈",fsize:40,fcolor:"FF6600FF",bcolor:"EABB19FF",bwidth:730,bheight:120};
-buttonbd.fire("buttonbb",btnf);
-var btntc = ui(buttonb + ".do_Button_b");
-btntc.on("touch","",300,function(){
-	nf.alert("按钮touch事件");
-});
-
-//button2 line
-var buttonb2 = rootview.add("bbutton2","source://view/buttons/buttonB_outLine.ui",100,400);
-var buttonbd2 = ui("bbutton2");
-var btnf2 = {ftxt:"look like",fsize:40,bwidth:500,bheight:120};
-buttonbd2.fire("buttonbb",btnf2);
+var bannerScroll = rootview.add("crollbanner","source://view/bannerScroll/banner.ui",0,148);
+var bannerScrollf = ui("crollbanner");
+var bimgs=[{"template" : 0,"imgs":"http://www.dcloud.io/hellomui/images/muwu.jpg","path":"123132"},
+           {"template" : 0,"imgs":"http://www.dcloud.io/hellomui/images/cbd.jpg","path":"43243234"},
+           {"template" : 0,"imgs":"http://www.dcloud.io/hellomui/images/yuantiao.jpg","path":"65456456"}
+           ];
+bannerScrollf.fire("bannerSc",bimgs);

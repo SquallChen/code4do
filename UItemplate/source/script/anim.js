@@ -16,3 +16,12 @@ module.exports.animbtn = function(animid){
 	animbtn.append(200, propsbtn1);
 	animid.animate(animbtn);
 }
+//按下动画1
+module.exports.animbtn1 = function(animid){
+	var animbtn = deviceone.mm("do_Animator");
+	var propsbtn = {alpha:0.5};
+	var propsbtn1 = {alpha:1};
+	animbtn.append(100, propsbtn);
+	animbtn.append(200, propsbtn1);
+	animid.animate(animbtn);
+}

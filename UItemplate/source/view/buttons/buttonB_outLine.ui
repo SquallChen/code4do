@@ -8,8 +8,8 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"border":"00000000,1,6",
-				"bgColor":"33CC66FF",
+				"border":"33cc66ff,2,6",
+				"bgColor":"FFFFFF00",
 				"x":"10",
 				"width":"730",
 				"y":"10",
@@ -17,7 +17,7 @@
 				"id":"do_Button_b",
 				"text":"button text",
 				"type":"do_Button",
-				"fontColor":"FFFFFFFF",
+				"fontColor":"000000FF",
 				"height":"120"
 			}
 		],

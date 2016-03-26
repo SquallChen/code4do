@@ -6,6 +6,7 @@ var nf = sm("do_Notification");
 var page = sm("do_Page");
 var app = sm("do_App");
 var storage = sm("do_Storage");
+var open = require("open");
 
 //返回按钮事件
 var leftclose = ui("do_ALayout_close");
@@ -30,12 +31,7 @@ storage.readFile("data://componentList.json",function(data){
 listviewComponent.on("touch",function(index){
 	var cell = dataComponent.getOne(index);
 	var paths = cell.path;
-	app.openPage({
-		source : paths,
-		animationType : "push_r2l_1",
-    	statusBarState : "transparent",
-    	statusBarFgColor : "black"
-	});
+	open.startl(paths);
 });
 
 page.on("result",function(data){

@@ -10,7 +10,7 @@ var headerTitleStyle = ui("titleHeader");
 //一.标题样式(显示标题类型)
 var hdtype=1;
 //二.标题
-var hdtitle = "button(按钮)";
+var hdtitle = "测试";
 //三.0.close方式(0.layer||1.ID) 1.传递内容 2.关闭动画 3.(layer层数|ID)
 var closeEvent = [0,"传递数据","",1];
 //四.0.closeimg 1.rightrightImg 2.rightleftImg
@@ -32,21 +32,44 @@ headerRR.on("touch","",300,function(){
 	nf.alert("rr");
 });
 
-/*
- * button
- */
-var buttonb = rootview.add("bbutton","source://view/buttons/buttonB.ui",0,200);
-var buttonbd = ui("bbutton");
-//0:默认true(true,false)1:文字 2:字体大小3:文字颜色  4:背景颜色 5:按钮宽 6:按钮高
-var btnf = {isShow:true,ftxt:"哈哈哈",fsize:40,fcolor:"FF6600FF",bcolor:"EABB19FF",bwidth:730,bheight:120};
-buttonbd.fire("buttonbb",btnf);
-var btntc = ui(buttonb + ".do_Button_b");
-btntc.on("touch","",300,function(){
-	nf.alert("按钮touch事件");
-});
 
-//button2 line
-var buttonb2 = rootview.add("bbutton2","source://view/buttons/buttonB_outLine.ui",100,400);
-var buttonbd2 = ui("bbutton2");
-var btnf2 = {ftxt:"look like",fsize:40,bwidth:500,bheight:120};
-buttonbd2.fire("buttonbb",btnf2);
+
+////////手势
+var laybox = ui("do_ALayout_1");
+var gestruet = ui("do_GestureView_1");
+var labes = ui("do_Label_1");
+
+//记录手指按下的xy位置
+gestruet.on("touchDown",function(datad){
+	deviceone.xx = datad.x;
+	deviceone.yy = datad.y;
+});
+	gestruet.on("move",function(data,e){
+		var moveposx = laybox.x;
+		var moveposy = laybox.y;
+		var figx = deviceone.xx;
+		var figy = deviceone.yy;
+		
+		//实际移动
+		laybox.x = data.x+moveposx-figx;
+		laybox.y = data.y+moveposy-figy;
+		
+		//文字显示手指按下位置
+		labes.text = figx+":"+figy;
+		
+		//设定移动的范围
+		if(laybox.y<148){
+			laybox.y = 148;
+			laybox.redraw();
+		}
+		laybox.redraw();
+	});
+
+
+//复位
+var btn11 = ui("do_Button_1");
+btn11.on("touch",function(){
+	laybox.x = 50;
+	laybox.y = 300;
+	laybox.redraw();
+});

@@ -8,6 +8,7 @@
 		"type":"do_ALayout",
 		"views":[
 			{
+				"border":"00000000,1,0",
 				"bgColor":"FFFFFF00",
 				"layoutAlign":"MiddleLeft",
 				"width":"120",
@@ -18,7 +19,6 @@
 				"isStretch":"false",
 				"views":[
 					{
-						"border":"00000000,1,4",
 						"bgColor":"F6F6F6FF",
 						"width":"120",
 						"scale":"centercrop",

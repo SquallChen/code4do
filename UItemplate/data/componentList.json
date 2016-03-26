@@ -1,6 +1,14 @@
 [
 	{
 		"template":0,
+		"path" : "source://view/test/test_index.ui",
+		"img" : "",
+		"title" : "测试",
+		"subtitle" : "测试一些功能",
+		"round" : "1x"
+	},
+	{
+		"template":0,
 		"path" : "source://view/header/header_index.ui",
 		"img" : "",
 		"title" : "Header(头部)",
@@ -37,6 +45,22 @@
 		"img" : "",
 		"title" : "button(按钮)",
 		"subtitle" : "各种按钮",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/bannerScroll/bannerS_index.ui",
+		"img" : "",
+		"title" : "banner(轮播)",
+		"subtitle" : "图片轮播",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/pops/pop_index.ui",
+		"img" : "",
+		"title" : "POP-actionSheet(弹出提示)",
+		"subtitle" : "弹出",
 		"round" : "1x"
 	}
 ]

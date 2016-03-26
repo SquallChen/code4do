@@ -2,43 +2,14 @@
 var page = sm("do_Page");
 var nf = sm("do_Notification");
 var root = ui("$");
-var animloadingshow = mm("do_Animation");
-animloadingshow.fillAfter = true;
-animloadingshow.scale({
-	duration : 200,
-	scaleFromX : 0,
-    scaleFromY : 0,
-    curve : "EaseInOut",
-    scaleToX : 1,
-    scaleToY : 1,
-    pivotX : 0.5,
-    pivotY : 0.5
-},"idsc");
-animloadingshow.alpha({
-    duration : 200,
-    curve : "EaseInOut",
-    alphaFrom : 0,
-    alphaTo : 1
-}, "idal");
-//
-var animloadinghide = mm("do_Animation");
-animloadinghide.fillAfter = true;
-animloadinghide.scale({
-	duration : 200,
-	scaleFromX : 1,
-    scaleFromY : 1,
-    curve : "EaseInOut",
-    scaleToX : 0,
-    scaleToY : 0,
-    pivotX : 0.5,
-    pivotY : 0.5
-},"idsc");
-animloadinghide.alpha({
-    duration : 200,
-    curve : "EaseInOut",
-    alphaFrom : 1,
-    alphaTo : 0
-}, "idal");
+//面板显示
+var animPanelShow = mm("do_Animator");
+var propsPS = {y:10,alpha:1};
+animPanelShow.append(300,propsPS,"EaseOut");
+//面板隐藏
+var animPanelHide = mm("do_Animator");
+var propsPH = {y:30,alpha:0};
+animPanelHide.append(300,propsPH,"EaseOut");
 //滚动条
 var animloadingleft = mm("do_Animation");
 animloadingleft.fillAfter = false;
@@ -61,9 +32,9 @@ root.on("loadingrect",function(data){
 	loadingtxt.text = data[1];
 	if(loadingback.tag == 1){
 		loadingback.visible = true;
-		loadingbox.animate(animloadingshow);
+		loadingbox.animate(animPanelShow);
 	}else{
-		loadingbox.animate(animloadinghide,function(){
+		loadingbox.animate(animPanelHide,function(){
 			loadingback.visible = false;
 		});
 	}
