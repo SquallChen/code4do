@@ -1,0 +1,20 @@
+{
+	"RootView":{
+		"width":"106",
+		"id":"do_alayout_1",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"textAlign":"center",
+				"x":"3",
+				"y":"3",
+				"fontSize":"32",
+				"id":"title",
+				"type":"do_Label",
+				"fontColor":"999999FF",
+				"height":"43"
+			}
+		],
+		"height":"50"
+	}
+}

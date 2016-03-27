@@ -1,0 +1,31 @@
+{
+	"RootView":{
+		"visible":"false",
+		"width":"750",
+		"id":"do_alayout_1",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"00000000",
+				"layoutAlign":"MiddleCenter",
+				"width":"120",
+				"x":"315",
+				"id":"do_alayout_2",
+				"type":"do_ALayout",
+				"isStretch":"false",
+				"views":[
+					{
+						"x":"30",
+						"width":"60",
+						"y":"30",
+						"id":"do_progressbar_1",
+						"type":"do_ProgressBar",
+						"height":"60"
+					}
+				],
+				"height":"120"
+			}
+		],
+		"height":"1334"
+	}
+}
