@@ -25,7 +25,7 @@
 						"x":"224",
 						"fontSize":"40",
 						"id":"do_Label_1",
-						"text":"GET测试",
+						"text":"POST测试",
 						"type":"do_Label",
 						"fontColor":"FFFFFFFF",
 						"height":"88"
@@ -59,11 +59,33 @@
 					{
 						"bgColor":"CCCCCCFF",
 						"x":"62",
-						"width":"610",
+						"width":"182",
 						"y":"52",
 						"fontSize":"30",
-						"id":"test",
-						"text":"/testget?a=x&b=2",
+						"id":"test1",
+						"text":"/testform(1)",
+						"type":"do_Button",
+						"height":"84"
+					},
+					{
+						"bgColor":"CCCCCCFF",
+						"x":"508",
+						"width":"182",
+						"y":"52",
+						"fontSize":"30",
+						"id":"test3",
+						"text":"/testform(3)",
+						"type":"do_Button",
+						"height":"84"
+					},
+					{
+						"bgColor":"CCCCCCFF",
+						"x":"285",
+						"width":"182",
+						"y":"52",
+						"fontSize":"30",
+						"id":"test2",
+						"text":"/testform(2)",
 						"type":"do_Button",
 						"height":"84"
 					}

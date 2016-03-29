@@ -12,10 +12,10 @@ import org.json.JSONObject;
 
 import net.deviceone.helper.HttpHelper;
 
-public class TestPostServlet extends HttpServlet {
+public class TestFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public TestPostServlet() {
+	public TestFormServlet() {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -33,7 +33,7 @@ public class TestPostServlet extends HttpServlet {
 			obj.put("request", requestO);
 
 			responseO.put("header", HttpHelper.getResponseHeader(response));
-			responseO.put("data", "POST成功!!!");
+			responseO.put("data", "FORM成功!!!");
 			obj.put("response", responseO);
 		} catch (JSONException e) {
 			e.printStackTrace();

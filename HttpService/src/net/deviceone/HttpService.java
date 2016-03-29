@@ -18,6 +18,12 @@ public class HttpService {
 
 		// http://localhost:8080/testpost
 		context.addServlet(new ServletHolder(new TestPostServlet()), "/testpost");
+
+		// http://localhost:8080/testupload
+		context.addServlet(new ServletHolder(new TestUploadServlet()), "/testupload");
+		
+		// http://localhost:8080/testform
+		context.addServlet(new ServletHolder(new TestFormServlet()), "/testform");
 		server.start();
 		server.join();
 	}
