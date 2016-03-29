@@ -12,10 +12,10 @@ import org.json.JSONObject;
 
 import net.deviceone.helper.HttpHelper;
 
-public class TestGetServlet extends HttpServlet {
+public class TestPostServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public TestGetServlet() {
+	public TestPostServlet() {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -27,14 +27,13 @@ public class TestGetServlet extends HttpServlet {
 		JSONObject requestO = new JSONObject();
 		JSONObject responseO = new JSONObject();
 		try {
-			JSONObject header = HttpHelper.getRequestHeader(request);
-			header.put("method", request.getMethod());
-			requestO.put("header", header);
+			requestO.put("header", HttpHelper.getRequestHeader(request));
 			requestO.put("parameters", HttpHelper.getRequestParameters(request));
+			requestO.put("body", HttpHelper.getRequestBody(request));
 			obj.put("request", requestO);
 
 			responseO.put("header", HttpHelper.getResponseHeader(response));
-			responseO.put("data", "GET成功!!!");
+			responseO.put("data", "POST成功!!!");
 			obj.put("response", responseO);
 		} catch (JSONException e) {
 			e.printStackTrace();
