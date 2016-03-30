@@ -3,6 +3,7 @@ var d1 = require("deviceone");
 
 module.exports.init = init;
 module.exports.getResponseData = getResponseData;
+module.exports.printJSON = printJSON;
 
 var app = d1.sm("do_App");
 var page = d1.sm("do_Page");

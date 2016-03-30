@@ -14,18 +14,30 @@ ui("response_id").bindData(hashdata);
 var host = page.getData();
 function init_http() {
 	var http = mm("do_Http");
-	http.url = "http://" + host + "/testupload";
+	http.url = "http://" + host + "/testdownload";
 	http.setRequestHeader("test1", "value1");
 	http.setRequestHeader("test2", "value2");
 
-	http.on("result", function(data) {
-		deviceone.print(JSON.stringify(data));
-		storage.readFile("data://1.txt", function(data, e) {
-			var response = util.getResponseData(data);
-			hashdata.addData(response);
-			ui("response_id").refreshData();
-		})
-	}).on("fail", function(data) {
+	http.on(
+			"result",
+			function(data) {
+				storage.readFile("data://1.txt", function(obj, e) {
+					deviceone.print(JSON.stringify(obj));
+					var d = {};
+					d["request_header"] = "返回request的header:\n"
+							+ util.printJSON(obj.request.header);
+					d["request_parameters"] = "返回request的parameters:\n"
+							+ util.printJSON(obj.request.parameters);
+					d["request_body"] = "返回request的body:\n"
+							+ util.printJSON(obj.request.body);
+					d["response_header"] = "返回response的header:\n"
+							+ util.printJSON(obj.response.header);
+					d["response_data"] = "返回response的data:\n"
+							+ util.printJSON(obj.response.data);
+					hashdata.addData(d);
+					ui("response_id").refreshData();
+				})
+			}).on("fail", function(data) {
 		nf.alert(JSON.stringify(data));
 	})
 	return http;
@@ -53,11 +65,9 @@ function init_test2() {
 init_test2();
 
 function init_test3() {
-	var http = init_http();
-	http.contentType = "multipart/form-data";
 	var button = ui("test3");
 	button.on("touch", function() {
-		http.upload("source://view/upload/index.ui", "test");
+		nf.alert("do nothing")
 	})
 }
 init_test3();

@@ -28,6 +28,9 @@ listdata.addData([ {
 },{
 	"index" : "4",
 	"name" : "测试do_Http的FORM"
+}, {
+	"index" : "5",
+	"name" : "测试do_Http的DOWNLOAD"
 } ]);
 listview.bindItems(listdata);
 
@@ -52,6 +55,9 @@ listview.on("touch", function(index) {
 		break;
 	case 3:
 		openNewPage("form");
+		break;
+	case 4:
+		openNewPage("download");
 		break;
 	}
 });

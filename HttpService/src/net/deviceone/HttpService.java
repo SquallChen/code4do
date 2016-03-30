@@ -26,7 +26,7 @@ public class HttpService {
 		context.addServlet(new ServletHolder(new TestFormServlet()), "/testform");
 
 		// http://localhost:8080/testdownload
-		context.addServlet(new ServletHolder(new TestFormServlet()), "/testdownload");
+		context.addServlet(new ServletHolder(new TestDownloadServlet()), "/testdownload");
 		server.start();
 		server.join();
 	}
