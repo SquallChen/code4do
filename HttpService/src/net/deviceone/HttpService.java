@@ -27,7 +27,7 @@ public class HttpService {
 
 		// http://localhost:8080/testdownload
 		context.addServlet(new ServletHolder(new TestDownloadServlet()), "/testdownload");
-		server.start();
+		server.start(); 
 		server.join();
 	}
 }
