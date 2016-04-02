@@ -9,6 +9,22 @@
 	},
 	{
 		"template":0,
+		"path" : "source://view/progressbars/probar_index.ui",
+		"img" : "",
+		"title" : "progressbar(自定义进度条)",
+		"subtitle" : "自定义进度条",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/logReg/login.ui",
+		"img" : "",
+		"title" : "login(登录)",
+		"subtitle" : "登录界面",
+		"round" : "1x"
+	},
+	{
+		"template":0,
 		"path" : "source://view/header/header_index.ui",
 		"img" : "",
 		"title" : "Header(头部)",
@@ -61,6 +77,14 @@
 		"img" : "",
 		"title" : "POP-actionSheet(弹出提示)",
 		"subtitle" : "弹出",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/viewShower/VSIndex.ui",
+		"img" : "",
+		"title" : "viewShower",
+		"subtitle" : "切换",
 		"round" : "1x"
 	}
 ]

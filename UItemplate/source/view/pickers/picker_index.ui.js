@@ -8,9 +8,9 @@ var anim = require("anim");
 var headerTitle = rootview.add("titleHeader","source://view/header/header_title.ui",0,0);
 var headerTitleStyle = ui("titleHeader");
 //一.标题样式(显示标题类型)
-var hdtype=1;
+var hdtype=2;
 //二.标题
-var hdtitle = "测试";
+var hdtitle = "picker(选择)";
 //三.0.close方式(0.layer||1.ID) 1.传递内容 2.关闭动画 3.(layer层数|ID)
 var closeEvent = [0,"传递数据","",1];
 //四.0.rightrightImg 1.rightleftImg
@@ -25,51 +25,42 @@ var handback = 1;
 var condata=[hdtype,hdtitle,closeEvent,btnImg,handback];
 headerTitleStyle.fire("headertitle",condata);
 
+/*
+ * add picker1
+ */
+var picker1 = rootview.add("1picker","source://view/pickers/picker1.ui",0,0);
+var picker1r = ui("1picker");
 //RR事件
+var ptitle={"title":"选择地区","ppos":deviceone.ppos}
+var pdata=["北京","内蒙古","新疆","西藏"];
+var pcount = [ptitle,pdata];
 var headerRR = ui(headerTitle + ".rightright");
+picker1r.on("picker1f",function(data){
+	deviceone.ppos = data[0];
+	nf.alert(data);
+});
 headerRR.on("touch","",300,function(){
 	anim.animbtn(headerRR);
-	nf.alert("rr");
+	picker1r.fire("picker1",pcount);
 });
 
+/*
+ * add picker3
+ */
+var picker3 = rootview.add("3picker","source://view/pickers/picker3.ui",0,0);
+var picker3r = ui("3picker");
+var titleppos3={"title":"选择时间","ppos3":deviceone.ppos3}
+var p3data1=["中国","美国"];
+var p3data2=["内蒙古自治区","河北省"];
+var p3data3=["锡林浩特","多伦"];
+var pcount3 = [titleppos3,p3data1,p3data2,p3data3];
 
-
-////////手势
-var laybox = ui("do_ALayout_1");
-var gestruet = ui("do_GestureView_1");
-var labes = ui("do_Label_1");
-
-//记录手指按下的xy位置
-gestruet.on("touchDown",function(datad){
-	deviceone.xx = datad.x;
-	deviceone.yy = datad.y;
+var btn1 = ui("do_Button_1");
+picker3r.on("picker3f",function(data){
+	deviceone.ppos = data[0];
+	nf.alert(data);
 });
-	gestruet.on("move",function(data,e){
-		var moveposx = laybox.x;
-		var moveposy = laybox.y;
-		var figx = deviceone.xx;
-		var figy = deviceone.yy;
-		
-		//实际移动
-		laybox.x = data.x+moveposx-figx;
-		laybox.y = data.y+moveposy-figy;
-		
-		//文字显示手指按下位置
-		labes.text = figx+":"+figy;
-		
-		//设定移动的范围
-		if(laybox.y<148){
-			laybox.y = 148;
-			laybox.redraw();
-		}
-		laybox.redraw();
-	});
-
-
-//复位
-var btn11 = ui("do_Button_1");
-btn11.on("touch",function(){
-	laybox.x = 50;
-	laybox.y = 300;
-	laybox.redraw();
+btn1.on("touch",function(){
+	anim.animbtn(btn1);
+	picker3r.fire("picker3",pcount3);
 });

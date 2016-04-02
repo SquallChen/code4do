@@ -13,8 +13,8 @@ var hdtype = 1;
 var hdtitle = "switch开关";
 //三.0.close方式(0.layer||1.ID) 1.传递内容 2.关闭动画 3.(layer层数|ID)
 var closeEvent = [0,"传递数据","",1];
-//四.0.closeimg 1.rightrightImg 2.rightleftImg
-var btnImg = ["","source://image/rightright.png","source://image/rightleft.png"];
+//四.0.rightrightImg 1.rightleftImg
+var btnImg = ["source://image/rightright.png","source://image/rightleft.png"];
 //五.是否开启IOS手势关闭page  0.不开启 1.开启
 var handback = 1;
 

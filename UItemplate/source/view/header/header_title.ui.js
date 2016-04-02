@@ -21,9 +21,8 @@ root.on("headertitle",function(data){
 	//开启关闭手势关闭page
 	others.handClose(data[4]);
 	//图片路径
-	closeImg.source = data[3][0];
-	rrImg.source = data[3][1];
-	rlImg.source = data[3][2];
+	rrImg.source = data[3][0];
+	rlImg.source = data[3][1];
 	//close事件
 	closebtn.on("touch","",300,function(){
 		hdbox.animate(animclose,function(){
