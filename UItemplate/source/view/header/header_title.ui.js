@@ -66,3 +66,8 @@ root.on("headertitle",function(data){
 		break;
 	}
 });
+
+var hdbg = ui("header_bg");
+hdbg.on("touch",function(){
+	//防止穿透
+});

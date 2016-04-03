@@ -44,6 +44,27 @@
 				"id":"do_Button_1",
 				"text":"复位",
 				"type":"do_Button"
+			},
+			{
+				"x":"64",
+				"width":"606",
+				"y":"632",
+				"maxLines":"0",
+				"fontSize":"30",
+				"id":"do_Label_2",
+				"type":"do_Label",
+				"height":"-1"
+			},
+			{
+				"width":"880",
+				"x":"-60",
+				"y":"860",
+				"scale":"centercrop",
+				"id":"do_ImageView_1",
+				"source":"http://cdn.duitang.com/uploads/blog/201310/05/20131005152937_GGAmZ.thumb.600_0.jpeg",
+				"type":"do_ImageView",
+				"cacheType":"always",
+				"height":"378"
 			}
 		],
 		"height":"1334"

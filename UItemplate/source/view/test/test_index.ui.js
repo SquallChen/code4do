@@ -73,3 +73,26 @@ btn11.on("touch",function(){
 	laybox.y = 300;
 	laybox.redraw();
 });
+
+
+/*
+ * 传感器
+ */
+var accelerometer = sm("do_AccelerometerSensor");
+var lab2 = ui("do_Label_2");
+var imgsa = ui("do_ImageView_1");
+accelerometer.on("shake",function(){
+	nf.toast("摇起来了");
+});
+accelerometer.on("change",function(data){
+	//lab2.text = data;
+	//var x = parseFloat(data.x).toFixed(2);
+	//var y = parseFloat(data.y).toFixed(2);
+	var x = data.x;
+	var y = data.y;
+	
+	imgsa.x = parseFloat(-60-+(x*20)).toFixed(2);
+	imgsa.y = parseFloat(860+-(y*20)).toFixed(2);
+	imgsa.redraw();
+	lab2.text = imgsa.x+":"+imgsa.y;
+});

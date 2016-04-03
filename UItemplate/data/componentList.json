@@ -9,10 +9,34 @@
 	},
 	{
 		"template":0,
+		"path" : "source://view/shakeShake/shake_index.ui",
+		"img" : "",
+		"title" : "shakeShake(摇一摇)",
+		"subtitle" : "摇一摇",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/coverFlow/CF_index.ui",
+		"img" : "",
+		"title" : "coverFlow(流动视图)",
+		"subtitle" : "coverFlow流动视图",
+		"round" : "1x"
+	},
+	{
+		"template":0,
 		"path" : "source://view/progressbars/probar_index.ui",
 		"img" : "",
 		"title" : "progressbar(自定义进度条)",
 		"subtitle" : "自定义进度条",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/pickers/picker_index.ui",
+		"img" : "",
+		"title" : "picker(选择)",
+		"subtitle" : "滚动选择",
 		"round" : "1x"
 	},
 	{
@@ -85,6 +109,14 @@
 		"img" : "",
 		"title" : "viewShower",
 		"subtitle" : "切换",
+		"round" : "1x"
+	},
+	{
+		"template":0,
+		"path" : "source://view/ExpandableListView/ELV_index.ui",
+		"img" : "",
+		"title" : "ExpandableListView",
+		"subtitle" : "分组视图",
 		"round" : "1x"
 	}
 ]
