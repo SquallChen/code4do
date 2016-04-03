@@ -5,7 +5,7 @@
   "Name": "滚动视图",
   "Version": "Internal",
   "Description": "滚动视图，支持上下和左右滚动两种类型，只有在滚动视图内容宽、高度超过自身定义的宽、高度时才可以滚动，滚动视图只能包含一个子组件，通常都是一个ALayout或LinearLayout",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150617/2a2b8450-7bbe-44b9-b7a1-c2435f3fe2c7.png",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_ScrollView/滚动视图.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "iOS 7.0"

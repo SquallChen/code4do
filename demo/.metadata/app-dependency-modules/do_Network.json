@@ -5,10 +5,10 @@
   "Name": "网络状态类",
   "Version": "Internal",
   "Description": "能获取当前手机端的网络状态,监听网络状态的变化",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_Network/network.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_Network/network.jpg",
   "IOS": {
     "Support": 1,
-    "MinVersion": "iOS 7.0"
+    "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,

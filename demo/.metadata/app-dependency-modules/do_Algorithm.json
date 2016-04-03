@@ -5,14 +5,14 @@
   "Name": "常用算法",
   "Version": "Internal",
   "Description": "包含一些常用的算法实现，包括md5算法、3DES算法、sha1安全哈希算法和Base64算法",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_Algorithm/算法.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_Algorithm/算法.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
-    "MinVersion": "14"
+    "MinVersion": "4.0"
   },
   "Windows": {
     "Support": 1,
@@ -79,7 +79,7 @@
         },
         {
           "ID": "source",
-          "Name": "需要md5的源数据",
+          "Name": "需要des3的源数据",
           "Type": "String",
           "Required": 0,
           "DefaultValue": "",
@@ -92,7 +92,7 @@
       "Name": "md5算法",
       "Description": "同步md5算法，只支持字符串的处理",
       "ReturnType": "String",
-      "ReturnDesc": "返回md5后的值",
+      "ReturnDesc": "返回md5后的值，使用的是32位小写加密方式",
       "Paras": [
         {
           "ID": "value",
@@ -189,7 +189,7 @@
         },
         {
           "ID": "source",
-          "Name": "需要md5的源数据",
+          "Name": "需要des3的源数据",
           "Type": "String",
           "Required": 0,
           "DefaultValue": "",
@@ -202,7 +202,7 @@
       "Name": "md5算法",
       "Description": "",
       "ReturnType": "String",
-      "ReturnDesc": "返回md5后的值",
+      "ReturnDesc": "返回md5后的值，使用的是32位小写加密方式",
       "Paras": [
         {
           "ID": "type",

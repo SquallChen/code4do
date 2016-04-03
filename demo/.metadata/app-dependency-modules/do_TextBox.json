@@ -5,10 +5,10 @@
   "Name": "多行文本编辑框",
   "Version": "Internal",
   "Description": "通常只能输入多行数据",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_TextBox/多编辑文本.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_TextBox/多编辑文本.jpg",
   "IOS": {
     "Support": 1,
-    "MinVersion": "iOS 7.0"
+    "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
