@@ -33,6 +33,6 @@ layout.on("longTouch", function() {
 		nf.alert(data);
 	})
 })
-//layout.on("touch", function() {
-//	
-//})
+layout.on("touch", function() {
+	
+})
