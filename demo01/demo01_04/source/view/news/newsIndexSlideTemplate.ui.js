@@ -1,5 +1,6 @@
 //引入组件库
 var do_Page = sm("do_Page");
+var do_App = sm("do_App");
 var do_Notification = sm("do_Notification");
 var do_DataCache = sm("do_DataCache");
 //声明UI变量
@@ -24,7 +25,10 @@ root.setMapping({
 });
 
 //初始化隐藏遮盖
-loadingUI.visible = false;	
+loadingUI.visible = false;
+
+//给do_ListView_news绑定数据
+do_ListView_news.bindItems(listdataNews);
 //刷新数据
 function refreshAllData(){
 	pageNum=0;
@@ -37,14 +41,14 @@ function refreshAllData(){
 	http.on("success", function(data) {
 		//恢复do_ListView_news的headerview和footerview状态
 		do_ListView_news.rebound();
-		listdataNews = mm("do_ListData");
+		listdataNews.removeAll();
 		//只有“热点”新闻，才需要显示推荐栏
 		if (type_id== "redian"){
 			listdataNews.addOne({"template":1, "type_id":type_id});
 		}		
 		listdataNews.addData(data);
-		//给do_ListView_news绑定数据
-	    do_ListView_news.bindItems(listdataNews);
+		//do_ListView_news刷新显示
+	    do_ListView_news.refreshItems();
 	    //每次刷新的数据，都在本地缓存起来，以便下次打开应用时即时离线状态下也能显示新闻列表，提高用户体验
 	    do_DataCache.saveData(type_id, data);
 	    //去掉遮盖
@@ -73,8 +77,8 @@ function getNextPageData(){
 		//恢复do_ListView_news的headerview和footerview
 		do_ListView_news.rebound();
 		listdataNews.addData(data);
-		//给do_ListView_news绑定数据
-	    do_ListView_news.bindItems(listdataNews);
+		//do_ListView_news刷新显示
+	    do_ListView_news.refreshItems();
 	});
 	http.on("fail", function(data) {
 		//恢复do_ListView_news的headerview和footerview
@@ -92,14 +96,14 @@ root.on("dataRefreshed", function(){
 	//先尝试加载本地数据
 	var data= do_DataCache.loadData(type_id);
 	if (data != null && data.length > 0){
-		listdataNews = mm("do_ListData");
+		listdataNews.removeAll();
 		//只有“热点”新闻，才需要显示推荐栏
 		if (type_id== "redian"){
 			listdataNews.addOne({"template":1, "type_id":type_id});
 		}
 		listdataNews.addData(data);
-		//给do_ListView_news绑定数据
-	    do_ListView_news.bindItems(listdataNews);
+		//do_ListView_news刷新显示
+	    do_ListView_news.refreshItems();
 	}
 	else{
 		loadingUI.visible = true;		
@@ -122,4 +126,15 @@ do_ListView_news.on("push", function(data){
 	if (data.state == 2){		
 		getNextPageData();
 	}
+});
+
+//点击一条新闻
+do_ListView_news.on("touch", function(data){
+	var onNews=listdataNews.getOne(data);
+	do_App.openPage({
+		source:"source://view/news/newsDetail.ui", 
+		animationType:"push_r2l", //动画效果：从右向左推出
+		statusBarState:"transparent",
+		data:JSON.stringify({title:onNews.title, url:onNews.url}) //传递页面之间的参数
+	});
 });

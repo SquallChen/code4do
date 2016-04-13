@@ -7,15 +7,32 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"x":"34",
-				"width":"544",
-				"y":"15",
-				"fontSize":"28",
-				"id":"do_TextField_Name",
-				"type":"do_TextField",
-				"height":"57"
+				"bgColor":"E0E0E0FF",
+				"width":"680",
+				"y":"99",
+				"id":"do_ALayout_line",
+				"type":"do_ALayout",
+				"height":"1"
+			},
+			{
+				"x":"33",
+				"width":"612",
+				"y":"25",
+				"fontSize":"32",
+				"id":"do_Label_Name",
+				"type":"do_Label",
+				"height":"65"
+			},
+			{
+				"width":"24",
+				"x":"663",
+				"y":"41",
+				"id":"do_ImageView_1",
+				"source":"source://image/to_right_arrow.png",
+				"type":"do_ImageView",
+				"height":"24"
 			}
 		],
-		"height":"88"
+		"height":"100"
 	}
 }

@@ -6807,11 +6807,11 @@ Pinyin.getWordsCode = function(str){
 	var c, result="", t;
 	for(i=0; i<len; i++){
 		c = str.substr(i,1);
-		t = this._JMcode[c];
+		t = Pinyin._JMcode[c];
 		if (""+t == "undefined") t = "";
 		result += t;
 	}
-	return result.toLowerCase();
+	return result.toUpperCase();
 }
 
 //////////////////////////////////////////////
@@ -6839,17 +6839,18 @@ Pinyin._arraySearch=function(l1,l2){
  * 获取汉字的简码拼音
  */
 module.exports.GetJP = function(str){
+	if (str == null) return "";
 	str = str.toUpperCase();
 	var len = str.length;
 	var c, result="", t;
 	for(i=0; i<len; i++){
 		c = str.substr(i,1);
-		t = this._JMcode[c];
+		t = Pinyin._JMcode[c];
 		if (""+t == "undefined") t = "";
 		result += t;
 	}
 
-	return result.toLowerCase();
+	return result.toUpperCase();
 }
 
 
@@ -6876,7 +6877,7 @@ module.exports.GetQP=function(l1){
     while (I1.indexOf('--')>0) { 
         I1 = I1.replace('--','-'); 
     } 
-    return I1.toLowerCase(); 
+    return I1.toUpperCase(); 
 }
 
 /*

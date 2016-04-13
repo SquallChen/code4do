@@ -5,7 +5,7 @@ var do_App = d1.sm("do_App");
 do_App.on("loaded", function () {
 	//全屏方式打开主界面
 	do_App.openPage({
-		source:"source://view/start.ui", 
+		source:"source://view/index.ui", 
 		statusBarState:"transparent",
 		animationType: "fade"
 			});
