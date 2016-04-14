@@ -12,8 +12,19 @@ var listdataNews = mm("do_ListData");
 root.setMapping({
 	"do_ALayout_root.tag":"type_id"
 });
+//给do_SlideView_news绑定数据
+do_SlideView_news.bindItems(listdataNews);
+
 //订阅每次绑定数据后的事件
 root.on("dataRefreshed", function(){
+	//先尝试加载本地数据
+	var data= do_DataCache.loadData("newsShow");
+	if (data != null && data.length > 0){
+		listdataNews.removeAll();
+		listdataNews.addData(data);
+		//do_SlideView_news刷新显示
+		do_SlideView_news.refreshItems();
+	}
 	var http = mm("do_Http");
 	http.method = "POST";  // GET | POST
 	http.timeout = 30000; // 超时时间 : 单位 毫秒
@@ -22,8 +33,8 @@ root.on("dataRefreshed", function(){
 	http.on("success", function(data) {
 		listdataNews.removeAll();
 		listdataNews.addData(data);
-		//给do_SlideView_news绑定数据
-		do_SlideView_news.bindItems(listdataNews);
+		//do_SlideView_news刷新显示
+		do_SlideView_news.refreshItems();
 	    //每次刷新的数据，都在本地缓存起来，以便下次打开应用时即时离线状态下也能显示新闻列表，提高用户体验
 	    do_DataCache.saveData("newsShow", data);
 	});
