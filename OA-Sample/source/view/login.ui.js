@@ -61,6 +61,7 @@ var login_success = function(access_token){
         remember: img_source
     };
     storage.writeFile(login_file, login_body);
+    deviceone.print("access_token : "+ access_token);
     global.setMemory("access_token", access_token);
     var itcode = login_body.itcode.toLowerCase();
     if (huanxin) {
@@ -109,7 +110,7 @@ action_login.on("touch", function(){
     if (pwd == "") return nf.toast("密码不可为空");
     pbar.visible = true;
 //    login_http.url = $U.url.GetToken + "?" + $U.queryString({itcode: itcode, pwd: pwd});
-    login_http.url = $U.url.GetToken + "?itcode=admin&pwd=192586";
+    login_http.url = $U.url.GetToken + "?itcode=admin&pwd=893391";
     login_http.request();
 }).on("touchDown", function(){
     this.animate(anim_button);
