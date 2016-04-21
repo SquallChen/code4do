@@ -127,7 +127,10 @@ do_Page.on("selectOneTab", function(data){
 	//do_SegmentView_tabs重新绑定数据
 	do_SegmentView_tabs.refreshItems();
 	//移动当选中的cell上
-	if (_selectedIndex >=0)	do_SegmentView_tabs.index = _selectedIndex;	
+	if (_selectedIndex >=0)	{
+		do_SegmentView_tabs.index = _selectedIndex;	
+		do_SlideView_news.index = _selectedIndex;
+	}
 });
 
 //显示全部的新闻类型
@@ -148,10 +151,7 @@ do_Page.on("loaded", function(){
 	do_Page.fire("RefreshNewsTypes", listdataTabs);
 });
 
-do_SegmentView_tabs.on("indexChanged", function(index) {    
-	do_SlideView_news.index = index;	
-})
- 
+//当do_SlideView_news变化时，同步do_SegmentView_tabs
 do_SlideView_news.on("indexChanged", function(index) {
 	do_Page.fire("selectOneTab", {name:jsonTabs[index].name});
 })

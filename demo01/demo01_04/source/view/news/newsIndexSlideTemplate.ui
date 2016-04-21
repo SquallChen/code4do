@@ -18,6 +18,7 @@
 						"width":"750",
 						"id":"do_ListView_news",
 						"type":"do_ListView",
+						"selectedColor":"ECECECFF",
 						"height":"1038"
 					}
 				],
