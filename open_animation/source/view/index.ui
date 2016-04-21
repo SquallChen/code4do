@@ -20,16 +20,6 @@
 				"type":"do_ALayout",
 				"views":[
 					{
-						"width":"70",
-						"x":"650",
-						"y":"9",
-						"id":"do_ImageView_1",
-						"source":"source://fake-weixin/image/chats/bar_add.png",
-						"type":"do_ImageView",
-						"enabled":"true",
-						"height":"70"
-					},
-					{
 						"textAlign":"center",
 						"width":"397",
 						"x":"173",
