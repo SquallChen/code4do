@@ -1,0 +1,22 @@
+{
+	"RootView":{
+		"bgColor":"800080FF",
+		"x":"0",
+		"width":"480",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"x":"57",
+				"width":"352",
+				"y":"320",
+				"fontSize":"30",
+				"id":"do_Button_1",
+				"text":"我是第三页",
+				"type":"do_Button",
+				"fontColor":"FFFFFFFF"
+			}
+		],
+		"height":"854"
+	}
+}
