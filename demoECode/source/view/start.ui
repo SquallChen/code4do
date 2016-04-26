@@ -1,0 +1,23 @@
+{
+	"RootView":{
+		"bgColor":"000000FF",
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"textAlign":"center",
+				"x":"229",
+				"width":"329",
+				"y":"501",
+				"fontSize":"32",
+				"id":"do_Label_title",
+				"text":"手势滑动 demo",
+				"type":"do_Label",
+				"fontColor":"FFFFFFFF"
+			}
+		],
+		"height":"1334"
+	}
+}
