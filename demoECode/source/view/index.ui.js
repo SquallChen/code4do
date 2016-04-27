@@ -51,12 +51,12 @@ do_Page.on("back", function(){
 
 
 var do_Animator1 = mm("do_Animator");
-do_Animator1.append(500, {
+do_Animator1.append(300, {
 	y: -1334,
 	curve:"Linear"
 });
 var do_Animator2 = mm("do_Animator");
-do_Animator2.append(500, {
+do_Animator2.append(300, {
 	y: 0,
 	curve:"Linear"
 });

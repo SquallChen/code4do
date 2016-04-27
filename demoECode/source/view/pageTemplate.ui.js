@@ -40,17 +40,17 @@ do_ALayout_root.on("setView", function(data){
 });
 
 var do_Animator_head_1 = mm("do_Animator");
-do_Animator_head_1.append(500, {
+do_Animator_head_1.append(300, {
 	y: -380,
 	curve:"Linear"
 });
 var do_Animator_head_2 = mm("do_Animator");
-do_Animator_head_2.append(500, {
+do_Animator_head_2.append(300, {
 	y: 0,
 	curve:"Linear"
 });
 var do_Animator_bottom_1 = mm("do_Animator");
-do_Animator_bottom_1.append(500, {
+do_Animator_bottom_1.append(300, {
 	y: 734,
 	curve:"Linear"
 });
