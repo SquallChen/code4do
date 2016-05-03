@@ -1,5 +1,6 @@
 {
 	"RootView":{
+		"bgColor":"FFFFFFFF",
 		"x":"0",
 		"width":"750",
 		"y":"0",
