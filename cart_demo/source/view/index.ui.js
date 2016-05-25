@@ -3,7 +3,7 @@
 deviceone.checked = "source://image/checked.png";
 deviceone.unchecked = "source://image/unchecked.png";
 
-var storage = sm("do_Storage");
+var initdata = sm("do_InitData");
 var listdata = mm("do_ListData");
 var listview = ui("listview");
 var nf = sm("do_Notification");
@@ -20,10 +20,10 @@ page.on("back", function(data) {
 })
 // //
 
-var json_path = "data://cars.json";// 本地缓存的数据
+var json_path = "initdata://cars.json";// 本地缓存的数据
 
-if (storage.fileExist(json_path)) {
-	storage.readFile(json_path, function(data, e) {
+if (initdata.fileExist(json_path)) {
+	initdata.readFile(json_path, function(data, e) {
 		// deviceone.print(JSON.stringify(data));
 		listdata.addData(data);
 		listview.bindItems(listdata);
