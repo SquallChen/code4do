@@ -3,7 +3,7 @@ var app = sm("do_App");
 var page = sm("do_Page");
 var dialog = sm("do_Dialog");
 var storage = sm("do_Storage");
-
+var initdata = sm("do_InitData");
 // //返回按钮
 var close = ui("close");
 close.on("touch", function() {
@@ -35,7 +35,7 @@ button1.on("touch", function() {
 // 利用dialog模拟一个多选
 var data2;
 var button2 = ui("do_Button_2");
-var json_path = "data://cars.json";// 本地缓存的数据
+var json_path = "initdata://cars.json";// 本地缓存的数据
 button2.on("touch", function() {
 	if (!data2) {
 		if (storage.fileExist(json_path)) {
