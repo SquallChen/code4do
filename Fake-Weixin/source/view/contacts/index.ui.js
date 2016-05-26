@@ -2,10 +2,11 @@
 var storage = sm("do_Storage");
 var hashdata = mm("do_HashData");
 var index_listview = ui("index_listview");
-var json_path = "data://contacts/contact.json";// 本地缓存的数据
+var json_path = "initdata://contacts/contact.json";// 本地缓存的数据
+var initdata = sm("do_InitData");
 
-if (storage.fileExist(json_path)) {
-	storage.readFile(json_path, function(data, e) {
+if (initdata.fileExist(json_path)) {
+	initdata.readFile(json_path, function(data, e) {
 		// deviceone.print(JSON.stringify(data));
 		hashdata.addData(data);
 		/**
