@@ -1,10 +1,12 @@
 /***********************************************************************************************************
  * @Author : nanyuantingfeng
  **********************************************************************************************************/
-var app, page, nf;
+var app, page, nf,storage,initdata;
 nf = sm("do_Notification");
 app = sm("do_App");
 page = sm("do_Page");
+storage = sm("do_Storage");
+initdata = sm("do_InitData");
 
 page.on("back", function(){ app.closePage() });
 ui("action_back").on("touch", function(){ app.closePage() });
@@ -15,8 +17,16 @@ var sqlite3 = mm("do_SQLite");
 
 var btn_open = ui("btn_open");
 btn_open.on("touch",function(data, e){
-	sqlite3.open({path:"data://demo.db"});
-	nf.alert("数据库打开成功！");
+	var d = "data://demo.db";
+	if (storage.fileExist(d)) {
+		sqlite3.open({path:d});
+		nf.alert("数据库打开成功！");
+	}else{
+		initdata.copyFile("initdata://demo.zip",d,function(){
+			sqlite3.open({path:d});
+			nf.alert("数据库打开成功！");
+		});
+	}
 });
 
 

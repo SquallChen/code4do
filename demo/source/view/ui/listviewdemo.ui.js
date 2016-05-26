@@ -10,6 +10,7 @@ page.on("back", function(){ app.closePage() });
 ui("action_back").on("touch", function(){ app.closePage() });
 
 var storage = sm("do_Storage");
+var initdata = sm("do_InitData");
 /**********************************************************************************************************/
 
 
@@ -23,7 +24,7 @@ listview.bindItems(listdata);// 建立listview与 ListData 的行数据关系;
 var i = page.getData({});
 listview.bindItems(listdata);// 建立ListView 与 ListData 的行数据关系;
 
-storage.readFile("data://LVdata.json", function(data){// 读取文件
+initdata.readFile("initdata://LVdata.json", function(data){// 读取文件
    
     var dd = [];
     dd.push(data[i]);

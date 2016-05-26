@@ -121,13 +121,24 @@ var btn_copyFile = ui("btn_copyFile");
 var lb_copy = ui("lb_copy");
 var lb_ext = ui("lb_ext");
 var btn_copyext = ui("btn_copyext");
-
+var initdata = sm("do_InitData");
+initdata.copyFile("initdata://data1/data1.txt","data://data1/data1.txt",function(){
+})
+initdata.copyFile("initdata://data1/data2.txt","data://data1/data2.txt",function(){
+})
 var adata = [
-//	"data://data1/data2.txt",
 	"data://imgs/deviceone.png"
-//	"data://do.png"
 ];
 btn_copyFile.on("touch",function(data, e){
+	if(storage.fileExist(adata[0])){
+		copy2data4();
+	}else{
+		initdata.copyFile("initdata://imgs/deviceone.png",adata[0],function(){
+			copy2data4();
+		})
+	}
+});
+function copy2data4(){
 	storage.copy({source:adata, target:"data://data4"}, function(data, e){
 		var d5;
 		if(data === true){
@@ -137,8 +148,7 @@ btn_copyFile.on("touch",function(data, e){
 		}
 		lb_copy.text = d5;
 	});
-});
-
+}
 btn_copyext.on("touch",function(data, e){
 	storage.getFiles({path:"data://data4"}, function(data, e){
 		lb_ext.text = data;

@@ -1,10 +1,12 @@
 /***********************************************************************************************************
  * @Author : nanyuantingfeng
  **********************************************************************************************************/
-var app, page, nf;
+var app, page, nf,storage,initdata;
 nf = sm("do_Notification");
 app = sm("do_App");
 page = sm("do_Page");
+storage = sm("do_Storage");
+initdata = sm("do_InitData");
 
 page.on("back", function(){ app.closePage() });
 ui("action_back").on("touch", function(){ app.closePage() });
@@ -103,7 +105,14 @@ e_post.on("touch", function(){
 });
 
 e_upload.on("touch", function(){
-    http3.upload("data://data1.zip");
+	var d = "data://data1.zip";
+	if (storage.fileExist(d)) {
+		http3.upload(d);
+	}else{
+		initdata.copyFile("initdata://data1.zip",d,function(){
+			http3.upload(d);
+		});
+	}
 });
 
 e_download.on("touch", function(){

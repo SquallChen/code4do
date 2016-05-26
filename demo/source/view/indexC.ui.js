@@ -10,6 +10,7 @@ page.on("back", function(){ app.closePage() });
 ui("action_back").on("touch", function(){ app.closePage() });
 
 var storage = sm("do_Storage");
+var initdata = sm("do_InitData");
 var pagedata = page.getData();
 /**********************************************************************************************************/
 
@@ -18,7 +19,7 @@ listview = ui("do_listview");
 listdata = mm("do_ListData");
 listview.bindItems(listdata);
 
-storage.readFile("data://idata.json", function(data){
+initdata.readFile("initdata://idata.json", function(data){
     listdata.addData(data[pagedata.NAME]);
     listview.refreshItems();
 });
