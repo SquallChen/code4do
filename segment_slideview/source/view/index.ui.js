@@ -52,15 +52,15 @@ seg.refreshItems({});
 
 // 定义SlideView的数据
 var data_slide = [ {
-	"$1" : "data://0.jpg"
+	"$1" : "source://image/0.jpg"
 }, {
-	"$1" : "data://1.jpg"
+	"$1" : "source://image/1.jpg"
 }, {
-	"$1" : "data://2.jpg"
+	"$1" : "source://image/2.jpg"
 }, {
-	"$1" : "data://3.jpg"
+	"$1" : "source://image/3.jpg"
 }, {
-	"$1" : "data://4.jpg"
+	"$1" : "source://image/4.jpg"
 } ];
 
 // 定义ListData用于给SegmentView绑定数据

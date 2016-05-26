@@ -23,8 +23,8 @@ var dataComponent = mm("do_ListData");
 var listviewComponent = ui("do_ListView_component");
 
 listviewComponent.bindItems(dataComponent);
-
-storage.readFile("data://componentList.json",function(data){
+var initdata = sm("do_InitData");
+initdata.readFile("initdata://componentList.json",function(data){
 	dataComponent.addData(data);
 	listviewComponent.refreshItems();
 });

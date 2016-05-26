@@ -18,10 +18,10 @@ page.on("back", function(data) {
 })
 // //
 
-var json_path = "data://movie.json";// 本地缓存的数据
-
-if (storage.fileExist(json_path)) {
-	storage.readFile(json_path, function(data, e) {
+var json_path = "initdata://movie.json";// 本地缓存的数据
+var initdata = sm("do_InitData");
+if (initdata.fileExist(json_path)) {
+	initdata.readFile(json_path, function(data, e) {
 		// deviceone.print(JSON.stringify(data));
 		listdata.addData(data);
 		listview.bindItems(listdata);
@@ -80,7 +80,7 @@ listview.on("push", function(data) {
 	page.fire("mypush", data);//触发一个自定义事件给footerview
 	if (data.state == 2) {
 		if (!added) {
-			storage.readFile("data://moremovie.json", function(
+			initdata.readFile("initdata://moremovie.json", function(
 					data, e) {
 				listdata.addData(data);
 				listview.refreshItems();
