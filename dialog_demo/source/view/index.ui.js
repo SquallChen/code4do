@@ -38,8 +38,8 @@ var button2 = ui("do_Button_2");
 var json_path = "initdata://cars.json";// 本地缓存的数据
 button2.on("touch", function() {
 	if (!data2) {
-		if (storage.fileExist(json_path)) {
-			data2 = storage.readFileSync(json_path);
+		if (initdata.fileExist(json_path)) {
+			data2 = initdata.readFileSync(json_path);
 		}
 	}
 	// 打开这个窗口的时候把data1数据传递到cars/index.ui
