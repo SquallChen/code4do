@@ -27,11 +27,11 @@ anim_button.scale({
 	pivotX : .5,
 	pivotY : .5
 });
-var initdata = sm("do_InitData");
+var initdata = deviceone.sm("do_InitData");
 app.on("loaded", function() {
 	initdata.copy([ "initdata://AllEmployers.zip", "initdata://oa.db" ],
 			"data://", function() {
-				this.openPage("source://view/login.ui");
+				app.openPage("source://view/login.ui");
 				// this.openPage("source://view/index.ui");
 			})
 });
