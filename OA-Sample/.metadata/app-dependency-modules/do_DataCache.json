@@ -5,7 +5,7 @@
   "Name": "数据缓存",
   "Version": "Internal",
   "Description": "缓存一些数据到本地文件，即使程序退出再进入还能获取到值，要确保设置的value值不要过大",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_DataCache/缓存管理.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_DataCache/缓存管理.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"

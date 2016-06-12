@@ -5,10 +5,10 @@
   "Name": "单行文本编辑框",
   "Version": "Internal",
   "Description": "通常只允许输入一行",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_TextField/单行文本框.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_TextField/单行文本框.jpg",
   "IOS": {
     "Support": 1,
-    "MinVersion": "iOS 7.0"
+    "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
@@ -137,7 +137,7 @@
       "DefaultValue": "normal",
       "EditType": "1",
       "Group": "",
-      "Description": "包含4种类型：\r\nnormal：常规\r\nbold：粗体\r\nitalic：斜体\r\nbold_italic：粗斜体",
+      "Description": "包含4种类型：normal：常规；bold：粗体；italic：斜体；bold_italic：粗斜体（iOS平台不支持）",
       "Design": {
         "Type": "List",
         "Data": [

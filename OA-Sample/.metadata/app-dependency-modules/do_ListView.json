@@ -4,8 +4,8 @@
   "Type": "UI",
   "Name": "List视图",
   "Version": "Internal",
-  "Description": "List视图是最常用的UI组件，由很多个Cell组成。它可以通过bind一个ListData来构造视图的数据Model，修改数据来更新视图。",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_ListView/list列表视图.jpg",
+  "Description": "List视图是最常用的UI组件，由很多个Cell组成。它可以通过bind一个ListData来构造视图的数据Model，修改数据来更新视图。android平台暂不支持在cell中放TextFiled、TextBox组件",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_ListView/list列表视图.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
@@ -123,7 +123,7 @@
       "Name": "Cell对应的模板UI文件组",
       "Type": "String",
       "DefaultValue": "",
-      "EditType": "0",
+      "EditType": "1",
       "Group": "",
       "Description": "一个ListView可以有多个cell模板，这个属性是一个json array，每一个元素都是一个source ui文件。这个属性的格式类似如下： source://view/cell1.ui,source://view/cell2.ui,source://view/cell3.ui",
       "Design": {

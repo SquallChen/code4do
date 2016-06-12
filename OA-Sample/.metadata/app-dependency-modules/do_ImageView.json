@@ -5,10 +5,10 @@
   "Name": "图片控件",
   "Version": "Internal",
   "Description": "图片控件，可以设置图片背景，也可以设置点击事件作为特殊的按钮使用，当不清楚原图大小时可设置宽高为-1，会显示原始大小的宽高",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_ImageView/图片.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_ImageView/图片.jpg",
   "IOS": {
     "Support": 1,
-    "MinVersion": "iOS 7.0"
+    "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
@@ -151,7 +151,7 @@
       "DefaultValue": "",
       "EditType": "1",
       "Group": "",
-      "Description": "可设置html链接或本地文件，支持：http:// https:// data:// source:// 打头的URI格式，不能包含@符号。其中文件格式说明可参考Storage类",
+      "Description": "可设置网络或本地文件，支持：http:// https:// data:// source:// 打头的URI格式，不能包含@符号。其中文件格式说明可参考Storage类",
       "Design": {
         "Type": "ImageSource",
         "Data": []
@@ -166,6 +166,24 @@
       "ReturnDesc": ""
     }
   ],
-  "syncMethodes": [],
+  "syncMethodes": [
+    {
+      "ID": "setBitmap",
+      "Name": "绑定bitmap对象",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnDesc": "",
+      "Paras": [
+        {
+          "ID": "bitmap",
+          "Name": "bitmap对象",
+          "Type": "String",
+          "Required": 1,
+          "DefaultValue": "",
+          "Description": ""
+        }
+      ]
+    }
+  ],
   "asyncMethodes": []
 }

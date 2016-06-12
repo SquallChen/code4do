@@ -5,14 +5,14 @@
   "Name": "http/https请求服务",
   "Version": "Internal",
   "Description": "支持http/https请求服务",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_Http/http.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_Http/http.jpg",
   "IOS": {
     "Support": 1,
-    "MinVersion": "iOS 7.0"
+    "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
-    "MinVersion": "14"
+    "MinVersion": "4.0"
   },
   "Windows": {
     "Support": 1,
@@ -61,6 +61,19 @@
       "EditType": "1",
       "Group": "",
       "Description": "http请求方式 GET/POST/PUT/PATCH/DELETE",
+      "Design": {
+        "Type": "Text",
+        "Data": []
+      }
+    },
+    {
+      "ID": "responseEncoding",
+      "Name": "字符集格式",
+      "Type": "String",
+      "DefaultValue": "",
+      "EditType": "1",
+      "Group": "",
+      "Description": "设置服务端返回内容的解码格式，通常与服务端开发人员约定，当属性有值时优先以该属性值格式解码，当不设置该属性时取服务器返回header中Content-Type格式解码，若header中没有Content-Type或Content-Type没有值则默认以utf-8格式编码",
       "Design": {
         "Type": "Text",
         "Data": []

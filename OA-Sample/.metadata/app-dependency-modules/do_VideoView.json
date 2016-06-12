@@ -5,7 +5,7 @@
   "Name": "视频播放器",
   "Version": "Internal",
   "Description": "一个简单的播放视频的UI组件，能支持播放本地和网络视频，可支持mp4格式，可以通过点击全屏按钮切换到全屏播放",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_VideoView/video.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_VideoView/video.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7"
@@ -31,7 +31,7 @@
       "ID": "path",
       "Name": "播放文件源路径",
       "Type": "String",
-      "DefaultValue": "无",
+      "DefaultValue": "",
       "EditType": "1",
       "Group": "",
       "Description": "支持data://、source://和网络地址",
@@ -46,20 +46,20 @@
       "ID": "error",
       "Description": "视频播放异常时触发",
       "ReturnType": "String",
-      "ReturnDesc": "无"
+      "ReturnDesc": ""
     },
     {
       "ID": "finished",
       "Description": "视频播放完后触发",
       "ReturnType": "String",
-      "ReturnDesc": "无"
+      "ReturnDesc": ""
     }
   ],
   "syncMethodes": [
     {
       "ID": "pause",
       "Name": "暂停播放",
-      "Description": "无",
+      "Description": "",
       "ReturnType": "Number",
       "ReturnDesc": "返回当前视频暂停时的位置，毫秒值",
       "Paras": []
@@ -67,9 +67,9 @@
     {
       "ID": "play",
       "Name": "开始播放",
-      "Description": "无",
+      "Description": "",
       "ReturnType": "",
-      "ReturnDesc": "无",
+      "ReturnDesc": "",
       "Paras": [
         {
           "ID": "point",
@@ -84,17 +84,17 @@
     {
       "ID": "resume",
       "Name": "继续播放",
-      "Description": "无",
+      "Description": "",
       "ReturnType": "",
-      "ReturnDesc": "无",
+      "ReturnDesc": "",
       "Paras": []
     },
     {
       "ID": "stop",
       "Name": "停止播放",
-      "Description": "返回当前视频暂停时的位置，毫秒值",
+      "Description": "",
       "ReturnType": "",
-      "ReturnDesc": "无",
+      "ReturnDesc": "",
       "Paras": []
     }
   ],

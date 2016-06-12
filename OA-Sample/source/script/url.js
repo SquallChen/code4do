@@ -2,7 +2,7 @@ var deviceone = require("deviceone");
 var global = deviceone.sm("do_Global");
 var nf = deviceone.sm("do_Notification");
 
-var domain = "http://oatest.deviceone.cn/";
+var domain = "http://oapro.deviceone.cn/";
 var oatestapi = domain + "oatestapi/";
 var oatest = domain + "oatest/";
 

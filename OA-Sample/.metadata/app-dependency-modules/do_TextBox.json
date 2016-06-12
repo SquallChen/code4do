@@ -5,10 +5,10 @@
   "Name": "多行文本编辑框",
   "Version": "Internal",
   "Description": "通常只能输入多行数据",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/D/20160121/do_TextBox/多编辑文本.jpg",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_TextBox/多编辑文本.jpg",
   "IOS": {
     "Support": 1,
-    "MinVersion": "iOS 7.0"
+    "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
@@ -86,7 +86,7 @@
       "DefaultValue": "normal",
       "EditType": "1",
       "Group": "",
-      "Description": "包含4种类型：normal：常规；bold：粗体；italic：斜体；bold_italic：粗斜体",
+      "Description": "包含4种类型：normal：常规；bold：粗体；italic：斜体；bold_italic：粗斜体（iOS平台不支持）",
       "Design": {
         "Type": "List",
         "Data": [
@@ -189,12 +189,6 @@
     }
   ],
   "Events": [
-    {
-      "ID": "enter",
-      "Description": "点击键盘右下角按钮时触发",
-      "ReturnType": "String",
-      "ReturnDesc": ""
-    },
     {
       "ID": "focusIn",
       "Description": "进入编辑状态",

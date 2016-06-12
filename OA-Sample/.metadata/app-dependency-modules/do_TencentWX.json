@@ -5,14 +5,14 @@
   "Name": "微信登陆",
   "Version": "Internal",
   "Description": "接入微信开放平台，可使用微信登录、分享和支付功能",
-  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150624/c8656b22-98e6-45b5-8cb5-763e16dd3bf1.png",
+  "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_TencentWX/微信呢.jpg",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
-    "MinVersion": "14"
+    "MinVersion": "4.0"
   },
   "Windows": {
     "Support": 0,
@@ -28,7 +28,16 @@
   },
   "Properties": [],
   "Events": [],
-  "syncMethodes": [],
+  "syncMethodes": [
+    {
+      "ID": "isWXAppInstalled",
+      "Name": "微信APP是否安装",
+      "Description": "判断当前设备中是否安装微信APP",
+      "ReturnType": "Bool",
+      "ReturnDesc": "true 安装，false 没有安装",
+      "Paras": []
+    }
+  ],
   "asyncMethodes": [
     {
       "ID": "login",
