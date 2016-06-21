@@ -29,6 +29,7 @@ page.on("loaded",function(){
 	pedometer.start();
 	count.text = pedometer.getInfo().count;
 	pbar.text = pedometer.getInfo().count;
+	pbar.progress = pedometer.getInfo().count
 	delay3.start();
 })
 
@@ -77,6 +78,7 @@ delay3.on("tick", function(){
 	}
 	count.text = pedometer.getInfo().count;
 	pbar.text = pedometer.getInfo().count;
+	pbar.progress = pedometer.getInfo().count
 });
 
 

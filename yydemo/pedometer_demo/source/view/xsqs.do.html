@@ -6,7 +6,7 @@
         <script type="text/javascript" src="echarts.min.js"></script>
 </head>
 <body>
-	<div id="main" style="height:200px; width:700px;"></div>
+	<div id="main" style="height:200px; width:450px;"></div>
 	<script type="text/javascript">
 	window.onDeviceOneLoaded = function() {
 		var page = deviceone.sm("do_Page");
@@ -16,13 +16,13 @@
 	    var times = global.getMemory("times");
 	    var myChart = echarts.init(document.getElementById('main'));
 	    var d0 = new Date();
-	    var d = JSON.stringify(new Date()).substring(1, 11)
-	    var d1 = JSON.stringify(new Date(d0 - (86400000 * 1))).substring(1, 11);
-	    var d2 = JSON.stringify(new Date(d0 - (86400000 * 2))).substring(1, 11);
-	    var d3 = JSON.stringify(new Date(d0 - (86400000 * 3))).substring(1, 11);
-	    var d4 = JSON.stringify(new Date(d0 - (86400000 * 4))).substring(1, 11);
-	    var d5 = JSON.stringify(new Date(d0 - (86400000 * 5))).substring(1, 11);
-	    var d6 = JSON.stringify(new Date(d0 - (86400000 * 6))).substring(1, 11);
+	    var d = JSON.stringify(new Date()).substring(9, 11)
+	    var d1 = JSON.stringify(new Date(d0 - (86400000 * 1))).substring(9, 11);
+	    var d2 = JSON.stringify(new Date(d0 - (86400000 * 2))).substring(9, 11);
+	    var d3 = JSON.stringify(new Date(d0 - (86400000 * 3))).substring(9, 11);
+	    var d4 = JSON.stringify(new Date(d0 - (86400000 * 4))).substring(9, 11);
+	    var d5 = JSON.stringify(new Date(d0 - (86400000 * 5))).substring(9, 11);
+	    var d6 = JSON.stringify(new Date(d0 - (86400000 * 6))).substring(6, 11);
 
 	    var chart_option = function(){
 	        var xsqs_data = global.getMemory("xsqs_data");
