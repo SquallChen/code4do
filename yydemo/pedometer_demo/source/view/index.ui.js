@@ -2,6 +2,7 @@
  * @Author : zxhuizhi@126.com
  * @Timestamp : 2016-06-16
  */
+
 // 根据sm的类型获取单实例对象
 var nf = sm("do_Notification");
 var pedometer = sm("M1294_Pedometer");
@@ -13,6 +14,8 @@ var close = ui("close");
 close.on("touch", function() {
 	app.closePage();
 })
+
+/*************************************/
 page.on("back", function(data) {
 	app.closePage();
 })
