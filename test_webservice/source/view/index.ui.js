@@ -18,7 +18,7 @@ function init_http(url) {
 	var http = mm("do_Http");
 	http.method = "POST";
 	http.url = url;
-	http.contentType = "text/xml; charset=UTF-8";
+	http.contentType = "text/xml";
 	http.on("result", function(d) {
 		nf.alert(JSON.stringify(d.data));
 	}).on("fail", function(d) {
@@ -26,7 +26,7 @@ function init_http(url) {
 	})
 	return http;
 }
-var http1 = init_http("http://mock.deviceone.net/test/webservice/WebService1.asmx");
+var http1 = init_http("http://182.92.198.3/WebService1.asmx");
 function create_soap_request(body) {
 	return "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
 			+ "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">"
@@ -42,8 +42,8 @@ button1.on("touch", function() {
 	http1.request();
 });
 button2.on("touch", function() {
-
+	nf.alert("do nothing")
 });
 button3.on("touch", function() {
-
+	nf.alert("do nothing")
 });
