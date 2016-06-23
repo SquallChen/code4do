@@ -10,10 +10,6 @@ var page = sm("do_Page");
 var storage = sm("do_Storage");
 var global = sm("do_Global");
 var app = sm("do_App");
-var close = ui("close");
-close.on("touch", function() {
-	app.closePage();
-})
 
 /*************************************/
 page.on("back", function(data) {
