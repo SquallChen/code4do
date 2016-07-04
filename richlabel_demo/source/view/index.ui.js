@@ -19,6 +19,10 @@ var lineheight = ui("do_Button_6");
 var list = ui("do_Button_7")
 var styles = ui("do_Button_8");
 // //返回按钮
+//通过linkTouch和回调回来的d来确定richlabel里的自定义点击事件
+label.on("linkTouch",function(d){
+	nf.alert("自定义事件:"+JSON.stringify(d));
+});
 
 close.on("touch", function() {
 	app.closePage();
