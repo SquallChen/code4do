@@ -16,7 +16,7 @@
   },
   "Windows": {
     "Support": 1,
-    "MinVersion": ""
+    "MinVersion": "8.1"
   },
   "WindowsPhone": {
     "Support": 1,

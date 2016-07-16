@@ -5,18 +5,18 @@
   "Name": "hash数据源",
   "Version": "Internal",
   "Description": "HashData作为一个内存数据源，可以给UIModule作为bind的数据源。可以参考UIModule的bind方法。也可以作为ListView，GridView的数据集。它本质上是一个可变key-value键值对，可以增删改查",
-  "Icon": "",
+  "Icon": "https://deviceone.blob.core.chinacloudapi.cn/store/R/20150723/3fe370f4-355a-4a09-b5d2-a96413991ac9.png",
   "IOS": {
     "Support": 1,
     "MinVersion": "7.0"
   },
   "Android": {
     "Support": 1,
-    "MinVersion": "14"
+    "MinVersion": "4.0"
   },
   "Windows": {
     "Support": 1,
-    "MinVersion": ""
+    "MinVersion": "8.1"
   },
   "WindowsPhone": {
     "Support": 1,
