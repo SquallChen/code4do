@@ -1,0 +1,9 @@
+[
+	{
+		"template":0,
+		"path" : "source://view/coverFlow/CF_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "coverFlow",
+		"round" : "1"
+	}
+]

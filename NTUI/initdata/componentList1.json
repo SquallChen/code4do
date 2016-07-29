@@ -1,0 +1,51 @@
+[
+	{
+		"template":0,
+		"path" : "source://view/header/header_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "Header",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/switch/switch_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "Switch",
+		"round" : "2"
+	},
+	{
+		"template":0,
+		"path" : "source://view/tabs/tab_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "Tab",
+		"round" : "3"
+	},
+	{
+		"template":0,
+		"path" : "source://view/dialog/dialog_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "Dialog",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/actionSheet/actionSheet_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "ActionSheet",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/loadings/loading_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "Loading",
+		"round" : "2"
+	},
+	{
+		"template":0,
+		"path" : "source://view/progressbars/probar_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "Progressbar",
+		"round" : "2"
+	}
+]

@@ -1,0 +1,20 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"spacing":"-20",
+				"bgColor":"FFFFFF00",
+				"templates":"source://view/coverFlow/cf_cell.ui",
+				"width":"750",
+				"id":"do_CoverFlowView_1",
+				"type":"do_CoverFlowView",
+				"height":"800"
+			}
+		],
+		"height":"800"
+	}
+}

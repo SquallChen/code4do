@@ -1,0 +1,32 @@
+{
+	"RootView":{
+		"padding":"30,10,0,10",
+		"width":"200",
+		"id":"caixilist",
+		"type":"do_LinearLayout",
+		"views":[
+			{
+				"textAlign":"center",
+				"width":"180",
+				"x":"10",
+				"y":"30",
+				"fontSize":"34",
+				"id":"caixititle",
+				"type":"do_Label",
+				"fontColor":"333333FF",
+				"height":"-1"
+			},
+			{
+				"margin":"30,0,0,0",
+				"bgColor":"00000044",
+				"x":"10",
+				"width":"180",
+				"y":"59",
+				"id":"do_Label_1",
+				"type":"do_Label",
+				"height":"1"
+			}
+		],
+		"height":"-1"
+	}
+}

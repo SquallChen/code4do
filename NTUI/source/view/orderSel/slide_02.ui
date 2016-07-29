@@ -1,0 +1,22 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"id":"slide02box",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"textAlign":"center",
+				"x":"170",
+				"width":"392",
+				"y":"388",
+				"fontSize":"60",
+				"id":"do_Label_1",
+				"type":"do_Label",
+				"height":"294"
+			}
+		],
+		"height":"934"
+	}
+}

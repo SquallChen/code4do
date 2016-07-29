@@ -1,0 +1,25 @@
+[
+	{
+		"template":0,
+		"title":"特色菜",
+		"FONTCOL":"333333FF",
+		"BGCOL":"FFFFFFFF",
+		"LFBG":"FFCC00FF"
+	},
+	{
+		"template":0,
+		"title":"风味家常菜了哈哈"
+	},
+	{
+		"template":0,
+		"title":"经典小吃"
+	},
+	{
+		"template":0,
+		"title":"美味甜品"
+	},
+	{
+		"template":0,
+		"title":"饮料酒水"
+	}
+]

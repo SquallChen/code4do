@@ -1,0 +1,22 @@
+[
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "家的味道"
+	},
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "麻辣诱惑"
+	},
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "美味甜品"
+	},
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "地方特色"
+	}
+]

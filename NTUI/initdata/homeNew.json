@@ -1,0 +1,30 @@
+[
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "妈妈的味道",
+		"discount" : "8.8折",
+		"cvm_str" : "特色菜 家常菜"
+	},
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "川香溜溜串",
+		"discount" : "",
+		"cvm_str" : "小吃"
+	},
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "顺心家常菜",
+		"discount" : "9.0折",
+		"cvm_str" : "特色菜"
+	},
+	{
+		"template":0,
+		"path" : "source://image/head.png",
+		"title" : "小聚生活",
+		"discount" : "",
+		"cvm_str" : "川菜"
+	}
+]

@@ -1,0 +1,37 @@
+[
+	{
+		"template":0,
+		"path" : "source://view/ScrollZoom/ScrollZoom_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "ScrollZoom+FloatPanel",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/homeTemplate/homeTemplate_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "homeTemplate",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/UserDetail/UserDetail_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "UserDetail",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/CouponBond/CB_index.ui",
+		"img" : "source://image/head.png",
+		"title" : "CouponBond",
+		"round" : "1"
+	},
+	{
+		"template":0,
+		"path" : "source://view/orderSel/orderSel.ui",
+		"img" : "source://image/head.png",
+		"title" : "orderSel",
+		"round" : "1"
+	}
+]
