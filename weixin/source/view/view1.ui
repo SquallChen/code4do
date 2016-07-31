@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"height":"854",
+		"views":[
+			{
+				"id":"indexListView",
+				"height":"694",
+				"templates":"source://view/indexlistview_cell/cell1.ui,,source://view/indexlistview_cell/cell2.ui",
+				"width":"480",
+				"selectedColor":"888888FF",
+				"type":"do_IndexListView"
+			}
+		],
+		"width":"480",
+		"type":"do_ALayout",
+		"y":"0",
+		"x":"0"
+	}
+}
