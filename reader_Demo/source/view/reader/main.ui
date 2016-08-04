@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"bgColor":"D2D9D2FF",
+		"width":"750",
+		"id":"do_ALayout_root",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"00000000",
+				"templates":"source://view/reader/temp1.ui,source://view/reader/temp2.ui,source://view/reader/temp3.ui",
+				"width":"750",
+				"id":"do_SlideView",
+				"type":"do_SlideView",
+				"height":"1334"
+			}
+		],
+		"height":"1334"
+	}
+}

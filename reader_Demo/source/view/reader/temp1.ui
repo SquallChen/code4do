@@ -1,0 +1,18 @@
+{
+	"RootView":{
+		"width":"750",
+		"id":"do_ALayout_root",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"00000000",
+				"templates":"source://view/reader/list_cell.ui",
+				"width":"750",
+				"id":"do_ListView",
+				"type":"do_ListView",
+				"height":"1334"
+			}
+		],
+		"height":"1334"
+	}
+}

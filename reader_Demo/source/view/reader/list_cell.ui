@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"width":"750",
+		"id":"do_ALayout_root",
+		"type":"do_LinearLayout",
+		"views":[
+			{
+				"margin":"0,25,0,25",
+				"width":"700",
+				"maxLines":"0",
+				"fontSize":"25",
+				"id":"do_Label_content",
+				"type":"do_Label",
+				"height":"-1"
+			}
+		],
+		"height":"-1"
+	}
+}
