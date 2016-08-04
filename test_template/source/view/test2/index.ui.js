@@ -21,6 +21,7 @@ var d = [];
 for (i = 0; i < 100; i++) {
 	d[i] = {};
 	d[i].name = (i + 1);
+	d[i].tag = i;
 	d[i].checked = false;
 }
 listdata.addData(d);
