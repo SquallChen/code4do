@@ -1,0 +1,18 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"templates":"source://view/weather1.ui,source://view/weather.ui",
+				"width":"750",
+				"id":"do_VerticalSlideView_1",
+				"type":"do_VerticalSlideView",
+				"height":"1331"
+			}
+		],
+		"height":"1334"
+	}
+}
