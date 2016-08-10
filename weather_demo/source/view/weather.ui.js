@@ -77,7 +77,6 @@ function weather_five(data) {
 }
 
 rootview.setMapping({
-//    "pollution_l0.text": "pollution_l0",
     "chy_l0.text": "chy_l0",
     "xcz_l0.text": "xcz_l0",
     "gm_l0.text": "gm_l0",
@@ -85,33 +84,12 @@ rootview.setMapping({
     "yd_l0.text": "yd_l0",
     "ssd_l0.text": "ssd_l0"
 });
-//
-///*请求天气信息接口*/
-//page.on("loaded",function(){
-////	storage.readFile("data://city.json",function(data,e){
-//////		nf.alert(data)
-////	})
-//	baidulocation.start("high", "true");
-//	baidulocation.locate("high", function(data, e) {
-//		latitude = data.latitude;
-//		longitude = data.longitude;
-//		baidulocation.reverseGeoCode(latitude,longitude, function(data1, e) {
-//			nf.alert(data1)
-//			toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data1.city.substring(0,data1.city.length-1), TODAY: "0", DAYS: "5"}, "true", function (d) {
-//				do_HashData.addData(weather_five(d.body));
-//			    rootview.bindData(do_HashData);
-//			    rootview.refreshData();
-//			});
-//		})
-//	})
-//})
+
 
 storage.readFile("data://city.json",function(data,e){
-	if(data.indexOf("省")!=-1){
-		toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data.substring(data.indexOf("省")+1, data.indexOf("市")), TODAY: "0", DAYS: "5"}, "true", function (d) {
-			do_HashData.addData(weather_five(d.body));
-		    rootview.bindData(do_HashData);
-		    rootview.refreshData();
-		});
-	}
+	toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data.city.substring(0, data.city.length-1), TODAY: "0", DAYS: "5"}, "true", function (d) {
+		do_HashData.addData(weather_five(d.body));
+	    rootview.bindData(do_HashData);
+	    rootview.refreshData();
+	});
 })

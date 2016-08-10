@@ -196,18 +196,18 @@
 						"id":"city_streetname",
 						"type":"do_Label",
 						"fontColor":"FFFFFFFF",
-						"height":"50"
+						"height":"40"
 					}
 				],
 				"height":"130"
 			},
 			{
 				"width":"748",
-				"y":"130",
+				"y":"120",
 				"id":"do_ALayout_could",
 				"type":"do_ALayout",
 				"views":[],
-				"height":"250"
+				"height":"260"
 			},
 			{
 				"width":"205",
