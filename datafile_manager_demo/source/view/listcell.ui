@@ -6,7 +6,7 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"bgColor":"FFFF00FF",
+				"bgColor":"FFFFFFFF",
 				"width":"750",
 				"id":"do_ALayout_1",
 				"type":"do_ALayout",
@@ -38,24 +38,6 @@
 						"y":"10",
 						"id":"do_Label_3",
 						"type":"do_Label"
-					},
-					{
-						"textAlign":"center",
-						"x":"451",
-						"width":"37",
-						"y":"8",
-						"id":"do_Label_4",
-						"text":"共",
-						"type":"do_Label"
-					},
-					{
-						"x":"594",
-						"width":"57",
-						"y":"12",
-						"id":"do_Label_5",
-						"text":"项",
-						"type":"do_Label",
-						"height":"72"
 					}
 				],
 				"height":"105"

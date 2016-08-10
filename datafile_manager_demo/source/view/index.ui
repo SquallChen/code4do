@@ -24,12 +24,12 @@
 				"type":"do_ALayout",
 				"views":[
 					{
-						"bgColor":"80FFFFFF",
+						"bgColor":"FFFFFFFF",
 						"templates":"source://view/listcell.ui",
 						"width":"750",
 						"id":"do_ListView_1",
 						"type":"do_ListView",
-						"height":"500"
+						"height":"1254"
 					}
 				],
 				"height":"1334"

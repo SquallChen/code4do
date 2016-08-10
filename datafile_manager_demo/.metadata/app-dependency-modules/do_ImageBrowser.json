@@ -4,7 +4,7 @@
   "Type": "SM",
   "Name": "图片预览",
   "Version": "Internal",
-  "Description": "这个组件用于浏览大量网络或本地图片，图片路径可以http://链接或本地data://，支持放大后缩放原图，多图片支持左右滑动预览，进入浏览界面单击一下屏幕退出",
+  "Description": "这个组件用于浏览大量网络或本地图片，图片路径可以http://链接或本地data://、source://、initdata://目录，支持放大后缩放原图，多图片支持左右滑动预览，进入浏览界面单击一下屏幕退出",
   "Icon": "https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_ImageBrowser/图片预览.jpg",
   "IOS": {
     "Support": 1,
@@ -12,7 +12,7 @@
   },
   "Android": {
     "Support": 1,
-    "MinVersion": "14"
+    "MinVersion": "4.0"
   },
   "Windows": {
     "Support": 1,
@@ -52,7 +52,7 @@
           "Type_JavaScript": "Node",
           "Required": 1,
           "DefaultValue": "",
-          "Description": "预览图片传递数据结构[{ source : '', init : ''},{source :'' , init : ''}, ..... ]其中source 为网络原图，init为缩略图"
+          "Description": "预览图片传递数据结构[{ source : '', init : ''},{source :'' , init : ''}, ..... ]其中source 为原图，init为缩略图"
         },
         {
           "ID": "index",
