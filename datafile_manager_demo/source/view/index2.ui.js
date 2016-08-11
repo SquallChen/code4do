@@ -22,6 +22,14 @@ do_Label_biaoti.text = "data://big/"+all+"/";
 rootView.add("tanchu","source://view/tanchu.ui", 0,80)
 //获取wenjian或者tupian目录下的所有下一级目录列表
 var lv_data=[];
+page.on("back",function(){
+	
+	
+	do_App.closePage();
+	
+})
+
+
 do_Storage.getDirs("data://big/"+all+"/",function(data1){
  if(data1.length>0){//获取所有下一级目录，并添加到数组里面
 	data1.forEach(function(v,k)
@@ -29,10 +37,7 @@ do_Storage.getDirs("data://big/"+all+"/",function(data1){
 		lv_data.push({"text":data1[k],"source":"source://image/mulutubiao.png","type":"目录"})
 		});
 	    }//if
-	else
-	    {
-		do_Notification.toast("没有目录了"); 
-	    }//else
+	
 	
 	//获取所有文件列表
 do_Storage.getFiles("data://big/"+all+"/",function(data){
@@ -89,21 +94,46 @@ do_Button_back.on("touch",function(){
 })
 do_ListView_2.on("longTouch",function(index){
 	var get = do_ListData.getOne(index)
-	page.fire("show",{k1:"data://big/"+page.getData()+"/"+get.text,k2:get.text,k3:get.type,k4:get});
+	page.fire("show",{k1:"data://big/"+page.getData()+"/"+get.text,k2:get.text,k3:get.type,k4:get,k5:index});
 });
+var newname="";
 page.on("close",function(data){
-		lv_data.push({"text":data.kk2,"source":data.kk4,"type":data.kk3})
+	if(data.kk3=="文本"){
+		var a = data.kk2.split(".");
+		 newname = a[0]+"_copy."+a[1];
+		do_Storage.copyFile(data.kk1, "data://big/"+page.getData()+"/"+newname, function(data, e) {
+			//do_Notification.alert(data);
+		})
+		}//if
+		if(data.kk3=="图片"){
+			var a = data.kk2.split(".");
+			 newname = a[0]+"_copy."+a[1];
+			do_Storage.copyFile(data.kk1, "data://big/"+page.getData()+"/"+newname, function(data, e) {
+				//do_Notification.alert(data);
+			})
+			}//if
+		if(data.kk3=="目录"){
+			 newname = data.kk2+"_copy";
+			do_Storage.copy([data.kk1], "data://big/"+page.getData()+"/"+newname, function(data, e) {
+				//do_Notification.alert(data);
+		})
+		}//if
+
+	
+	
+		lv_data.push({"text":newname,"source":data.kk4,"type":data.kk3})
 	    do_ListData.removeAll();
 		do_ListData.addData(lv_data);
 		do_ListView_2.refreshItems;
 });
 page.on("delete",function(data){
-	lv_data.splice(data.dk5,1)
+	do_Notification.alert(data.dk5);
+	lv_data.splice(data.dk5,1);
 	do_ListData.removeAll();
 	do_ListData.addData(lv_data);
 	do_ListView_2.refreshItems();
-    do_Storage.deleteFile(data.dk1, function(data, e) {
-	})//删除目录文件了
+//    do_Storage.deleteFile(data.dk1, function(data, e) {
+//	})//删除目录文件了
 })
 page.on("cut",function(data){
     if(data.cdk3=="目录"){

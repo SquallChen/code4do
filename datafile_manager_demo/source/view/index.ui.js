@@ -24,7 +24,7 @@ do_Storage.unzip("data://big/big.zip","data://big", function(data){
 		})//data1.forEach
 
 }//if
-	else{"没有目录咯"}
+	
  do_Storage.getFiles("data://big/", function(data2, e) {
 		data2.forEach(function(v,k){
 			var a = data2[k].split(".");
@@ -49,20 +49,19 @@ do_ListView_1.on("touch",function(index){
 	var getall = do_ListData.getRange(0);//包含data文件夹下的所有目录，或者文件
 	 if(getall.length>0){
 	   var getone = do_ListData.getOne(index);//通过index拿出一条数据包括k.v
-	       if(getone.type =="文本"){//可以直接打开了
-				do_External.openFile("data://big/"+getone.text)
-			}
-			else if(getone.type =="图片"){//可以直接打开了
-				do_External.openFile("data://big/"+getone.text)
-			}
-			else if(getone.type =="压缩文件"){//传目录路径到下一个界面
-				do_Notification.toast("这是压缩文件，暂时打不开哦")
-			}
-			else if(getone.type =="目录"){//传目录路径到下一个界面
-				do_App.openPage("source://view/index2.ui",getone.text,function(){
-				});//getone.text+"/"实际是tupian/,wenjian/
-			}
-			else if(getone.type =="未知"){
+	   if(getone.type == "文本"){//可以直接打开了
+			do_External.openFile("data://big/"+getone.text)
+		}
+	if(getone.type == "图片"){//可以直接打开了
+			do_External.openFile("data://big/"+getone.text)
+		}
+	if(getone.type =="目录"){//传目录路径到下一个界面
+				do_App.openPage({source:"source://view/index2.ui",
+					             data:getone.text,
+					             statusBarState:"transparent"
+			                     })
+			                   }
+	else if(getone.type =="未知"){
 				do_Notification.toast("未知文件");
 			}
 	    }//if
@@ -75,13 +74,53 @@ do_ListView_1.on("longTouch",function(index){
 	page.fire("show",{k1:"data://big/"+get.text,k2:get.text,k3:get.type,k4:get,k5:index});
 	
 });
+page.on("back",function(){
+	
+	
+	do_App.closePage();
+	
+})
+var newname="";
 page.on("close",function(data){
- lv_data.push({"text":data.kk2,"source":data.kk4,"type":data.kk3})//实质读取的时候还是读取的源文件
+	if(data.kk3=="文本"){
+	var a = data.kk2.split(".");
+	 newname = a[0]+"_copy."+a[1];
+	do_Storage.copyFile(data.kk1, "data://big/"+newname, function(data, e) {
+		//do_Notification.alert(data);
+	})
+	}//if
+	if(data.kk3=="图片"){
+		var a = data.kk2.split(".");
+		 newname = a[0]+"_copy."+a[1];
+		do_Storage.copyFile(data.kk1, "data://big/"+newname, function(data, e) {
+			//do_Notification.alert(data);
+		})
+		}//if
+	if(data.kk3=="目录"){
+		 newname = data.kk2+"_copy";
+		do_Storage.copy([data.kk1], "data://big/"+newname, function(data, e) {
+			//do_Notification.alert(data);
+	})
+	}//if
+
+ lv_data.push({"text":newname,"source":data.kk4,"type":data.kk3})
     do_ListData.removeAll();
 	do_ListData.addData(lv_data);
 	do_ListView_1.refreshItems();
 })  
 page.on("delete",function(data){
+	if(data.dk3=="目录"){
+	do_Storage.deleteFile(data.dk1, function(data, e) {
+				//do_Notification.alert(data);
+
+	})
+}
+	else if(data.dk3=="文本"){
+	do_Storage.deleteDir(data.dk1, function(data, e){
+				//do_Notification.alert(data);
+
+	})
+}
 	lv_data.splice(data.dk5,1)
 	do_ListData.removeAll();
 	do_ListData.addData(lv_data);
@@ -90,21 +129,22 @@ page.on("delete",function(data){
 	})//删除目录文件了
 })
 page.on("cut",function(data){
-	//do_Notification.alert(data.cdk3);
     if(data.cdk3=="目录"){
 	do_Storage.copy([data.cdk1],"data://cut/"+data.cdk2, function(data, e) {
 		})//do_Storage.copy
-     }//if
-	    else{
-	    do_Storage.copy([data.cdk1],"data://cut/", function(data, e) {
-			})//do_Storage.copy
-	      }//else
+}//if
+    else{
+    	do_Storage.copy([data.cdk1],"data://cut/", function(data, e) {
+    		do_Notification.alert(data);
+    	})
+}//else
 	lv_data.splice(data.cdk5,1)
 	do_ListData.removeAll();
 	do_ListData.addData(lv_data);
 	do_ListView_1.refreshItems();
 })//cut
 page.on("paste",function(data){
+	
 	lv_data.push({"text":data.pk2,"source":data.pk4.source,"type":data.pk3});
 	do_ListData.removeAll();
 	do_ListData.addData(lv_data);

@@ -27,18 +27,18 @@ var duixiang ={};
 	});
 do_ALayout_copy.on("touch",function(){
 	if(do_Label_1.text=="copy"){
-		do_Storage.copy([duixiang.k1],"data://copy/"+duixiang.k2, function(){
+		
 			do_Label_1.text="paste"
-	          })//duixiang.k1是原路径，
-	     }//把文件复制到另一个文件夹下面，实质读取的时候还是读取的源文件
+	        
+	     }
 		else{
 			do_Label_1.text="copy"
-			page.fire("close",{"kk2":duixiang.k2,"kk4":duixiang.k4.source,"kk3":duixiang.k3,})
+			page.fire("close",{"kk1":duixiang.k1,"kk2":duixiang.k2,"kk3":duixiang.k3,"kk4":duixiang.k4.source,})
 			do_ALayout_10.visible ="false";//关闭透明页面
 		 }
       })//do_ALayout_copy 点击文件复制按钮
 do_ALayout_delete.on("touch",function(){//点击删除按钮
-	  page.fire("delete",{"dk1":duixiang.k1,"dk5":duixiang.k5})
+	  page.fire("delete",{"dk1":duixiang.k1,"dk3":duixiang.k3,"dk5":duixiang.k5})
 	  do_ALayout_10.visible ="false";
 })
 do_ALayout_cut.on("touch",function(){//点击剪切按钮

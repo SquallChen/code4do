@@ -6,20 +6,21 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"bgColor":"FFFFFFFF",
+				"bgColor":"C0C0C0FF",
 				"textAlign":"center",
 				"width":"750",
+				"y":"40",
 				"fontSize":"40",
 				"id":"do_Label_1",
-				"text":"文件管理器",
+				"text":"文件管理",
 				"type":"do_Label",
 				"fontStyle":"bold",
-				"fontColor":"400040FF"
+				"fontColor":"000000FF"
 			},
 			{
 				"bgColor":"FFFFFFFF",
 				"width":"750",
-				"y":"80",
+				"y":"120",
 				"id":"do_ALayout_bg",
 				"type":"do_ALayout",
 				"views":[
@@ -33,6 +34,13 @@
 					}
 				],
 				"height":"1334"
+			},
+			{
+				"bgColor":"C0C0C0FF",
+				"width":"750",
+				"id":"do_Label_2",
+				"type":"do_Label",
+				"height":"40"
 			}
 		],
 		"height":"1334"

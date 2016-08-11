@@ -2,17 +2,18 @@
 	"RootView":{
 		"visible":"false",
 		"width":"750",
-		"y":"80",
+		"y":"90",
 		"id":"do_ALayout_10",
 		"type":"do_ALayout",
 		"views":[
 			{
 				"bgColor":"00000066",
 				"width":"750",
+				"y":"50",
 				"id":"do_ALayout_1",
 				"type":"do_ALayout",
 				"views":[],
-				"height":"1120"
+				"height":"1080"
 			},
 			{
 				"bgColor":"FFFFFFFF",
@@ -91,7 +92,7 @@
 					{
 						"x":"74",
 						"id":"do_ImageView_delete",
-						"source":"source://image/delete1.png",
+						"source":"source://image/delte.png",
 						"type":"do_ImageView"
 					}
 				],

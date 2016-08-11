@@ -15,8 +15,12 @@ app.on("loaded", function () {
 		
 	})
 
-	app.openPage("source://view/index.ui");
-
+	//app.openPage("source://view/index.ui");
+	app.openPage({source:"source://view/index.ui",
+        
+        statusBarState:"transparent"
+        });
+   
 
 
 });
