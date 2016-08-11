@@ -13,7 +13,7 @@ var select_bg = ui(rootview.add("select_bg", "source://view/select_bg.ui", 0, 0)
 
 var do_PainterView = ui("do_PainterView_1");
 var do_ALayout_clear = ui("do_ALayout_clear");
-var do_ImageView_undo = ui("do_ImageView_undo");
+
 
 var do_ALayout_black = ui("do_ALayout_black");
 var do_ALayout_blue = ui("do_ALayout_blue");
@@ -37,9 +37,19 @@ var do_ImageView_circle0 = ui("do_ImageView_circle0");
 var do_ImageView_circle1 = ui("do_ImageView_circle1");
 var do_ImageView_circle2 = ui("do_ImageView_circle2");
 
+var do_ALayout_circle0 = ui("do_ALayout_circle0");
+var do_ALayout_circle1 = ui("do_ALayout_circle1");
+var do_ALayout_circle2 = ui("do_ALayout_circle2");
+
+var do_ImageView_undo = ui("do_ImageView_undo");
 var do_ImageView_save = ui("do_ImageView_save");
-var do_ImageView_picture = ui("do_ImageView_picture");
 var do_ImageView_bg = ui("do_ImageView_bg");
+
+var do_ALayout_undo = ui("do_ALayout_undo")
+var do_ALayout_bg = ui("do_ALayout_bg")
+var do_ALayout_save = ui("do_ALayout_save")
+
+var do_ImageView_picture = ui("do_ImageView_picture");
 
 var canBack = false;
 page.on("back", function(){
@@ -169,15 +179,15 @@ page.on("select_color",function(data){
 })
 
 //字体粗细
-do_ImageView_circle0.on("touch",function(){
+do_ALayout_circle0.on("touch",function(){
 	brushWidth = 1;
-	do_PainterView.brushWidth = 1;
+	do_PainterView.brushWidth = brushWidth;
 	do_ImageView_circle0.source = "source://image/circle_1.png";
 	do_ImageView_circle1.source = "source://image/circle.png";
 	do_ImageView_circle2.source = "source://image/circle.png";
 })
 
-do_ImageView_circle1.on("touch",function(){
+do_ALayout_circle1.on("touch",function(){
 	brushWidth = 3;
 	do_PainterView.brushWidth = 3;
 	do_ImageView_circle0.source = "source://image/circle.png";
@@ -185,9 +195,9 @@ do_ImageView_circle1.on("touch",function(){
 	do_ImageView_circle2.source = "source://image/circle.png";
 })
 
-do_ImageView_circle2.on("touch",function(){
-	brushWidth = 5;
-	do_PainterView.brushWidth = 5;
+do_ALayout_circle2.on("touch",function(){
+	brushWidth = 8;
+	do_PainterView.brushWidth = 8;
 	do_ImageView_circle0.source = "source://image/circle.png";
 	do_ImageView_circle1.source = "source://image/circle.png";
 	do_ImageView_circle2.source = "source://image/circle_2.png";
@@ -198,7 +208,7 @@ do_ALayout_clear.on("touch",function(){
 })
 
 //回退操作
-do_ImageView_undo.on("touch",function(){
+do_ALayout_undo.on("touch",function(){
 	do_PainterView.undo();
 })
 
@@ -229,7 +239,7 @@ img_anima.scale({
 
 var myDate = new Date();
 //保存图片到手机
-do_ImageView_save.on("touch",function(){
+do_ALayout_save.on("touch",function(){
 	do_PainterView.saveAsImage({"format":"PNG"},function(data){
 		var img = data;
 		var mytime = globle.getTime();   //获取当前时间
@@ -246,6 +256,6 @@ do_ImageView_save.on("touch",function(){
 })
 
 //更换背景
-do_ImageView_bg.on("touch",function(){
+do_ALayout_bg.on("touch",function(){
 	select_bg.visible = true;
 })
