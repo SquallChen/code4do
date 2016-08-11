@@ -1,25 +1,16 @@
 {
 	"RootView":{
 		"visible":"false",
+		"bgColor":"00000066",
 		"width":"750",
-		"y":"90",
 		"id":"do_ALayout_10",
 		"type":"do_ALayout",
 		"views":[
 			{
-				"bgColor":"00000066",
-				"width":"750",
-				"y":"50",
-				"id":"do_ALayout_1",
-				"type":"do_ALayout",
-				"views":[],
-				"height":"1080"
-			},
-			{
 				"bgColor":"FFFFFFFF",
 				"width":"250",
 				"x":"250",
-				"y":"1120",
+				"y":"1070",
 				"id":"do_ALayout_cut",
 				"type":"do_ALayout",
 				"views":[
@@ -36,6 +27,7 @@
 					},
 					{
 						"x":"80",
+						"y":"10",
 						"id":"do_ImageView_cut",
 						"source":"source://image/cut.png",
 						"type":"do_ImageView"
@@ -46,7 +38,7 @@
 			{
 				"bgColor":"FFFFFFFF",
 				"width":"250",
-				"y":"1120",
+				"y":"1070",
 				"id":"do_ALayout_copy",
 				"type":"do_ALayout",
 				"views":[
@@ -63,6 +55,7 @@
 					},
 					{
 						"x":"68",
+						"y":"10",
 						"id":"do_ImageView_copy",
 						"source":"source://image/copy.png",
 						"type":"do_ImageView"
@@ -74,7 +67,7 @@
 				"bgColor":"FFFFFFFF",
 				"width":"250",
 				"x":"500",
-				"y":"1120",
+				"y":"1070",
 				"id":"do_ALayout_delete",
 				"type":"do_ALayout",
 				"views":[
@@ -91,6 +84,7 @@
 					},
 					{
 						"x":"74",
+						"y":"10",
 						"id":"do_ImageView_delete",
 						"source":"source://image/delte.png",
 						"type":"do_ImageView"
@@ -99,6 +93,6 @@
 				"height":"134"
 			}
 		],
-		"height":"1254"
+		"height":"1204"
 	}
 }
