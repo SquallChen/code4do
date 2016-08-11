@@ -1,0 +1,24 @@
+{
+	"RootView":{
+		"visible":"false",
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"id":"do_ALayout_root",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"F2F4F4FF",
+				"templates":"source://view/select_bg_cell.ui",
+				"width":"740",
+				"x":"5",
+				"y":"776",
+				"id":"do_GridView_bg",
+				"type":"do_GridView",
+				"numColumns":"4",
+				"height":"560"
+			}
+		],
+		"height":"1334"
+	}
+}
