@@ -4,7 +4,6 @@ var do_ALayout_root = ui("do_ALayout_root")
 var do_Label_content = ui("do_Label_content")
 var do_Notification = sm("do_Notification");
 
-
 //设置数据绑定的映射关系
 root.setMapping({
 	"do_Label_content.text":"text",

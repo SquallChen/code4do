@@ -8,6 +8,11 @@ var do_ImageView_size = ui("do_ImageView_size")
 var do_ImageView_model = ui("do_ImageView_model")
 var do_Global = sm("do_Global")
 
+var do_ALayout_back = ui("do_ALayout_back")
+
+var uitools = require("uitools");
+uitools.setPageCloseWay(do_ALayout_back)
+
 var sizeflg = true
 var modelflg = true
 

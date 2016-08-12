@@ -8,6 +8,12 @@ var do_Global = sm("do_Global")
 var do_SlideView = ui("do_SlideView")
 var do_ListData = mm("do_ListData")
 
+do_Page.supportPanClosePage({support:"true"})
+
+do_Page.on("back", function() { // 监听android 的返回按钮;
+	do_App.closePage();
+});
+
 var reader_data = []
 reader_data.push({template: 0})
 reader_data.push({template: 1})
