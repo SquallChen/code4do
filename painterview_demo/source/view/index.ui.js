@@ -238,7 +238,7 @@ var myDate = new Date();
 do_ALayout_save.on("touch",function(){
 	do_PainterView.saveAsImage({"format":"PNG"},function(data){
 		var img = data;
-		var mytime = globle.getTime();   //获取当前时间
+		var mytime = global.getTime();   //获取当前时间
 		storage.copyFile({"source":img,"target":"data://"+mytime+".jpg"}, function(data1, e) {
 			if(data1){
 				var img_source = "data://"+mytime+".jpg";
