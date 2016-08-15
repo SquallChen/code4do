@@ -246,16 +246,6 @@
 						]
 					},
 					{
-						"x":"680",
-						"width":"40",
-						"y":"43",
-						"id":"do_ImageView_8",
-						"source":"source://image/more.png",
-						"type":"do_ImageView",
-						"enabled":"true",
-						"height":"10"
-					},
-					{
 						"x":"210",
 						"width":"60",
 						"id":"do_ALayout_circle0",
@@ -309,57 +299,38 @@
 						]
 					},
 					{
-						"x":"465",
-						"width":"50",
-						"y":"-1",
+						"x":"570",
+						"width":"80",
 						"id":"do_ALayout_undo",
 						"type":"do_ALayout",
 						"views":[
 							{
-								"width":"40",
-								"x":"5",
-								"y":"35",
+								"width":"45",
+								"x":"20",
+								"y":"30",
 								"id":"do_ImageView_undo",
 								"source":"source://image/remove.png",
 								"type":"do_ImageView",
 								"enabled":"true",
-								"height":"30"
+								"height":"35"
 							}
 						]
 					},
 					{
-						"x":"535",
-						"width":"50",
-						"id":"do_ALayout_bg",
-						"type":"do_ALayout",
-						"views":[
-							{
-								"width":"40",
-								"x":"5",
-								"y":"35",
-								"id":"do_ImageView_bg",
-								"source":"source://image/change.png",
-								"type":"do_ImageView",
-								"enabled":"true",
-								"height":"30"
-							}
-						]
-					},
-					{
-						"x":"605",
-						"width":"50",
+						"x":"660",
+						"width":"80",
 						"id":"do_ALayout_save",
 						"type":"do_ALayout",
 						"views":[
 							{
-								"width":"40",
-								"x":"5",
-								"y":"35",
+								"width":"45",
+								"x":"20",
+								"y":"30",
 								"id":"do_ImageView_save",
 								"source":"source://image/save.png",
 								"type":"do_ImageView",
 								"enabled":"true",
-								"height":"30"
+								"height":"35"
 							}
 						]
 					}

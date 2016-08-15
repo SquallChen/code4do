@@ -5,11 +5,11 @@
 var nf = sm("do_Notification");
 var page = sm("do_Page");
 var storage = sm("do_Storage");
-var globle = sm("do_Global");
+var global = sm("do_Global");
 var album = sm("do_Album");
 var rootview = ui("$");
 var select_color = ui(rootview.add("select_color", "source://view/select_color.ui", 0, 0));
-var select_bg = ui(rootview.add("select_bg", "source://view/select_bg.ui", 0, 0));
+var start = ui(rootview.add("start", "source://view/start.ui", 0,0));
 
 var do_PainterView = ui("do_PainterView_1");
 var do_ALayout_clear = ui("do_ALayout_clear");
@@ -43,10 +43,8 @@ var do_ALayout_circle2 = ui("do_ALayout_circle2");
 
 var do_ImageView_undo = ui("do_ImageView_undo");
 var do_ImageView_save = ui("do_ImageView_save");
-var do_ImageView_bg = ui("do_ImageView_bg");
 
 var do_ALayout_undo = ui("do_ALayout_undo")
-var do_ALayout_bg = ui("do_ALayout_bg")
 var do_ALayout_save = ui("do_ALayout_save")
 
 var do_ImageView_picture = ui("do_ImageView_picture");
@@ -127,9 +125,7 @@ page.on("select_color1",function(data){
 	select_color.visible = false;
 })
 
-page.on("select_bg1",function(data){
-	select_bg.visible = false;
-})
+
 //选择颜色
 page.on("select_color",function(data){
 	if(data.bgColor == "000000FF"){
@@ -255,7 +251,7 @@ do_ALayout_save.on("touch",function(){
 	})
 })
 
-//更换背景
-do_ALayout_bg.on("touch",function(){
-	select_bg.visible = true;
+//显示引导页
+page.on("start",function(){
+	start.visible = false;
 })
