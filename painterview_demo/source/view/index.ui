@@ -194,6 +194,7 @@
 							{
 								"border":"00000000,1,[10,10,0,0]",
 								"visible":"false",
+								"bgColor":"00FF00FF",
 								"x":"10",
 								"width":"25",
 								"id":"do_Label_more_1",

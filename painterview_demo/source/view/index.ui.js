@@ -123,6 +123,8 @@ action_btn(color_data);
 
 page.on("select_color1",function(data){
 	select_color.visible = false;
+	do_Label_more0.visible = false;
+	do_Label_more_1.visible = true;
 })
 
 
