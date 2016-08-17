@@ -72,26 +72,31 @@ var brushWidth = 3;
 var action_alys = [ui("do_ALayout_black"), ui("do_ALayout_blue"), ui("do_ALayout_red"), ui("do_ALayout_more")];
 var action_imgs = [ui("do_Button_black"), ui("do_Button_blue"), ui("do_Button_red"), ui("do_Label_more0")];
 var action_imgs_1 = [ui("do_Button_black_1"), ui("do_Button_blue_1"), ui("do_Button_red_1"), ui("do_Label_more_1")];
+var action_color = ["000000FF","0000FFFF","FF0000FF","00FF00FF"]
 var color_data = [ 
 	          	{
 	          		action_alys:do_ALayout_black,
 	          		action_imgs:do_Button_black,
-	          		action_imgs_1:do_Button_black_1
+	          		action_imgs_1:do_Button_black_1,
+	          		action_color:"000000FF"
 	          	}, 
 	          	{
 	          		action_alys:do_ALayout_blue,
 	          		action_imgs:do_Button_blue,
-	          		action_imgs_1:do_Button_blue_1
+	          		action_imgs_1:do_Button_blue_1,
+	          		action_color:"0000FFFF"
 	          	}, 
 	          	{
 	          		action_alys:do_ALayout_red,
 	          		action_imgs:do_Button_red,
-	          		action_imgs_1:do_Button_red_1
+	          		action_imgs_1:do_Button_red_1,
+	          		action_color:"FF0000FF"
 	          	},
 	          	{
 	          		action_alys:do_ALayout_more,
 	          		action_imgs:do_Label_more0,
-	          		action_imgs_1:do_Label_more_1
+	          		action_imgs_1:do_Label_more_1,
+	          		action_color:"00FF00FF"
 	          	}
 	      ];
 	
@@ -103,18 +108,18 @@ var action_btn = function(obj_data){
 				if (_index == j && _index != 3){
 					obj_data[j].action_imgs.visible = false;
 					obj_data[j].action_imgs_1.visible = true;
+					do_PainterView.brushColor = obj_data[j].action_color;
 				}else if (_index == j && _index == 3){
 					obj_data[j].action_imgs.visible = false;
 					obj_data[j].action_imgs_1.visible = true;
 					select_color.visible = true;
-				}
-				else{
+					do_PainterView.brushColor = obj_data[j].action_color;
+				}else{
 					obj_data[j].action_imgs.visible = true;
 					obj_data[j].action_imgs_1.visible = false;
 				}
 			}
 			do_Label_more0.bgColor = do_Label_more.bgColor;
-			do_PainterView.brushColor = "0000FFFF";
 			do_PainterView.brushWidth = brushWidth
 		});
 	}
