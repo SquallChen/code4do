@@ -44,7 +44,7 @@
 						"height":"25"
 					},
 					{
-						"x":"521",
+						"x":"540",
 						"width":"185",
 						"y":"90",
 						"id":"action_iFlyVoice",
@@ -62,14 +62,31 @@
 								"height":"56"
 							},
 							{
+								"width":"40",
 								"x":"139",
-								"width":"44",
-								"y":"-3",
-								"id":"do_ImageView_2",
-								"source":"source://image/weather_icoin/vidio.png",
+								"y":"8",
+								"id":"pngsView",
+								"type":"do_FrameAnimationView",
+								"height":"40"
+							},
+							{
+								"width":"40",
+								"x":"139",
+								"y":"8",
+								"id":"anim",
+								"type":"do_ALayout",
+								"views":[],
+								"height":"40"
+							},
+							{
+								"width":"40",
+								"x":"139",
+								"y":"8",
+								"id":"playpng",
+								"source":"source://image/broad.png",
 								"type":"do_ImageView",
 								"enabled":"true",
-								"height":"56"
+								"height":"40"
 							}
 						],
 						"height":"56"
@@ -202,21 +219,26 @@
 				"height":"130"
 			},
 			{
-				"width":"748",
-				"y":"120",
-				"id":"do_ALayout_could",
-				"type":"do_ALayout",
-				"views":[],
-				"height":"260"
-			},
-			{
-				"width":"205",
+				"width":"170",
 				"x":"512",
 				"y":"744",
 				"id":"do_ImageView_person",
-				"source":"source://no_friends.png",
+				"source":"source://image/mm.png",
 				"type":"do_ImageView",
 				"height":"292"
+			},
+			{
+				"width":"750",
+				"id":"do_ALayout_could",
+				"type":"do_ALayout",
+				"height":"300"
+			},
+			{
+				"width":"750",
+				"x":"-750",
+				"id":"do_ALayout_could1",
+				"type":"do_ALayout",
+				"height":"300"
 			}
 		],
 		"height":"1334"

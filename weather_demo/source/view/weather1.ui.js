@@ -29,26 +29,29 @@ var toolbar = require("toolbar"),
 	weather_temperature = ui("weather_temperature"),
 	weather_temperature_0 = ui("weather_temperature_0"),
 	weather_temperature_1 = ui("weather_temperature_1"),
-	do_ALayout_could = ui("do_ALayout_could"),
 	do_ImageView_icoin_0 = ui("do_ImageView_icoin_0"),
-	do_ImageView_icoin_1 = ui("do_ImageView_icoin_1")
-
+	do_ImageView_icoin_1 = ui("do_ImageView_icoin_1"),
+	do_ALayout_could = ui("do_ALayout_could"),
+	do_ALayout_could1 = ui("do_ALayout_could1"),
+	al_anim = ui("anim"),
+	img_playpng = ui("playpng"),
+    pngsView = ui("pngsView");
 //定义一个2秒的动画过程：缩放比例1-》1.2，图片位置：(0,0)-》(-75, -133)
 var img_anima = mm("do_Animation");
 img_anima.fillAfter = true;
 img_anima.scale({
     delay: 0,
-    duration: 5000,
+    duration: 10000,
     curve: "Linear",
     autoReverse: false,
     scaleFromX: 1,
     scaleFromY: 1,
-    scaleToX: 1.2,
-    scaleToY: 1.2
+    scaleToX: 1.5,
+    scaleToY: 1.5
 }, "start1");
 img_anima.transfer({
-    delay: 1000,
-    duration: 10000,
+    delay: -100,
+    duration: 20000,
     curve: "Linear",
     autoReverse: false,
     repeatCount:-1,
@@ -57,6 +60,8 @@ img_anima.transfer({
     toX: 750,
     toY: 0
 }, "start2");
+
+
 var temperature1 = "";
 var temperature2 = "";
 var status1 = "";
@@ -77,32 +82,41 @@ page.on("loaded",function(){
 						weather_status0.text = d.body[key].status1;
 						weather_temperature.text = d.body[key].temperature1+"℃";
 						if(d.body[key].status1 == "多云"){
-							do_ImageView_icoin_0.source = "source://image/weather_bg/blur_bg_na.jpg"
+							do_ImageView_icoin_0.source = "source://image/weather_icoin/w1.png"
 							do_Alayout_Root.bgImage = "source://image/weather_bg/bg_sunny_day.jpg"
-							do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
+							do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_middle.png"
+							do_ALayout_could1.bgImage = "source://image/weather_bg/fog_day_fog_middle.png"
 							do_ALayout_could.animate(img_anima)
+							do_ALayout_could1.animate(img_anima)
 						}else if(d.body[key].status1 == "晴"){
 							do_ImageView_icoin_0.source = "source://image/weather_icoin/w0.png"
 							do_Alayout_Root.bgImage = "source://image/weather_bg/bg_sunny_day.jpg"
 							do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
+							do_ALayout_could1.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
 							do_ALayout_could.animate(img_anima)
+							do_ALayout_could1.animate(img_anima)
 						}else if(d.body[key].status1.indexOf("雨")!=-1){
+							nf.alert(d.body[key].status1)
 							do_ImageView_icoin_0.source = "source://image/weather_icoin/w7.png"
-							do_Alayout_Root.bgImage = "source://image/weather_bg/blur_bg_fog_and_haze.jpg"
+							do_Alayout_Root.bgImage = "source://image/weather_bg/bg.jpg"
 							do_ALayout_could.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
+							do_ALayout_could1.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
 							do_ALayout_could.animate(img_anima)
+							do_ALayout_could1.animate(img_anima)
 						}else{
 							do_ImageView_icoin_0.source = "source://image/weather_icoin/w0.png"
-							do_Alayout_Root.bgImage = "source://image/weather_bg/blur_bg_fog_and_haze.jpg"
+							do_Alayout_Root.bgImage = "source://image/weather_bg/bg.jpg"
 							do_ALayout_could.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
+							do_ALayout_could1.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
 							do_ALayout_could.animate(img_anima)
+							do_ALayout_could1.animate(img_anima)
 						}
 						weather_temperature_0.text = d.body[key].temperature1+"/"+d.body[key].temperature2+"℃";
 					}
 					if (key == "1"){
 						weather_1.text = d.body[key].status1;
 						if(d.body[key].status1 == "多云"){
-							do_ImageView_icoin_1.source = "source://image/weather_icoin/w13.png"
+							do_ImageView_icoin_1.source = "source://image/weather_icoin/w1.png"
 						}else if(d.body[key].status1 == "晴"){
 							do_ImageView_icoin_1.source = "source://image/weather_icoin/w0.png"
 						}else{
@@ -116,13 +130,33 @@ page.on("loaded",function(){
 })
 
 
-action_iFlyVoice.on("touch",function(){
-	var text1 = "现在为您播报，今天白天到夜间," + status1 +",温度"+ temperature2+"到"+temperature1+"摄氏度";
-	iFlyVoice.speak({text:text1})
-})
+//构建一组连续的图片，一共180张png图片
+var pngs = [];
+for (var i = 1; i <= 3; i++) {
+	var a = {};
+	// 设定每个图片播放的间隔都是50毫秒
+	a.duration = 300;
+	a.path = "source://image/broadcasting" + i + ".png";
+	pngs.push(a);
+}
 
-
-
-
-
-
+var flag = 1;
+al_anim.on("touch", function(d, e) {
+	// 重复播放这组图片形成动画
+	if(flag == 1)
+	{
+		img_playpng.visible = false;
+		pngsView.visible = true;
+		pngsView.startImages(pngs, -1);
+		flag = 2;
+		var text1 = "现在为您播报，今天白天到夜间," + status1 +",温度"+ temperature2+"到"+temperature1+"摄氏度";
+		iFlyVoice.speak({text:text1})
+	}else{
+		img_playpng.visible = true;
+		pngsView.visible = false;
+		pngsView.stop();
+		flag = 1;
+		iFlyVoice.stop();
+	}
+	
+});

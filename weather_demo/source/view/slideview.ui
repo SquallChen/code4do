@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"looping":"true",
+				"templates":"source://view/slideview_cell.ui",
+				"width":"750",
+				"id":"do_SlideView_cloud",
+				"type":"do_SlideView",
+				"height":"260"
+			}
+		],
+		"height":"1334"
+	}
+}

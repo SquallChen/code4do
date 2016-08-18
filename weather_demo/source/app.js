@@ -8,8 +8,6 @@ var baidulocation = d1.sm("do_BaiduLocation");
 var nf = d1.sm("do_Notification")
 var storage = d1.sm("do_Storage");
 
-
-
 app.on("loaded", function () {
 	baidulocation.start("high", "true");
 	baidulocation.locate("high", function(data, e) {
