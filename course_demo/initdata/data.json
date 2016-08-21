@@ -1,0 +1,233 @@
+{
+    "allCourseList": [
+        {
+            "courseWeek": "周三",
+            "courseDate": "05-11",
+            "courseOneDayList": [
+                [
+                    {
+                        "courseName": "中国舞一级",
+                        "courseTime": "8:00~10:00"
+                    },
+                    {
+                        "courseName": "中国舞二级",
+                        "courseTime": "10:00~11:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞三级",
+                        "courseTime": "14:00~16:00"
+                    },
+                    {
+                        "courseName": "中国舞四级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "19:00~20:00"
+                    }
+                ]
+            ]
+        },
+        {
+            "courseWeek": "周四",
+            "courseDate": "05-12",
+            "courseOneDayList": [
+                [
+                    {
+                        "courseName": "中国舞一级",
+                        "courseTime": "8:00~10:00"
+                    },
+                    {
+                        "courseName": "中国舞二级",
+                        "courseTime": "10:00~11:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞三级",
+                        "courseTime": "14:00~16:00"
+                    },
+                    {
+                        "courseName": "中国舞四级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                []
+            ]
+        },
+        {
+            "courseWeek": "周五",
+            "courseDate": "05-13",
+            "courseOneDayList": [
+                [
+                    {
+                        "courseName": "中国舞一级",
+                        "courseTime": "8:00~10:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞四级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "19:00~20:00"
+                    }
+                ]
+            ]
+        },
+        {
+            "courseWeek": "周六",
+            "courseDate": "05-14",
+            "courseOneDayList": [
+                [
+                    {
+                        "courseName": "中国舞一级",
+                        "courseTime": "8:00~10:00"
+                    },
+                    {
+                        "courseName": "中国舞二级",
+                        "courseTime": "10:00~11:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "19:00~20:00"
+                    }
+                ]
+            ]
+        },
+        {
+            "courseWeek": "周日",
+            "courseDate": "05-15",
+            "courseOneDayList": [
+                [
+                    {
+                        "courseName": "中国舞一级",
+                        "courseTime": "8:00~10:00"
+                    },
+                    {
+                        "courseName": "中国舞二级",
+                        "courseTime": "10:00~11:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "19:00~20:00"
+                    }
+                ]
+            ]
+        },
+        {
+            "courseWeek": "周一",
+            "courseDate": "05-16",
+            "courseOneDayList": [
+                [
+                    {
+                        "courseName": "中国舞一级",
+                        "courseTime": "8:00~10:00"
+                    },
+                    {
+                        "courseName": "中国舞二级",
+                        "courseTime": "10:00~11:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞三级",
+                        "courseTime": "14:00~16:00"
+                    },
+                    {
+                        "courseName": "中国舞四级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                []
+            ]
+        },
+        {
+            "courseWeek": "周二",
+            "courseDate": "05-17",
+            "courseOneDayList": [
+                [],
+                [
+                    {
+                        "courseName": "中国舞三级",
+                        "courseTime": "14:00~16:00"
+                    },
+                    {
+                        "courseName": "中国舞四级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "16:00~18:00"
+                    },
+                    {
+                        "courseName": "中国舞六级",
+                        "courseTime": "16:00~18:00"
+                    }
+                ],
+                [
+                    {
+                        "courseName": "中国舞五级",
+                        "courseTime": "19:00~20:00"
+                    }
+                ]
+            ]
+        }
+    ]
+}
