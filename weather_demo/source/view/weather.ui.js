@@ -11,9 +11,6 @@ var toolbar = require("toolbar"),
     baidulocation = sm("do_BaiduLocation"),
     rootview = ui("$"),
     do_HashData = mm("do_HashData")
-//    city_name = ui("city_name");
-//toolbar.app_back();
-//
 var storage = sm("do_Storage");
 
 //

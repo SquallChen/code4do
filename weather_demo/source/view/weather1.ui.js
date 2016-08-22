@@ -158,5 +158,4 @@ al_anim.on("touch", function(d, e) {
 		flag = 1;
 		iFlyVoice.stop();
 	}
-	
 });
