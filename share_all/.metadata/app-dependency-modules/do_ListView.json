@@ -270,6 +270,15 @@
           "Description": "缺省是false表示直接跳转到某一行，没有任何平滑过渡的效果。为true表示平滑到那一行；其中为false的时候是不会触发scroll事件的，为true会触发；windows不支持该效果"
         }
       ]
+    },
+    {
+      "ID": "showHeader",
+      "Name": "显示HeaderView",
+      "Description": "当设置isHeaderVisible=true，自动显示HeaderView，并触发pull事件",
+      "ReturnType": "",
+      "ReturnType_JavaScript": "",
+      "ReturnDesc": "",
+      "Paras": []
     }
   ],
   "asyncMethodes": []
