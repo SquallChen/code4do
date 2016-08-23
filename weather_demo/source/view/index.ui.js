@@ -10,29 +10,46 @@ var toolbar = require("toolbar"),
     global = sm("do_Global"),
     nf = sm("do_Notification"),
     baidulocation = sm("do_BaiduLocation"),
+    storage = sm("do_Storage"),
     rootview = ui("$"),
+    device = sm("do_Device"),
+    external = sm("do_External"),
     data = mm("do_HashData");
+//ios手势关闭页面
+page.supportPanClosePage({support:"true",animationType:"push_r2l_1"});
 var start = ui(rootview.add("start", "source://view/start.ui", 0, 0));
 
 
 var VerticalSlideView = ui("do_VerticalSlideView_1");
-//添加模板数据
-var data1 = [
-    {template:0},
-    {template:1}
-    ];
- 
-//根据ID获取VerticalSlideVie实例对象；
 var VerticalSlideView = ui("do_VerticalSlideView_1");
- 
-//创建一个ListData集合对象
 var listdata = mm("do_ListData");
-//绑定listdata视图模板数据
-listdata.addData(data1);
-//给SlideView绑定一个listData；
-VerticalSlideView.bindItems(listdata);
-//刷新数据，此方法只有在listData数据发生变化时需要调用；
-VerticalSlideView.refreshItems();
+
+device.getGPSInfo(function(data,e){
+	if(data.state == 1){
+		baidulocation.start("high", "true");
+		baidulocation.locate("high", function(data, e) {
+			if(data){
+				flag = true;
+				var latitude = data.latitude;
+				var longitude = data.longitude;
+				baidulocation.reverseGeoCode(data.latitude,data.longitude, function(data2, e) {
+					var data1 = [
+					          {template:0,city:data2},
+					          {template:1,city:data2}
+					    ];
+					 listdata.addData(data1);
+					 VerticalSlideView.bindItems(listdata);
+					 VerticalSlideView.refreshItems();
+				})
+			}
+		})
+	}else{
+		nf.alert("请检查手机是否开启定位功能",function(data){
+			external.openSystemSetting("GPS")
+		});
+	}
+})
+
 
 var canBack = false;
 page.on("back", function(){
@@ -52,10 +69,6 @@ delay3.on("tick", function(){
     this.stop();
     canBack = false;
 });
-
-//ios手势关闭页面
-page.supportPanClosePage({support:"true",animationType:"push_r2l_1"});
-
 
 start.visible = true;
 page.on("COLSE",function(){

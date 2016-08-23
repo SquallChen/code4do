@@ -1,22 +1,3 @@
-/**
- * @author louhyi
- * @explanation 工具箱
- * button_change--实现一列按钮，点击切换效果用与index_2页面的页底
- * app_back--点击返回和物理返回事件
- * http_get--包含票据的get请求
- * http_post--包含票据的post请求
- * http_download--下载
- * tab_view--制作tabview控件
- * msg_tips--获取未读消息条数，并展示
- * login_http_post--登录接口的http请求*
- * url_distribute--根据是否登录打开不同页面
- * format_time--将时间戳的字符串格式化出年、月、日、时、分、秒
- * test_phone_number--手机号码正则验证
- * test_idcard--身份证号码正则验证
- * test_username--用户名验证正则验证
- * get_verificationcode--获得验证码
- * http_get_usually--不包含票据的get请求
- *************************************************************************************/
 var deviceone = require("deviceone");
 var my_touch = require("my_touch");
 var URL = require("url");

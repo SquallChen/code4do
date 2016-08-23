@@ -13,6 +13,10 @@ var toolbar = require("toolbar"),
     do_HashData = mm("do_HashData")
 var storage = sm("do_Storage");
 
+rootview.on("dataRefreshed",function(){
+	 type = rootview.tag;
+})
+
 //
 /*生成最近5天的天气信息*/
 function weather_five(data) {
@@ -79,14 +83,19 @@ rootview.setMapping({
     "gm_l0.text": "gm_l0",
     "zwx_l0.text": "zwx_l0",
     "yd_l0.text": "yd_l0",
-    "ssd_l0.text": "ssd_l0"
+    "ssd_l0.text": "ssd_l0",
+    "tag": "city"   
 });
 
 
-storage.readFile("data://city.json",function(data,e){
-	toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data.city.substring(0, data.city.length-1), TODAY: "0", DAYS: "5"}, "true", function (d) {
+var city1 = {};
+rootview.on("dataRefreshed", function(){
+	city1 = rootview.tag;
+	var data = JSON.parse(city1)
+	toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data.city.substring(0, data.city.length-1), TODAY: "0", DAYS: "5"}, "false", function (d) {
 		do_HashData.addData(weather_five(d.body));
 	    rootview.bindData(do_HashData);
 	    rootview.refreshData();
 	});
 })
+

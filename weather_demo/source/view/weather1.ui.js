@@ -65,70 +65,74 @@ img_anima.transfer({
 var temperature1 = "";
 var temperature2 = "";
 var status1 = "";
-
 var new_city = ""
-page.on("loaded",function(){
-	storage.readFile("data://city.json",function(data,e){
-		city_name.text = data.district;
-		city_streetname.text = data.streetName;
-		new_city = data.city;
-		toolbar.http_post(URL.url.WeatherFive, {CITYNAME: new_city.substring(0, new_city.length-1), TODAY: "0", DAYS: "2"}, "true", function (d) {
-			for (var key in d.body) {
-					if (key == "0") {
-						weather_0.text = d.body[key].status1;
-						temperature1 = d.body[key].temperature1;
-						temperature2 = d.body[key].temperature2;
-						status1 = d.body[key].status1;
-						weather_status0.text = d.body[key].status1;
-						weather_temperature.text = d.body[key].temperature1+"℃";
-						if(d.body[key].status1 == "多云"){
-							do_ImageView_icoin_0.source = "source://image/weather_icoin/w1.png"
-							do_Alayout_Root.bgImage = "source://image/weather_bg/bg_sunny_day.jpg"
-							do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_middle.png"
-							do_ALayout_could1.bgImage = "source://image/weather_bg/fog_day_fog_middle.png"
-							do_ALayout_could.animate(img_anima)
-							do_ALayout_could1.animate(img_anima)
-						}else if(d.body[key].status1 == "晴"){
-							do_ImageView_icoin_0.source = "source://image/weather_icoin/w0.png"
-							do_Alayout_Root.bgImage = "source://image/weather_bg/bg_sunny_day.jpg"
-							do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
-							do_ALayout_could1.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
-							do_ALayout_could.animate(img_anima)
-							do_ALayout_could1.animate(img_anima)
-						}else if(d.body[key].status1.indexOf("雨")!=-1){
-							nf.alert(d.body[key].status1)
-							do_ImageView_icoin_0.source = "source://image/weather_icoin/w7.png"
-							do_Alayout_Root.bgImage = "source://image/weather_bg/bg.jpg"
-							do_ALayout_could.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
-							do_ALayout_could1.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
-							do_ALayout_could.animate(img_anima)
-							do_ALayout_could1.animate(img_anima)
-						}else{
-							do_ImageView_icoin_0.source = "source://image/weather_icoin/w0.png"
-							do_Alayout_Root.bgImage = "source://image/weather_bg/bg.jpg"
-							do_ALayout_could.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
-							do_ALayout_could1.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
-							do_ALayout_could.animate(img_anima)
-							do_ALayout_could1.animate(img_anima)
-						}
-						weather_temperature_0.text = d.body[key].temperature1+"/"+d.body[key].temperature2+"℃";
-					}
-					if (key == "1"){
-						weather_1.text = d.body[key].status1;
-						if(d.body[key].status1 == "多云"){
-							do_ImageView_icoin_1.source = "source://image/weather_icoin/w1.png"
-						}else if(d.body[key].status1 == "晴"){
-							do_ImageView_icoin_1.source = "source://image/weather_icoin/w0.png"
-						}else{
-							do_ImageView_icoin_1.source = "source://image/weather_icoin/w7.png"
-						}
-						weather_temperature_1.text = d.body[key].temperature1+"/"+d.body[key].temperature2+"℃";
-					}
-			}
-		});
-	})
-})
+	
+rootview.setMapping({
+    "tag": "city"    
+});	
 
+var city1 = {};
+rootview.on("dataRefreshed", function(){
+	city1 = rootview.tag;
+	var city = JSON.parse(city1)
+	city_name.text = city.district;
+	city_streetname.text = city.streetName;
+	new_city = city.city;
+	toolbar.http_post(URL.url.WeatherFive, {CITYNAME: new_city.substring(0, new_city.length-1), TODAY: "0", DAYS: "2"}, "true", function (d) {
+		for (var key in d.body) {
+				if (key == "0") {
+					weather_0.text = d.body[key].status1;
+					temperature1 = d.body[key].temperature1;
+					temperature2 = d.body[key].temperature2;
+					status1 = d.body[key].status1;
+					weather_status0.text = d.body[key].status1;
+					weather_temperature.text = d.body[key].temperature1+"℃";
+					if(d.body[key].status1 == "多云"){
+						do_ImageView_icoin_0.source = "source://image/weather_icoin/w1.png"
+						do_Alayout_Root.bgImage = "source://image/weather_bg/bg_sunny_day.jpg"
+						do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_middle.png"
+						do_ALayout_could1.bgImage = "source://image/weather_bg/fog_day_fog_middle.png"
+						do_ALayout_could.animate(img_anima)
+						do_ALayout_could1.animate(img_anima)
+					}else if(d.body[key].status1 == "晴"){
+						do_ImageView_icoin_0.source = "source://image/weather_icoin/w0.png"
+						do_Alayout_Root.bgImage = "source://image/weather_bg/bg_sunny_day.jpg"
+						do_ALayout_could.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
+						do_ALayout_could1.bgImage = "source://image/weather_bg/fog_day_fog_bottom.png"
+						do_ALayout_could.animate(img_anima)
+						do_ALayout_could1.animate(img_anima)
+					}else if(d.body[key].status1.indexOf("雨")!=-1){
+						do_ImageView_icoin_0.source = "source://image/weather_icoin/w7.png"
+						do_Alayout_Root.bgImage = "source://image/weather_bg/bg.jpg"
+						do_ALayout_could.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
+						do_ALayout_could1.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
+						do_ALayout_could.animate(img_anima)
+						do_ALayout_could1.animate(img_anima)
+					}else{
+						do_ImageView_icoin_0.source = "source://image/weather_icoin/w0.png"
+						do_Alayout_Root.bgImage = "source://image/weather_bg/bg.jpg"
+						do_ALayout_could.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
+						do_ALayout_could1.bgImage = "source://image/weather_bg/moderate_rain_cloud1.png"
+						do_ALayout_could.animate(img_anima)
+						do_ALayout_could1.animate(img_anima)
+					}
+					weather_temperature_0.text = d.body[key].temperature1+"/"+d.body[key].temperature2+"℃";
+				}
+				if (key == "1"){
+					weather_1.text = d.body[key].status1;
+					if(d.body[key].status1 == "多云"){
+						do_ImageView_icoin_1.source = "source://image/weather_icoin/w1.png"
+					}else if(d.body[key].status1 == "晴"){
+						do_ImageView_icoin_1.source = "source://image/weather_icoin/w0.png"
+					}else{
+						do_ImageView_icoin_1.source = "source://image/weather_icoin/w7.png"
+					}
+					weather_temperature_1.text = d.body[key].temperature1+"/"+d.body[key].temperature2+"℃";
+				}
+		}
+	});
+})    
+	    
 
 //构建一组连续的图片，一共180张png图片
 var pngs = [];

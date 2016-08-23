@@ -9,13 +9,5 @@ var nf = d1.sm("do_Notification")
 var storage = d1.sm("do_Storage");
 
 app.on("loaded", function () {
-	baidulocation.start("high", "true");
-	baidulocation.locate("high", function(data, e) {
-		var latitude = data.latitude;
-		var longitude = data.longitude;
-		baidulocation.reverseGeoCode(data.latitude,data.longitude, function(data1, e) {
-			storage.writeFile("data://city.json",data1);
-			app.openPage("source://view/index.ui");
-		})
-	})
+	app.openPage("source://view/index.ui");
 });
