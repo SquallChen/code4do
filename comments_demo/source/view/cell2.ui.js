@@ -61,3 +61,22 @@ work_imgs.forEach(function(v, k){
         page.fire("imgs-listen", {s: JSON.parse(rootview.tag), i: e.data.index})
     })
 });
+
+//评论
+actionTips.on("touch", function(){
+    page.fire("comment-listen", {id: this.tag});
+});
+
+//点赞
+var isDz_flg = true
+var do_ALayout_dz = ui("do_ALayout_dz")
+var do_ImageView_dz = ui("do_ImageView_dz")
+do_ALayout_dz.on("touch", function(){
+	if(isDz_flg){
+		do_ImageView_dz.source = "source://image/dzs_h.png"
+		isDz_flg =false 
+	}else {
+		do_ImageView_dz.source = "source://image/dzs.png"
+		isDz_flg =true
+	}
+});

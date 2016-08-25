@@ -188,10 +188,9 @@
 								"height":"70"
 							},
 							{
-								"visible":"false",
 								"width":"70",
-								"x":"440",
-								"id":"al_dz",
+								"x":"450",
+								"id":"do_ALayout_dz",
 								"type":"do_ALayout",
 								"views":[
 									{
@@ -199,7 +198,7 @@
 										"x":"18",
 										"scale":"fillxory",
 										"y":"20",
-										"id":"do_ImageView_1",
+										"id":"do_ImageView_dz",
 										"source":"source://image/dzs.png",
 										"type":"do_ImageView",
 										"height":"30"
