@@ -1,0 +1,31 @@
+{
+	"RootView":{
+		"bgColor":"FFFFFFFF",
+		"width":"-1",
+		"type":"do_LinearLayout",
+		"views":[
+			{
+				"border":"FFFFFFFF,0,[0,0,0,0]",
+				"margin":"10,5,10,10",
+				"bgColor":"FFFFFFFF",
+				"textAlign":"right",
+				"width":"-1",
+				"x":"10",
+				"fontSize":"35",
+				"id":"do_Label_2",
+				"type":"do_Label",
+				"height":"60"
+			},
+			{
+				"margin":"27,10,20,5",
+				"width":"18",
+				"x":"19",
+				"id":"do_ImageView_1",
+				"source":"source://image/right3.png",
+				"type":"do_ImageView",
+				"height":"30"
+			}
+		],
+		"direction":"horizontal"
+	}
+}

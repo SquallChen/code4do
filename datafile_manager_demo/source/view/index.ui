@@ -6,41 +6,62 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"bgColor":"C0C0C0FF",
-				"textAlign":"center",
 				"width":"750",
-				"y":"40",
-				"fontSize":"40",
-				"id":"do_Label_1",
-				"text":"文件管理",
-				"type":"do_Label",
-				"fontStyle":"bold",
-				"fontColor":"000000FF"
-			},
-			{
-				"bgColor":"FFFFFFFF",
-				"width":"750",
-				"y":"120",
-				"id":"do_ALayout_bg",
+				"id":"do_ALayout_2",
 				"type":"do_ALayout",
 				"views":[
 					{
-						"bgColor":"FFFFFFFF",
-						"templates":"source://view/listcell.ui",
+						"bgColor":"A7CCDAFF",
 						"width":"750",
-						"id":"do_ListView_1",
-						"type":"do_ListView",
-						"height":"1254"
+						"id":"do_Label_1",
+						"type":"do_Label",
+						"height":"40"
+					},
+					{
+						"bgColor":"A7CCDAFF",
+						"textAlign":"center",
+						"width":"750",
+						"y":"40",
+						"fontSize":"40",
+						"id":"do_Label_2",
+						"text":"最新版文件管理",
+						"type":"do_Label",
+						"fontStyle":"bold",
+						"height":"90"
 					}
 				],
-				"height":"1334"
+				"height":"130"
 			},
 			{
-				"bgColor":"C0C0C0FF",
 				"width":"750",
-				"id":"do_Label_2",
-				"type":"do_Label",
-				"height":"40"
+				"y":"130",
+				"id":"do_ALayout_3",
+				"type":"do_ALayout",
+				"views":[
+					{
+						"templates":"source://view/cell1.ui",
+						"width":"750",
+						"y":"80",
+						"id":"do_ListView_1",
+						"type":"do_ListView",
+						"height":"1120"
+					},
+					{
+						"bgColor":"FFFFFFFF",
+						"width":"750",
+						"id":"do_ALayout_4",
+						"type":"do_ALayout",
+						"views":[
+							{
+								"templates":"source://view/gridcell.ui",
+								"width":"750",
+								"id":"do_SegmentView_1",
+								"type":"do_SegmentView"
+							}
+						]
+					}
+				],
+				"height":"1204"
 			}
 		],
 		"height":"1334"

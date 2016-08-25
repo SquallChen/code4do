@@ -17,20 +17,23 @@
 					{
 						"bgColor":"FFFFFFFF",
 						"textAlign":"center",
-						"x":"81",
-						"y":"85",
+						"x":"93",
+						"width":"64",
+						"y":"90",
 						"fontSize":"30",
 						"id":"do_Label_2",
-						"text":"cut",
+						"text":"剪切",
 						"type":"do_Label",
-						"height":"45"
+						"height":"40"
 					},
 					{
-						"x":"80",
-						"y":"10",
+						"x":"93",
+						"width":"64",
+						"y":"20",
 						"id":"do_ImageView_cut",
 						"source":"source://image/cut.png",
-						"type":"do_ImageView"
+						"type":"do_ImageView",
+						"height":"64"
 					}
 				],
 				"height":"134"
@@ -45,20 +48,23 @@
 					{
 						"bgColor":"FFFFFFFF",
 						"textAlign":"center",
-						"x":"68",
-						"y":"85",
+						"x":"93",
+						"width":"64",
+						"y":"90",
 						"fontSize":"30",
 						"id":"do_Label_1",
-						"text":"copy",
+						"text":"复制",
 						"type":"do_Label",
-						"height":"45"
+						"height":"40"
 					},
 					{
-						"x":"68",
-						"y":"10",
+						"x":"93",
+						"width":"64",
+						"y":"20",
 						"id":"do_ImageView_copy",
 						"source":"source://image/copy.png",
-						"type":"do_ImageView"
+						"type":"do_ImageView",
+						"height":"64"
 					}
 				],
 				"height":"134"
@@ -74,20 +80,23 @@
 					{
 						"bgColor":"FFFFFFFF",
 						"textAlign":"center",
-						"x":"74",
-						"y":"85",
+						"x":"93",
+						"width":"64",
+						"y":"90",
 						"fontSize":"30",
 						"id":"do_Label_3",
-						"text":"delete",
+						"text":"删除",
 						"type":"do_Label",
-						"height":"45"
+						"height":"40"
 					},
 					{
-						"x":"74",
-						"y":"10",
+						"x":"93",
+						"width":"64",
+						"y":"20",
 						"id":"do_ImageView_delete",
-						"source":"source://image/delte.png",
-						"type":"do_ImageView"
+						"source":"source://image/delete.png",
+						"type":"do_ImageView",
+						"height":"64"
 					}
 				],
 				"height":"134"

@@ -1,17 +1,14 @@
 /**
- * related to listcell.ui
+ * related to cell1.ui
  * 
- * @Author : zxhuizhi@126.com
- * @Timestamp : 2016-07-20
+ * @Author : logo_qy@163.com
+ * @Timestamp : 2016-08-16
  */
 var page = sm("do_Page");
-
 var rootView = ui("$");
 var do_ImageView_1 =ui("do_ImageView_1");
 var do_Label_1 = ui("do_Label_1");
-var do_Label_3 = ui("do_Label_3");
 rootView.setMapping({
     "do_ImageView_1.source":"source",
     "do_Label_1.text":"text",
-    "do_Label_3.text":"text3"
 });

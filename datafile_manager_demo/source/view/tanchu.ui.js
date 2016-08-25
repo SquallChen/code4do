@@ -15,36 +15,38 @@ var do_Label_2 = ui("do_Label_2");
 var duixiang ={};
 
 page.on("show",function(data){
+	//do_Notification.alert(data);
 	do_ALayout_10.visible = "true";//显示透明页面
 	duixiang = data;
 });
+
 do_ALayout_copy.on("touch",function(){
-	if(do_Label_1.text=="copy"){
-		do_Label_1.text="paste"
+	if(do_Label_1.text=="复制"){
+		do_Label_1.text="粘贴"
 	}else{
-		do_Label_1.text="copy"
-		page.fire("close",{"kk1":duixiang.k1,"kk2":duixiang.k2,"kk3":duixiang.k3,"kk4":duixiang.k4.source,})
+		do_Label_1.text="复制"
+		page.fire("close",{"k1":duixiang.k1,"k2":duixiang.k2,"k3":duixiang.k3,"k4":duixiang.k4.source,})
 		do_ALayout_10.visible ="false";//关闭透明页面
 	}
 })
 do_ALayout_delete.on("touch",function(){//点击删除按钮
-	 page.fire("delete",{"dk1":duixiang.k1,"dk3":duixiang.k3,"dk5":duixiang.k5})
+	 page.fire("delete",{"k1":duixiang.k1,"k3":duixiang.k3,"k5":duixiang.k5})
 	 do_ALayout_10.visible ="false";
 })
 do_ALayout_cut.on("touch",function(){//点击剪切按钮
-    if(do_Label_2.text=="cut"){
-		 do_Label_2.text="paste"
-		 page.fire("cut",{cdk1:duixiang.k1,cdk5:duixiang.k5,cdk2:duixiang.k2,cdk3:duixiang.k3})
+    if(do_Label_2.text=="剪切"){
+		 do_Label_2.text="粘贴"
+		 page.fire("cut",{"k1":duixiang.k1,"k5":duixiang.k5,"k2":duixiang.k2,"k3":duixiang.k3})
     } else{       
-		 do_Label_2.text="cut";
-    	 page.fire("paste",{pk2:duixiang.k2,pk4:duixiang.k4,pk3:duixiang.k3})
+		 do_Label_2.text="剪切";
+    	 page.fire("paste",{"k2":duixiang.k2,"k4":duixiang.k4,"k3":duixiang.k3})
     	 do_ALayout_10.visible ="false";
 	}	  
 })//剪切按钮
 do_ALayout_10.on("touch",function(){//关闭页面
     do_ALayout_10.visible = "false";
-    do_Label_1.text="copy";
-    do_Label_2.text="cut";
+    do_Label_1.text="复制";
+    do_Label_2.text="剪切";
  })
 	
 

@@ -46,10 +46,10 @@
       "Name": "内容类型",
       "Type": "String",
       "Type_JavaScript": "String",
-      "DefaultValue": "text/html",
+      "DefaultValue": "application/x-www-form-urlencoded",
       "EditType": "1",
       "Group": "",
-      "Description": "内容类型",
+      "Description": "request时该属性默认值为application/x-www-form-urlencoded，upload和form时的默认值为multipart/form-data",
       "Design": {
         "Type": "Text",
         "Data": []
@@ -77,7 +77,7 @@
       "DefaultValue": "utf-8",
       "EditType": "1",
       "Group": "",
-      "Description": "设置服务端返回内容的解码格式，通常与服务端开发人员约定，当属性有值时优先以该属性值格式解码，当不设置该属性时以默认值utf-8格式解码",
+      "Description": "设置服务端返回内容的解码格式，通常与服务端开发人员约定，当属性有值时优先以该属性值格式解码，当不设置该属性时以默认值utf-8格式解码。Android平台支持utf-8、GBK；iOS平台支持utf-8、GBK、GB2312、BIG5；windows支持utf-8、GBK、GB2312；除此之外不支持的都以默认utf-8解析",
       "Design": {
         "Type": "Text",
         "Data": []

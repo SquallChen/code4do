@@ -1,0 +1,32 @@
+{
+	"RootView":{
+		"bgColor":"00000088",
+		"width":"750",
+		"id":"do_ALayout_1",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"x":"387",
+				"width":"128",
+				"y":"180",
+				"id":"do_ImageView_1",
+				"source":"source://image/128.png",
+				"type":"do_ImageView",
+				"height":"180"
+			},
+			{
+				"bgColor":"00000000",
+				"x":"340",
+				"width":"408",
+				"y":"375",
+				"fontSize":"40",
+				"id":"do_Label_1",
+				"text":"长按可以复制剪切删除",
+				"type":"do_Label",
+				"fontStyle":"italic",
+				"height":"132"
+			}
+		],
+		"height":"1334"
+	}
+}
