@@ -20,7 +20,7 @@
 						"maxLines":"0",
 						"fontSize":"35",
 						"id":"do_Label_3",
-						"text":"do_combox控件显示全国省市县",
+						"text":"do_ComboBox控件显示全国省市县",
 						"type":"do_Label",
 						"height":"650"
 					}
@@ -42,7 +42,7 @@
 						"maxLines":"0",
 						"fontSize":"35",
 						"id":"do_Label_4",
-						"text":"do_combox控件显示全国省市县",
+						"text":"do_Picker控件显示全国省市县",
 						"type":"do_Label",
 						"height":"650"
 					}
