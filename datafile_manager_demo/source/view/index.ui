@@ -53,7 +53,7 @@
 						"type":"do_ALayout",
 						"views":[
 							{
-								"templates":"source://view/gridcell.ui",
+								"templates":"source://view/segcell.ui",
 								"width":"750",
 								"id":"do_SegmentView_1",
 								"type":"do_SegmentView"
