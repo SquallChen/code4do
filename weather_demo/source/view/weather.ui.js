@@ -4,10 +4,9 @@
 // *************************************************************************************/
 //
 ///*设定页面返回功能*/
-var toolbar = require("toolbar"),
-    URL = require("url"),
-    page = sm("do_Page"),
+var page = sm("do_Page"),
     nf = sm("do_Notification"),
+    initdata = sm("do_InitData"),
     baidulocation = sm("do_BaiduLocation"),
     rootview = ui("$"),
     do_HashData = mm("do_HashData")
@@ -92,7 +91,8 @@ var city1 = {};
 rootview.on("dataRefreshed", function(){
 	city1 = rootview.tag;
 	var data = JSON.parse(city1)
-	toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data.city.substring(0, data.city.length-1), TODAY: "0", DAYS: "5"}, "false", function (d) {
+	initdata.readFile("initdata://weather.json", function(d, e) {
+//	toolbar.http_post(URL.url.WeatherFive, {CITYNAME:data.city.substring(0, data.city.length-1), TODAY: "0", DAYS: "5"}, "false", function (d) {
 		do_HashData.addData(weather_five(d.body));
 	    rootview.bindData(do_HashData);
 	    rootview.refreshData();

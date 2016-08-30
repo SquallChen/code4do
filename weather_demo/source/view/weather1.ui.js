@@ -1,22 +1,10 @@
-/**
- * related to weather1.ui
- * 
- * @Author : zxhuizhi@126.com
- * @Timestamp : 2016-07-28
- */
-/**
- * @author louhyi
- * 天气信息
- *************************************************************************************/
-
 /*设定页面返回功能*/
-var toolbar = require("toolbar"),
-    URL = require("url"),
-    page = sm("do_Page"),
+var page = sm("do_Page"),
     nf = sm("do_Notification"),
     iFlyVoice = sm("do_iFlyVoice"),
     baidulocation = sm("do_BaiduLocation"),
     rootview = ui("$"),
+    initdata = sm("do_InitData"),
     storage = sm("do_Storage"),
     do_HashData = mm("do_HashData"),
     do_Alayout_Root = ui("do_Alayout_Root"),
@@ -78,7 +66,7 @@ rootview.on("dataRefreshed", function(){
 	city_name.text = city.district;
 	city_streetname.text = city.streetName;
 	new_city = city.city;
-	toolbar.http_post(URL.url.WeatherFive, {CITYNAME: new_city.substring(0, new_city.length-1), TODAY: "0", DAYS: "2"}, "true", function (d) {
+	initdata.readFile("initdata://weather.json", function(d, e) {
 		for (var key in d.body) {
 				if (key == "0") {
 					weather_0.text = d.body[key].status1;
