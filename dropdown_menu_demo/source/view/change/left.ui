@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"bgColor":"FFFFFFFF",
+		"x":"0",
+		"width":"440",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"templates":"source://view/change/left_cell.ui",
+				"width":"440",
+				"id":"do_ListView",
+				"type":"do_ListView",
+				"height":"1334"
+			}
+		],
+		"height":"1334"
+	}
+}
