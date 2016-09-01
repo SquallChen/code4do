@@ -18,7 +18,8 @@ var fudong = ui("do_ALayout_29");
 
 var imgviewbg = ui("do_ImageView_1");
 var scrollbody = ui("do_ScrollView_2");
-scrollbody.on("scroll",function(datas){
+scrollbody.on("scroll",function(datass){
+	var datas = datass.top;
 	//图片位置大小
 	imgviewbg.y = 0-+datas;
 	if(imgviewbg.y >= 0){
