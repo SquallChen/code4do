@@ -1,12 +1,14 @@
 var nf = sm("do_Notification");
 var initdata = sm("do_InitData");
 var page = sm("do_Page");
+var do_App = sm("do_App");
 var device = sm("do_Device");
 var qq = sm("do_TencentQQ");
 var wx = sm("do_TencentWX");
 var wb = sm("do_SinaWeiBo");
 var do_ALayout_root=ui("do_ALayout_root");
 var do_Button_share = ui("do_Button_share");
+var do_ALayout_back = ui("do_ALayout_back");
 var share = ui(do_ALayout_root.add("share", "source://view/share.ui", 0, 0));
 
 var do_Button_picture = ui("do_Button_picture");
@@ -15,6 +17,12 @@ var do_Button_music = ui("do_Button_music");
 var do_Button_video = ui("do_Button_video");
 var do_Button_app = ui("do_Button_app");
 
+do_ALayout_back.on("touch",function(){
+	do_App.closePage();
+})
+page.on("back",function(){
+	do_App.closePage();
+})
 var share_type = [ 
      	{
      		btnUI:do_Button_picture,
@@ -108,14 +116,16 @@ var shareTo = function(id){
 		key.type = 3;
 		key.title = "应用分享";
 		key.image = "data://logo.jpg";
-		key.summary = "分享share_all应用";
-		key.appName = "share_all应用";
+		key.url = "http://www.deviceone.net";
+		key.summary = "分享DC协同应用";
+		key.appName = "DC协同";
 	}
 	
     switch (id) {
     	case "qq":   
     		if (type == "3") return nf.toast("QQ暂不支持视频分享!");
-	    	qq.shareToQQ({
+    		if (type == "4" && device.getInfo().OS != "android") return nf.toast("IOS不支持应用分享!");
+    		qq.shareToQQ({
 	            appId: key.qq,
 	            type: key.type,
 	            title: key.title,
@@ -155,14 +165,16 @@ var shareTo = function(id){
         		key.image = "data://logo.jpg";
         		key.summary = "Deviceone——跨平台开发+纯原生体验的APP开发平台";
         	}
-            wb.share({
-                appId: key.wb,
-                type: key.type,
-                title: key.title,
-                image: key.image,
-                url: key.url,
-                summary: key.summary
-            }, function(data){
+        	var map = {
+                    appId: key.wb,
+                    type: key.type,
+                    title: key.title,
+                    image: key.image,
+                    url: key.url,
+                    summary: key.summary
+                }
+        	deviceone.print(JSON.stringify(map))
+            wb.share(map, function(data){
                 if (data) nf.toast(key.success);
             });
             break;
