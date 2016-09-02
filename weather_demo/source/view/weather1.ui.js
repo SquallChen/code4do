@@ -133,7 +133,7 @@ for (var i = 1; i <= 3; i++) {
 }
 
 var flag = 1;
-al_anim.on("touch", function(d, e) {
+action_iFlyVoice.on("touch", function(d, e) {
 	// 重复播放这组图片形成动画
 	if(flag == 1)
 	{
