@@ -75,7 +75,7 @@ do_Button_share.on("touch",function(){
 var key = {
 	    qq: "1104684313",
 	    wb: "2299300367",
-	    wx: "wx7589880f174273b5",   //wx377c5bb4592b3709
+	    wx: "wx7589880f174273b5",  
 	    title: "欢迎使用Deviceone第三方应用分享",
 	    url:"",
 	    image: "",
@@ -110,7 +110,7 @@ var shareTo = function(id){
 		key.type = 3;
 		key.title = "视频分享";
 		key.url = "http://www.ydtsystem.com/CardImage/21/video/20140305/20140305124807_37734.mp4";
-		key.image = "data://logo.jpg";
+		key.image = "data://video.png";
 		key.summary = "视频分享为视频文件的远程链接,以URL的形式传入";
 	} else if(type == "4"){   
 		key.type = 3;
@@ -165,16 +165,14 @@ var shareTo = function(id){
         		key.image = "data://logo.jpg";
         		key.summary = "Deviceone——跨平台开发+纯原生体验的APP开发平台";
         	}
-        	var map = {
-                    appId: key.wb,
-                    type: key.type,
-                    title: key.title,
-                    image: key.image,
-                    url: key.url,
-                    summary: key.summary
-                }
-        	deviceone.print(JSON.stringify(map))
-            wb.share(map, function(data){
+            wb.share({
+                appId: key.wb,
+                type: key.type,
+                title: key.title,
+                image: key.image,
+                url: key.url,
+                summary: key.summary
+            }, function(data){
                 if (data) nf.toast(key.success);
             });
             break;
