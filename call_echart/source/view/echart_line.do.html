@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script type="text/javascript" src="echarts.min.js"></script>
+</head>
+<body>
+	<div id="main" style="height:400px; width:400px;"></div>
+	<script type="text/javascript">
+	window.onDeviceOneLoaded = function() {
+		var do_Page = deviceone.sm("do_Page");
+	    var do_Notification = deviceone.sm("do_Notification");
+	    var do_Global = deviceone.sm("do_Global");
+	    var myChart = echarts.init(document.getElementById('main'));
+	    var datas = do_Global.getMemory("echarts_datas");
+	    var chart_option = function(){
+	        var x_data = datas.x_data;
+	        var y_data = datas.y_data;
+	        var option = {
+	            tooltip: {trigger: 'axis'},
+	            legend: {
+	            	left: 'left',
+	                data: []
+	            },
+	            calculable: true,
+	            xAxis: [
+	                {
+	                    type: 'category',
+	                    boundaryGap: true,
+	                    data: x_data,
+	                    splitLine: {show: false}
+	                }
+	            ],
+	            yAxis: [
+	                {
+	                    type: 'value',
+	                    axisLabel: {formatter: '{value} 个'}
+	                }
+	            ],
+	            series: []
+	        };
+	        option.legend.data = ['毛巾', '牙刷', '雨伞']
+	        option.legend.data.forEach(function(v, k){
+	        	var _color = 'red';
+        		if (k == 1) _color = 'blue';
+        		if (k == 2) _color = 'green';
+        		option.series.push({
+	                name: v,
+	                type: 'line',
+	                data: y_data[k].t,
+	                itemStyle:{
+	                    normal:{color:_color}
+	                }
+	            })
+	        });
+	        return option;
+	    };
+	    myChart.setOption(chart_option());
+	}
+	</script>
+</body>
+</html>
