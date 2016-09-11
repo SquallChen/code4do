@@ -18,6 +18,7 @@ var data = page.getData()["allCourseList"];
 
 var y = 0;
 page.on("loaded",function(){
+	//页面加载完再加载后面的数据
 	addday(data[2]);
 	addday(data[3]);
 	addday(data[4]);
