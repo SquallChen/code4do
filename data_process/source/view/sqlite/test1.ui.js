@@ -12,9 +12,9 @@ sqlite_app.executeSync(stu_table);
 stu_table = "create table stu_table(_id integer primary key autoincrement,sname text,snumber text)";
 // 同步执行一个SQL语句
 sqlite_app.executeSync(stu_table);
-var stu_sql = "insert into stu_table(sname,snumber) values('laoming','1');"
-		+ "insert into stu_table(sname,snumber) values('laohong','2');"
-		+ "insert into stu_table(sname,snumber) values('laoliu','3')";
+var stu_sql = ["insert into stu_table(sname,snumber) values('laoming','1');"
+		,"insert into stu_table(sname,snumber) values('laohong','2');"
+		, "insert into stu_table(sname,snumber) values('laoliu','3')"];
 // 同步执行一个SQL语句
-sqlite_app.executeSync(stu_sql);
+sqlite_app.executeSync1(stu_sql);
 label.text = "在test1.ui.js里创建一个page作用域的内存数据库，创建表stu_table并插入3条数据" + "\n";

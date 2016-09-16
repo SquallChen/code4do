@@ -135,11 +135,11 @@ function test_sqlite() {
 	stu_table = "create table stu_table(_id integer primary key autoincrement,sname text,snumber text)";
 	// 同步执行一个SQL语句
 	sqlite_app.executeSync(stu_table);
-	var stu_sql = "insert into stu_table(sname,snumber) values('xiaoming','01005');"
-			+ "insert into stu_table(sname,snumber) values('xiaohong','01006');"
-			+ "insert into stu_table(sname,snumber) values('xiaoliu','01007')";
+	var stu_sql = ["insert into stu_table(sname,snumber) values('xiaoming','01005');"
+			, "insert into stu_table(sname,snumber) values('xiaohong','01006');"
+			, "insert into stu_table(sname,snumber) values('xiaoliu','01007')"];
 	// 异步执行一个SQL语句
-	sqlite_app.execute(stu_sql, function(data, e) {
+	sqlite_app.execute1(stu_sql, function(data, e) {
 		// 回调到这里才真正把数据插入完，如果在执行到这里之前去查询数据有可能读不到数据
 		deviceone.print("insert finished!")
 	})
