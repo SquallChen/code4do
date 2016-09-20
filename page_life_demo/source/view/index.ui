@@ -1,0 +1,29 @@
+{
+	"RootView":{
+		"bgColor":"FFFFFFFF",
+		"width":"750",
+		"id":"ALayout_1",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"80808080",
+				"x":"140",
+				"width":"365",
+				"y":"149",
+				"id":"btn_hello",
+				"text":"Say Hello",
+				"type":"do_Button",
+				"height":"135"
+			},
+			{
+				"x":"141",
+				"width":"416",
+				"y":"338",
+				"id":"do_ViewShower_1",
+				"type":"do_ViewShower",
+				"height":"260"
+			}
+		],
+		"height":"1334"
+	}
+}
