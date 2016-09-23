@@ -1,0 +1,22 @@
+{
+	"RootView":{
+		"bgColor":"F2F2F2FF",
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"isShowbar":"false",
+				"childTemplate":"source://view/cells/gmoneyhis/ELV_Child_cell.ui",
+				"width":"750",
+				"y":"250",
+				"groupTemplate":"source://view/cells/gmoneyhis/ELV_Group_cell.ui",
+				"id":"do_ExpandableListView_1",
+				"type":"do_ExpandableListView",
+				"height":"1084"
+			}
+		],
+		"height":"1334"
+	}
+}

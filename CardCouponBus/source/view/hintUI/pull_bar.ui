@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"x":"335",
+				"width":"80",
+				"y":"20",
+				"style":"small",
+				"id":"do_ProgressBar_1",
+				"type":"do_ProgressBar"
+			}
+		],
+		"height":"100"
+	}
+}
