@@ -1,0 +1,46 @@
+[
+	{
+		"template":0,
+		"couptype" : "满200减50元",
+		"couplq":"限领1次",
+		"allnum":"总发放:100",
+		"synum" : "剩余:20",
+		"startime":"发放时间:2016-07-10",
+		"endtime":"截止时间:2016-10-10",
+		"bgcolor":"369FDAFF",
+		"index" : 0
+	},
+	{
+		"template":0,
+		"couptype" : "8.8折",
+		"couplq":"不限领取次数",
+		"allnum":"总发放:200",
+		"synum" : "剩余:50",
+		"startime":"发放时间:2016-07-10",
+		"endtime":"截止时间:2016-10-10",
+		"bgcolor":"8462A7FF",
+		"index" : 1
+	},
+	{
+		"template":0,
+		"couptype" : "雪花啤酒2瓶",
+		"couplq":"限领1次",
+		"allnum":"总发放:120",
+		"synum" : "剩余:37",
+		"startime":"发放时间:2016-07-10",
+		"endtime":"截止时间:2016-10-10",
+		"bgcolor":"50B98EFF",
+		"index" : 2
+	},
+	{
+		"template":0,
+		"couptype" : "抵50元",
+		"couplq":"限领1次",
+		"allnum":"总发放:500",
+		"synum" : "剩余:96",
+		"startime":"发放时间:2016-07-10",
+		"endtime":"截止时间:2016-10-10",
+		"bgcolor":"FF9523FF",
+		"index" : 3
+	}
+]
