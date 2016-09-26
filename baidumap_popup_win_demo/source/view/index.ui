@@ -60,54 +60,54 @@
 					},
 					{
 						"bgColor":"FFFFFFFF",
-						"width":"80",
-						"x":"642",
-						"y":"1136",
+						"width":"105",
+						"x":"615",
+						"y":"1106",
 						"id":"do_ALayout_5",
 						"type":"do_ALayout",
 						"views":[
 							{
-								"width":"50",
+								"width":"80",
 								"x":"14",
 								"y":"8",
 								"fontSize":"50",
 								"id":"do_Button_big",
 								"text":"＋",
-								"type":"do_Button",
-								"height":"50"
+								"type":"do_Button"
 							},
 							{
-								"width":"50",
+								"width":"80",
 								"x":"14",
-								"y":"84",
+								"y":"104",
 								"fontSize":"50",
 								"id":"do_Button_small",
 								"text":"－",
-								"type":"do_Button",
-								"height":"50"
+								"type":"do_Button"
 							}
 						],
-						"height":"150"
+						"height":"191"
 					},
 					{
 						"bgColor":"80808099",
-						"width":"80",
-						"x":"644",
+						"width":"133",
+						"x":"589",
 						"y":"314",
+						"fontSize":"30",
 						"id":"do_Button_satellite",
 						"text":"卫星地图",
 						"type":"do_Button",
-						"fontColor":"FFFFFFFF"
+						"fontColor":"00FFFFFF"
 					},
 					{
 						"bgColor":"80808099",
-						"width":"80",
-						"x":"644",
+						"width":"133",
+						"x":"589",
 						"y":"192",
+						"fontSize":"30",
 						"id":"do_Button_standard",
 						"text":"标准地图",
 						"type":"do_Button",
-						"fontColor":"FFFFFFFF"
+						"fontColor":"00FFFFFF"
 					}
 				],
 				"height":"1334"
