@@ -1,16 +1,51 @@
 {
 	"RootView":{
 		"width":"750",
-		"id":"do_ALayout_root",
-		"type":"do_ALayout",
+		"id":"do_ScrollView_1",
+		"type":"do_ScrollView",
 		"views":[
 			{
-				"bgColor":"00000000",
-				"templates":"source://view/reader/list_cell.ui",
 				"width":"750",
-				"id":"do_ListView",
-				"type":"do_ListView",
-				"height":"1334"
+				"id":"do_LinearLayout_1",
+				"type":"do_LinearLayout",
+				"views":[
+					{
+						"width":"730",
+						"maxLines":"0",
+						"fontSize":"36",
+						"id":"do_Label_1",
+						"type":"do_Label",
+						"height":"-1"
+					},
+					{
+						"width":"462",
+						"y":"-1",
+						"id":"do_ALayout_2",
+						"type":"do_ALayout",
+						"views":[
+							{
+								"textAlign":"right",
+								"width":"110",
+								"x":"237",
+								"y":"1",
+								"fontSize":"36",
+								"id":"do_Label_2",
+								"type":"do_Label",
+								"height":"60"
+							},
+							{
+								"width":"110",
+								"x":"350",
+								"fontSize":"36",
+								"id":"do_Label_3",
+								"type":"do_Label",
+								"height":"60"
+							}
+						],
+						"height":"60"
+					}
+				],
+				"height":"-1"
 			}
 		],
 		"height":"1334"

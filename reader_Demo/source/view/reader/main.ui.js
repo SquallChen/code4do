@@ -1,61 +1,66 @@
-var do_Global=sm("do_Global");
-var do_App=sm("do_App");
-var do_Page=sm("do_Page");
-var do_Notification = sm("do_Notification");
+var do_Global = sm("do_Global");
+var do_App = sm("do_App");
+var do_Page = sm("do_Page");
 var do_InitData = sm("do_InitData")
-var do_Storage = sm("do_Storage");
-var do_Global = sm("do_Global")
 
-var do_SlideView = ui("do_SlideView")
-var do_ListData = mm("do_ListData")
+var slideview = ui("do_SlideView");
+var listdata = mm("do_ListData");
+slideview.bindItems(listdata);
 
-do_Page.supportPanClosePage({support:"true"})
+var text_datas = [];
+var page_length = 1000;
 
-do_Page.on("back", function() { // 监听android 的返回按钮;
-	do_Global.setMemory("reader_flg","")
-	do_Global.setMemory("change","0")
-	do_App.closePage();
+do_Page.on("loaded", function() {
+	do_InitData.readFile("initdata://mock/reader.txt", function(data, e) {
+		var total = parseInt(data.length / page_length);
+		for (var i = 0; i < total; i++) {
+			text_datas[i] = {
+				"index" : i ,
+				"text" : data.substr(i * page_length, page_length),
+				"total_index" : "/" + total
+			};
+		}
+		var d = [ text_datas[0], text_datas[1], text_datas[2] ];
+		listdata.addData(d);
+	
+		slideview.refreshItems();
+	})
 });
 
-var reader_data = []
-reader_data.push({template:0,flg:1},{template:0,flg:2})
+slideview.on("indexChanged", function(index) {
+	var next = index+1;
+	if (next > 2)
+		next = 0;
+	var pre = index-1;
+	if (pre < 0)
+		pre = 2;
+	var current_d = listdata.getOne(index);
+	var current_total_index = current_d.index;
 
-do_ListData.addData(reader_data)
-do_SlideView.bindItems(do_ListData)
-do_SlideView.refreshItems();
+	var next_d = listdata.getOne(next);
+	var next_total_index = next_d.index;
+	
+	var pre_d = listdata.getOne(pre);
+	var pre_total_index = pre_d.index;
+	
+	deviceone.print(pre+";"+index+";"+next);
+	deviceone.print(pre_total_index+";"+current_total_index+";"+next_total_index);
+	if (next_total_index != (current_total_index + 1)) {
+		listdata.updateOne(next, text_datas[(current_total_index + 1)]);
+		
+	}
+	
+	if (pre_total_index != (current_total_index - 1)) {
+		listdata.updateOne(pre, text_datas[(current_total_index - 1)]);
+	}
+	next_d = listdata.getOne(next);
+	next_total_index = next_d.index;
+	
+	pre_d = listdata.getOne(pre);
+	pre_total_index = pre_d.index;
+	deviceone.print(pre_total_index+";"+current_total_index+";"+next_total_index);
+	
+	deviceone.print(JSON.stringify(listdata.getRange(0)));
 
-do_SlideView.on("indexChanged",function(data){
-	do_Page.fire("hide");
-	do_Storage.writeFile("data://reader_change","")
-	reader_data = []
-	reader_data.push({template:0,flg:data+2})
-
-	do_ListData.addData(reader_data)
-	do_SlideView.bindItems(do_ListData)
-	do_SlideView.refreshItems();
-	var change_flg = do_Global.getMemory("change")
-	if(change_flg == "1"){
-		do_Page.fire("change_model_sun1")
-	}
-	if(change_flg == "2"){
-		do_Page.fire("change_model_night1")
-	}
-	if(change_flg == "3"){
-		do_Page.fire("change_model_sun")
-	}
-	if(change_flg == "4"){
-		do_Page.fire("change_model_night")
-	}
-	if(change_flg == "5"){
-		do_Page.fire("change_size_add1")
-	}
-	if(change_flg == "6"){
-		do_Page.fire("change_size_del")
-	}
-	if(change_flg == "7"){
-		do_Page.fire("change_size_add")
-	}
-	if(change_flg == "8"){
-		do_Page.fire("change_size_del1")
-	}
+	slideview.refreshItems();
 })
