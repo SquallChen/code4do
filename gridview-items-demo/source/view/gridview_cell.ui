@@ -6,12 +6,12 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"x":"45",
-				"width":"160",
-				"y":"45",
+				"x":"65",
+				"width":"120",
+				"y":"65",
 				"id":"do_ImageView_1",
 				"type":"do_ImageView",
-				"height":"160"
+				"height":"120"
 			}
 		],
 		"height":"250"

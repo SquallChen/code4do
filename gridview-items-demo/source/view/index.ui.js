@@ -23,6 +23,7 @@ function initdata() {
 		d = {};
 		d.template = 1;
 		d.icons_data=[];
+		d.group_index=i;
 		for(var j=0;j<image_count_group[i];j++){
 			d.icons_data[j]={};
 			d.icons_data[j].icon_source="source://image/"+index+".png";
@@ -35,3 +36,12 @@ function initdata() {
 	listview.refreshItems();
 }
 initdata();
+
+sm("do_Page").on("deleteIcon",function(d){
+	var group_index = d.group_index;
+	var index = d.index;
+	var data = listdata.getOne(group_index*2+1);
+	data.icons_data.splice(index,1);
+	listdata.updateOne(group_index*2+1,data);
+	listview.refreshItems();
+})
