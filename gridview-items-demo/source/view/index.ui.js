@@ -2,14 +2,14 @@
  * @Author : and
  * @Timestamp : 2016-09-27
  */
-var core = require("do/core");
-var page = require("do/page");
+var corejs = require("do/core");
+var pagejs = require("do/page");
 
 var listview = ui("do_ListView_1");
 var listdata = mm("do_ListData");
 listview.bindItems(listdata);
 
-page.allowClose(ui("do_ALayout_3"));
+pagejs.allowClose(ui("do_ALayout_3"));
 
 var image_count_group = [3,1,4,1,5,9,2,6,3];
 function initdata() {
@@ -31,7 +31,7 @@ function initdata() {
 		}
 		data.push(d);
 	}
-	core.p(data);
+	corejs.p(data);
 	listdata.addData(data);
 	listview.refreshItems();
 }
