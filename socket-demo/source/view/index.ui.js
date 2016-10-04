@@ -11,6 +11,7 @@ var do_Page = sm("do_Page");
 var do_Notification = sm("do_Notification");
 var do_DataCache = sm("do_DataCache");
 var do_Storage = sm("do_Storage");
+var do_Algorithm = sm("do_Algorithm");
 // mm
 var do_Socket = mm("do_Socket");
 // ui
@@ -58,7 +59,7 @@ connect_button.on("touch", function() {
 send_button.on("touch", function() {
 	var content = send_textbox.text;
 	if (send_type == "HEX") {
-		send(enc(content));
+		send(stringToHex(content));
 	} else if (send_type == "file") {
 		var filename = "data://temp.txt";
 		content = " 写内容到文件" + filename + ":" + content;
@@ -73,9 +74,9 @@ send_button.on("touch", function() {
 
 do_Socket.on("receive", function(data) {
 	// 接受到是16进制，需要转换
-	// core.p(dec(data), "receive");
-	println(dec(data), "R");
-
+	do_Algorithm.hex2Str(data,"utf-8",function(d){
+		println(d, "R");
+	})
 }).on("error", function(data) {
 	core.alert(data, "error");
 	println(JSON.stringify(data), "E");
@@ -88,18 +89,7 @@ do_Page.on("send_type", function(d) {
 function println(msg, tag) {
 	output_label.text = output_label.text + tag + ": " + msg + "\n";
 }
-function dec(s1) {
-	var tmp2 = '';
-	for (i = 0; i < s1.length;)
-		tmp2 += '%' + s1.substring(i, i += 2);
-	return decodeURI(tmp2);
-}
-function enc(s1) {
-	var tmp2 = '';
-	for (i = 0; i < s1.length;)
-		tmp2 += s1.charCodeAt(i).toString(16);
-	return tmp2;
-}
+
 function send(content) {
 	println(content, "S");
 	do_Socket.send(send_type, content, function(data, e) {
@@ -108,3 +98,13 @@ function send(content) {
 		}
 	})
 }
+function stringToHex(str){
+　　　　var val="";
+　　　　for(var i = 0; i < str.length; i++){
+　　　　　　if(val == "")
+　　　　　　　　val = str.charCodeAt(i).toString(16);
+　　　　　　else
+　　　　　　　　val += str.charCodeAt(i).toString(16);
+　　　　}
+　　　　return val;
+　　}
