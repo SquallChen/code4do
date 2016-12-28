@@ -1,0 +1,31 @@
+{
+	"RootView":{
+		"bgColor":"00000000",
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"templates":"source://samples/api/main_1.ui",
+				"width":"750",
+				"y":"80",
+				"id":"do_ListView_index",
+				"type":"do_ListView",
+				"height":"1254"
+			},
+			{
+				"bgColor":"3C3C3CFF",
+				"textAlign":"center",
+				"width":"750",
+				"y":"-1",
+				"fontSize":"40",
+				"id":"do_Label_title",
+				"text":"API代码示例",
+				"type":"do_Label",
+				"fontColor":"FFFFFFFF"
+			}
+		],
+		"height":"1334"
+	}
+}
