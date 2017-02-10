@@ -1,0 +1,14 @@
+{
+	"id": "obj.weapon.hot-hammer",
+	"type": "weapon",
+	"match": "skills.stick",
+	"wield": "right",
+	"level": 1,
+	"name": "烧红的铁锤",
+	"weight": 2,
+	"range": 2,
+	"damage": "8/9",
+	"desc": {
+		"look": "这是王铁匠吃饭的家伙，又大又沉，温度也高"
+	}
+}

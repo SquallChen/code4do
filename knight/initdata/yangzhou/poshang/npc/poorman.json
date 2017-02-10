@@ -1,0 +1,51 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.poorman",
+	"name": "穷汉",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "一个骨瘦如柴，满脸菜色的穷汉。",
+		"ask":"“你在干啥？”：{{source}}问道",
+		"init": "{{source}}呆呆的发起愣来了。",
+		"random": [
+			"{{source}}懒洋洋地打了个哈欠。”",
+			"{{source}}伸手捉住了身上的虱子，骂道：老子身上没几两肉，全叫你们给咬了。 "
+		]
+	},
+	"exp": 30,
+	"ally": [
+	],
+	"HP": "60/60",
+	"MP": "50/50",
+	"defend": [0,0,0,0,0,0],
+	"skills": {
+		"skills.stick": 100
+	},
+	"spells": [
+		"spell.stick.attack",
+		"spell.stick.multi"
+	],
+	"battle": {
+	},
+	"lost_exp": "2/6",
+	"corpse": {
+		"coin": "5/12",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.wood-stick",
+				"random": 0.5
+			}
+		]
+	},
+	"wield": {
+		"right": "obj.weapon.wood-stick"
+	},
+	"allowFight": true,
+	"allowKill": true
+}

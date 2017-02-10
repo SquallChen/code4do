@@ -1,0 +1,24 @@
+{
+	"id": "yangzhou.poshang.scene.road3",
+	"type": "scene",
+	"name": "碎石路",
+	"desc": {
+		"look": "这里传来了叮当叮当的声音，南面是一个铁匠铺，北面是村里地保家，村里唯一的青砖瓦房。西面就是后山了，远远望去，郁郁葱葱。"
+	},
+	"creatures": [
+	],
+	"exits": {
+		"east": {
+			"id": "yangzhou.poshang.scene.road2"
+		},
+		"south": {
+			"id": "yangzhou.poshang.scene.smith"
+		},
+		"west": {
+			"id": "yangzhou.poshang.scene.hillroad1"
+		},
+		"south_west": {
+			"id": "yangzhou.poshang.scene.home-laoer"
+		}
+	}
+}

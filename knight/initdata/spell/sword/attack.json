@@ -1,0 +1,33 @@
+{
+	"id": "spell.sword.attack",
+	"skill": "skills.sword",
+	"type": "physical_attack",
+	"name": "剑击",
+	"damage_type": "破伤",
+	"cast": 0,
+	"range": 0,
+	"desc": "普通攻击",
+	"random": {
+		"attack": [
+			"{{source}}后撤一步，猛然往前，一个{{spell}}{{source.wield.right}}劈向{{target}}",
+			"{{source}}近身{{target}}，突然回身一转，{{source.wield.right}}旋转着{{spell}}了过来"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被轻轻的擦过，"
+			],
+			[
+				"{{target}}的{{part}}被划破一个小口子，"
+			],
+			[
+				"{{target}}的{{part}}被扎了血口子，鲜血直流"
+			],
+			[
+				"噗的一声，{{target}}的{{part}}被捅了一个大血口，血花飞溅，，"
+			],
+			[
+				"{{target}}的{{part}}被劈开一个血洞，血流如柱，"
+			]
+		]
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"id": "pc.backpack",
+	"money": [
+		0,
+		0,
+		12
+	],
+	"objs": [
+		{
+			"id": "obj.weapon.wood-stick",
+			"count": 1
+		},
+		{
+			"id": "obj.weapon.kitchen-knife",
+			"count": 1
+		}
+	]
+}

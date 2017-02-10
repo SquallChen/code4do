@@ -1,0 +1,23 @@
+{
+	"id": "yangzhou.poshang.scene.home-laoer",
+	"type": "scene",
+	"name": "王老二家",
+	"desc": {
+		"look": "这里是王老二家，一只破木箱上摆着几样粗制的赌具，地上乱扔着些鸡骨头，空气中有一股鸡香、酒香和汗臭混杂在一起的味道。看来这里是村内地痞、流氓聚集的地方"
+	},
+	"creatures": [
+		{
+			"type": "npc",
+			"id": "yangzhou.poshang.npc.wang-laosan",
+			"status": "normal",
+			"appear": 0,
+			"die": 20,
+			"revival": 0
+		}
+	],
+	"exits": {
+		"north_east": {
+			"id": "yangzhou.poshang.scene.road3"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"id": "yangzhou.poshang.scene.myhouse",
+	"type": "scene",
+	"name": "商文家",
+	"desc": {
+		"look": "这就是我家，母亲早逝，父亲带着我很小从远方移居到这里，在此做一个教书先生，没想到前年突然就消失了，从此生活窘迫，天天靠邻里人照顾才不至于饿死。屋子里暗的很，角落里好像有一个破破烂烂的箱子"
+	},
+	"creatures": [
+	],
+	"exits": {
+		"south": {
+			"id": "yangzhou.poshang.scene.road2"
+		}
+	}
+}

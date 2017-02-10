@@ -1,0 +1,15 @@
+{
+	"id": "yangzhou.poshang.scene.road3",
+	"type": "scene",
+	"name": "黄土路",
+	"desc": {
+		"look": "一条坑坑洼洼的土路，弯弯曲曲的通向山里。"
+	},
+	"creatures": [
+	],
+	"exits": {
+		"east": {
+			"id": "yangzhou.poshang.scene.road3"
+		}
+	}
+}

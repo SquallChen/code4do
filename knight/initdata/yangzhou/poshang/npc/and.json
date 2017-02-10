@@ -1,0 +1,74 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.and",
+	"name": "And",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "这是位中年剑侠，肩背长剑，长长的剑穗随风飘扬，看来似乎身怀绝艺。",
+		"ask": "“and，是你吗？”：{{source}}问道",
+		"init": "{{source}}悉悉索索从洞里爬出来。",
+		"reply": "{{source}}大笑：“是我，小伙子，你是来要红包的吗?”",
+		"random": [
+			"{{source}}自言自语：“这是第几个红包了，快没了吧”",
+			"{{source}}笑道：新年好，新年好，红包拿去”",
+			"{{source}}嘿嘿笑道：要红包吗？来打我啊来打我啊”",
+			"{{source}}冲我们贼眉鼠眼的上下打量，不怀好意的奸笑。",
+			"{{source}}说道：“你知道do吗？不知道?不知道还想拿红包，你去死吧！”。",
+			"{{source}}淫笑道：“来来来，让老夫do一do，红包就给你！”。",
+			"{{source}}一脸正气：“订阅do了吗?没订阅也好意思要红包！”。",
+			"{{source}}笑道：“有了do，天下没有难做的app”。",
+			"{{source}}匡兰兰拔出长剑架在你脖子上：“小崽子，要红包？先回答我一个问题？官方qq群谁是第一美女？说！”。",
+			"{{source}}对你上下打量道：“你想要红包，哼哼，你用do做过app吗？做过几个？上线appstore了吗？赚到钱了吗？啊，你赚到钱了，那你发红包给我吧”。",
+			"{{source}}大声唱道：“do，do，do，OLA，OLA，OLA do”。",
+			"{{source}}一屁股坐地上，摸出长剑开始弹唱：“长铗归来乎！没红包”。",
+			"{{source}}长叹一声，轻抚手中的长剑:“天下风云出我辈，一入江湖岁月催”",
+			"{{source}}鬼鬼祟祟：“要app吗？日本的，欧美的，还有do的哦，10快一个”。",
+			"{{source}}摸出键盘，快速输入deviceone.print('you are pig,you are pig,your family all are pig'),就看屏幕上打印出“新年好，新年好，你全家新年好”。"
+		]
+	},
+	"exp": 200,
+	"ally": [
+	],
+	"HP": "100/100",
+	"MP": "500/500",
+	"defend": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"skills": {
+		"skills.sword": 100
+	},
+	"spells": [
+		"spell.sword.attack",
+		"spell.sword.heavy",
+		"spell.sword.multi",
+		"spell.sword.repeat"
+	],
+	"battle": {
+	},
+	"lost_exp": "2/6",
+	"corpse": {
+		"coin": "5/12",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.wood-stick",
+				"random": 0.5
+			}
+		]
+	},
+	"wield": {
+		"right": "obj.weapon.long-sword"
+	},
+	"allowFight": true,
+	"allowKill": true
+}

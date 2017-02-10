@@ -1,0 +1,15 @@
+{
+	"id": "condition.ko",
+	"name": "击倒",
+	"effect": "negative",
+	"desc": "被击倒的对象一个回合不能移动，而且防御会降低",
+	"turn": [
+		1,
+		1,
+		2,
+		2
+	],
+	"random": [
+		"{{target}}被打倒在地，受到{{source}}的{{spell}}造成的<d5>击倒</d5>影响"
+	]
+}

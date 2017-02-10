@@ -1,0 +1,53 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.wang-laoer",
+	"name": "王老二",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "和普通的村民没什么区别，穿的破破烂烂，矮个头，挺壮实，小眼睛里露出狡诈的光芒。村里惹人厌的小地痞，好吃懒做，偷鸡摸狗",
+		"ask":"“王老二，你在干啥？”：{{source}}问道",
+		"init": "{{source}}手提{{source.wield.right}}溜溜达达走了过来。",
+		"reply": "{{source}}一瞪眼：“别惹我，小心我揍你”",
+		"random": [
+			"{{source}}自言自语：“老四这家伙怎么还没来，好久没玩骰子了，就等他了”",
+			"{{source}}淫笑着说：“茶水摊的杨小寡妇真水灵，就是她家的狗太厉害了”",
+			"{{source}}冲我们贼眉鼠眼的上下打量，不怀好意的看着我们的背包。"
+		]
+	},
+	"exp": 10,
+	"ally": [
+		"yangzhou.poshang.npc.wang-si"
+	],
+	"HP": "60/60",
+	"MP": "50/50",
+	"defend": [0,0,0,0,0,0],
+	"skills": {
+		"skills.stick": 10
+	},
+	"spells": [
+		"spell.stick.attack"
+	],
+	"battle": {
+	},
+	"lost_exp": "2/6",
+	"corpse": {
+		"coin": "5/12",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.wood-stick",
+				"random": 0.5
+			}
+		]
+	},
+	"wield": {
+		"right": "obj.weapon.wood-stick"
+	},
+	"allowFight": true,
+	"allowKill": true
+}

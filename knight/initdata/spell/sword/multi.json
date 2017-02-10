@@ -1,0 +1,40 @@
+{
+	"id": "spell.sword.multi",
+	"skill": "skills.sword",
+	"type": "physical_attack",
+	"name": "顺风斩",
+	"damage_type": "破伤",
+	"cast": 15,
+	"multi_count": [
+		2,
+		2,
+		3,
+		4
+	],
+	"extra_rate": 0.025,
+	"range": 0,
+	"desc": "顺势斩能利用武器顺势攻击其它敌人，初始能攻击2人，成为大师3人，宗师能攻击4个人",
+	"random": {
+		"attack": [
+			"{{source}}施展巧劲，一个{{spell}}{{source.wield.right}}劈向{{target}}，顺势又砍向其它敌人",
+			"{{source}}看似冲向{{target}}，{{source.wield.right}}转着{{spell}}了过来，手腕一翻又劈向他人"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被轻轻的擦过，"
+			],
+			[
+				"{{target}}的{{part}}被划破一个小口子，"
+			],
+			[
+				"{{target}}的{{part}}被扎了血口子，鲜血直流"
+			],
+			[
+				"噗的一声，{{target}}的{{part}}被捅了一个大血口，血花飞溅，，"
+			],
+			[
+				"{{target}}的{{part}}被劈开一个血洞，血流如柱，"
+			]
+		]
+	}
+}

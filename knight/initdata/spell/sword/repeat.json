@@ -1,0 +1,40 @@
+{
+	"id": "spell.sword.repeat",
+	"skill": "skills.sword",
+	"type": "physical_attack",
+	"name": "排山倒海",
+	"damage_type": "破伤",
+	"cast": 15,
+	"repeat_count": [
+		2,
+		2,
+		3,
+		3
+	],
+	"extra_rate": 0.025,
+	"range": 0,
+	"desc": "排山倒海能利用武器连续击打同一敌人，初始连击2次，成为剑术大师后能连击3次",
+	"random": {
+		"attack": [
+			"{{source}}烦躁起来，大喊：“我砍砍砍”，像疯了一样，一个{{spell}}{{source.wield.right}}不断的劈向{{target}}",
+			"{{source}}施展{{spell}}，手留5分力，连续的对{{target}}发起攻击，{{source.wield.right}}在{{target}}身边飞舞"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被轻轻的擦过，"
+			],
+			[
+				"{{target}}的{{part}}被划破一个小口子，"
+			],
+			[
+				"{{target}}的{{part}}被扎了血口子，鲜血直流"
+			],
+			[
+				"噗的一声，{{target}}的{{part}}被捅了一个大血口，血花飞溅，，"
+			],
+			[
+				"{{target}}的{{part}}被劈开一个血洞，血流如柱，"
+			]
+		]
+	}
+}

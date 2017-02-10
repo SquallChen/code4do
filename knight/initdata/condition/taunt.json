@@ -1,0 +1,15 @@
+{
+	"id": "condition.taunt",
+	"name": "嘲讽",
+	"effect": "negative",
+	"desc": "被嘲讽的对象会在2回合或者更多回合内只攻击嘲讽他的对手",
+	"turn": [
+		2,
+		3,
+		3,
+		4
+	],
+	"random": [
+		"{{target}}嗷嗷大叫，目标转向{{source}}，受到{{source}}的{{spell}}造成的<d1>嘲讽</d1>影响"
+	]
+}

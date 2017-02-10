@@ -1,0 +1,34 @@
+{
+	"id": "yangzhou.poshang.scene.entry",
+	"type": "scene",
+	"name": "小村口",
+	"desc": {
+		"look": "这里是坡上村的村口，一个不小的平整地，逐渐成为村的一个中心。一些游手好闲的人在这里溜溜达达，打牌玩耍。中央有一棵大榕树，盘根错节，据传已有百年的树龄。小村虽小，但是有一个南北大道路过此处，常有各地的行人来来往往。"
+	},
+	"creatures": [
+		{
+			"type": "npc",
+			"id": "yangzhou.poshang.npc.wang-laoer",
+			"status": "normal",
+			"appear": 0,
+			"die": 20,
+			"revival": 0
+		},
+		{
+			"type": "npc",
+			"id": "yangzhou.poshang.npc.wang-si",
+			"status": "normal",
+			"appear": 5,
+			"die": 20,
+			"revival": 0
+		}
+	],
+	"exits": {
+		"east": {
+			"id": "yangzhou.poshang.scene.shop"
+		},
+		"west": {
+			"id": "yangzhou.poshang.scene.road1"
+		}
+	}
+}

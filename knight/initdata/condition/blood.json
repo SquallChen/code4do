@@ -1,0 +1,15 @@
+{
+	"id": "condition.taunt",
+	"name": "流血",
+	"effect": "negative",
+	"desc": "流血的对象会在2回合或者更多回合受到持续伤害",
+	"turn": [
+		2,
+		2,
+		3,
+		4
+	],
+	"random": [
+		"{{target}}血流不止，受到{{source}}的{{spell}}造成的<d3>流血</d3>影响"
+	]
+}

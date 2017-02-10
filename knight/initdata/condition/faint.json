@@ -1,0 +1,16 @@
+{
+	"id": "condition.faint",
+	"name": "眩晕",
+	"effect": "negative",
+	"desc": "眩晕的对象会在1回合或者更多回合内无法任何行动，而且防御力降低",
+	"turn": [
+		1,
+		1,
+		1,
+		2
+	],
+	"random": [
+		"{{target}}昏迷不醒，受到{{source}}的{{spell}}造成的<d5>眩晕</d5>影响"
+	]
+	
+}

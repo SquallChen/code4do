@@ -1,0 +1,51 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.smith",
+	"name": "王老大",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "想是常年弯腰打铁，背已驼了，双眼被烟火薰的又红又细",
+		"ask":"“王叔，你在干啥？”：{{source}}问道",
+		"init": "{{source}}热火朝天敲打着烧红的铁块。",
+		"random": [
+			"{{source}}自言自语：“啥？小人做的铁锤坚固又耐用，一把只要三百文钱”",
+			"{{source}}叹了口气，说道：锄头... 抱歉，锄头已经卖光了...”"
+		]
+	},
+	"exp": 100,
+	"ally": [
+	],
+	"HP": "100/100",
+	"MP": "50/50",
+	"defend": [0,0,0,0,0,0],
+	"skills": {
+		"skills.stick": 200
+	},
+	"spells": [
+		"spell.stick.attack",
+		"spell.stick.heavy"
+	],
+	"battle": {
+	},
+	"lost_exp": "2/6",
+	"corpse": {
+		"coin": "5/12",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.hot-hammer",
+				"random": 0.5
+			}
+		]
+	},
+	"wield": {
+		"right": "obj.weapon.hot-hammer"
+	},
+	"allowFight": true,
+	"allowKill": true
+}

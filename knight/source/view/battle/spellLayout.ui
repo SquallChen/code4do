@@ -1,0 +1,8 @@
+{
+	"RootView":{
+		"templates":"source://view/battle/spellItem.ui",
+		"width":"143",
+		"type":"do_ListView",
+		"height":"744"
+	}
+}

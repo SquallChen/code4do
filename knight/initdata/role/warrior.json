@@ -1,0 +1,20 @@
+{
+	"id": "role.warrior",
+	"desc": [
+		"武士",
+		"战士",
+		"侠士",
+		"猛士"
+	],
+	"condition": {
+		"武士": [],
+		"战士": [
+			{
+				"exp": 5000
+			},
+			{
+				"quest": "quest.role.warrior.warrior"
+			}
+		]
+	}
+}

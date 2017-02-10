@@ -1,0 +1,40 @@
+{
+	"id": "spell.stick.multi",
+	"skill": "skills.stick",
+	"type": "physical_attack",
+	"name": "风卷残云",
+	"damage_type": "瘀伤",
+	"cast": 20,
+	"multi_count": [
+		2,
+		2,
+		3,
+		4
+	],
+	"extra_rate": 0.03,
+	"range": 0,
+	"desc": "风卷残云能利用武器同时攻击很多敌人，初始能攻击2人，成为大师3人，宗师能攻击4个人",
+	"random": {
+		"attack": [
+			"{{source}}脚尖点地，挥舞着{{source.wield.right}}一个{{spell}}直指{{target}}的{{part}}猛烈转起来，旁边的对手也受到这阵厉风影响",
+			"{{source}}突然蹲下，{{source.wield.right}}猛扫，对着{{target}}的{{part}}一个{{spell}}砸了过来，力气之大，谁也不敢强挡"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被轻轻的碰到，"
+			],
+			[
+				"{{target}}的{{part}}马上青了一块，"
+			],
+			[
+				"{{target}}的{{part}}淤青一大块，"
+			],
+			[
+				"{{target}}的{{part}}咔的一声，骨头都要断了，"
+			],
+			[
+				"{{target}}被打的像风筝一样倒飞出去，骨断筋折，"
+			]
+		]
+	}
+}

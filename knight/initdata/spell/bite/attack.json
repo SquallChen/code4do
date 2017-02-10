@@ -1,0 +1,34 @@
+{
+	"id": "spell.bite.attack",
+	"skill": "skills.bite",
+	"type": "physical_attack",
+	"name": "撕咬",
+	"damage_type": "咬伤",
+	"cast": 0,
+	"desc": "普通攻击",
+	"range": 1,
+	"random": {
+		"attack": [
+			"{{source}}嗷一声，跳去老高，冲着{{target}}的{{part}}就{{spell}}了过来，",
+			"{{source}}侧边一跳，冲着{{target}}的{{part}}就{{spell}}起来"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被咬破了点皮，"
+			],
+			[
+				"{{target}}的{{part}}被咬破了一个口子，血流了出来，"
+			],
+			[
+				"{{target}}的{{part}}被咬了一大口，鲜血四溅，"
+			],
+			[
+				"{{target}}的{{part}}被撕咬下一块肉，血流不止，"
+			],
+			[
+				"{{target}}的{{part}}被咬得血肉模糊，疼的几乎晕倒，"
+			]
+		]
+	},
+	"damage": "3/5"
+}

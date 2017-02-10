@@ -1,0 +1,50 @@
+{
+	"type": "animal",
+	"id": "yangzhou.poshang.animal.dog",
+	"role": "role.warrior",
+	"level": 1,
+	"name": "野狗",
+	"weight": 80,
+	"age": 4,
+	"speed": 2,
+	"desc": {
+		"look": "一只浑身脏兮兮的野狗。",
+		"init": "{{source}}东闻西闻，翻着垃圾堆",
+		"random": [
+		"{{source}}用鼻子闻了闻你的脚。",
+		"{{source}}在你的脚边挨挨擦擦的，想讨东西吃。"
+		]
+	},
+	"exp": 10,
+	"usable_exp": 0,
+	"money": {
+		"coin": 10,
+		"silver": 1,
+		"gold": 0
+	},
+	"ally": [
+	],
+	"wield": {
+	},
+	"HP": "80/80",
+	"MP": "10/10",
+	"defend": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"skills": {
+		"skills.bite": 60
+	},
+	"spells": [
+		"spell.bite.attack"
+	],
+	"battle": {
+		"default_spell": "spell.bite.attack",
+		"selected_spell": "spell.bite.attack"
+	},
+	"allowKill": true
+}

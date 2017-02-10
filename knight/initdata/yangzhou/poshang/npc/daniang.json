@@ -1,0 +1,51 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.daniang",
+	"name": "老大娘",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "一个满脸风霜之色的老婆婆。",
+		"ask":"“大娘，你在干啥？”：{{source}}问道",
+		"init": "{{source}}呆呆的望着鸡笼，发起愣来了。",
+		"reply": "{{source}}伤心的说道：那个天杀的，偷了我的老母鸡。”",
+		"random": [
+			"{{source}}自言自语：“我那老母鸡啊...一定是那几个不务正业的小流氓干的。”",
+			"{{source}}叹了口气，说道：这是个什麽世道啊”"
+		]
+	},
+	"exp": 30,
+	"ally": [
+	],
+	"HP": "30/30",
+	"MP": "50/50",
+	"defend": [0,0,0,0,0,0],
+	"skills": {
+		"skills.stick": 100
+	},
+	"spells": [
+		"spell.stick.attack"
+	],
+	"battle": {
+	},
+	"lost_exp": "2/6",
+	"corpse": {
+		"coin": "5/12",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.wood-stick",
+				"random": 0.5
+			}
+		]
+	},
+	"wield": {
+		"right": "obj.weapon.wood-stick"
+	},
+	"allowFight": true,
+	"allowKill": true
+}

@@ -1,0 +1,38 @@
+{
+	"id": "spell.sword.heavy",
+	"skill": "skills.sword",
+	"type": "physical_attack",
+	"name": "力劈华山",
+	"damage_type": "破伤",
+	"cast": 30,
+	"condition": {
+		"id": "condition.blood",
+		"rate": 0.08
+	},
+	"extra_rate": 0.05,
+	"range": 0,
+	"desc": "力斩能发挥武器的最大力量对敌人造成伤害，还有可能对敌人造成流血效果",
+	"random": {
+		"attack": [
+			"{{source}}大吼一声：“我斩”，气势逼人，一个{{spell}}{{source.wield.right}}带着罡风劈向{{target}}",
+			"{{source}}近身{{target}}，侧身突然一转，大喝：“{{spell}}”，{{source.wield.right}}横扫过来"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被轻轻的擦过，"
+			],
+			[
+				"{{target}}的{{part}}被划破一个小口子，"
+			],
+			[
+				"{{target}}的{{part}}被扎了血口子，鲜血直流"
+			],
+			[
+				"噗的一声，{{target}}的{{part}}被捅了一个大血口，血花飞溅，，"
+			],
+			[
+				"{{target}}的{{part}}被劈开一个血洞，血流如柱，"
+			]
+		]
+	}
+}

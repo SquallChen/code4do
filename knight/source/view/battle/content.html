@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+@charset "utf-8";
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	color: #00AA00;
+	font-family: 'Microsoft YaHei', 'Hiragino Sans GB', Helvetica, Arial,
+		'Lucida Grande', sans-serif;
+	font-size: 18px;
+	line-height: 1.2em;
+	padding: 0.8em;
+	margin: auto;
+	max-width: 42em;
+	background: #0B0B0B;
+}
+
+move {
+	/*人物移动*/
+	color: #B0C4DE;
+	font-size: 15px;
+}
+pc-battle {
+	/*我方攻击*/
+	color: #DDA0DD;
+	font-size: 15px;
+}
+npc-battle {
+	/*敌方npc攻击*/
+	color: #B0C4DE;
+	font-size: 15px;
+}
+animal-battle {
+	/*动物攻击*/
+	color: #F5DEB3;
+	font-size: 15px;
+}
+weapon1 {
+	/*  最低级武器*/
+	color: #C0C0C0;
+	font-size: 15px;
+}
+spell {
+	/*  */
+	color: #00FFFF;
+	font-size: 15px;
+}
+d1 {
+	/* */
+	color: #FFC0CB;
+	font-size: 15px;
+}
+
+d2 {
+	/* */
+	color: #FF69B4;
+	font-size: 15px;
+}
+d3 {
+	/* */
+	color: #FF4500;
+	font-size: 15px;
+}
+d4 {
+	/* */
+	color: #B22222;
+	font-size: 15px;
+}
+
+d5 {
+	/* */
+	color: #800000;
+	font-size: 15px;
+}
+
+pc {
+	/*操作的玩家*/
+	color: #FFE4E1;
+	font-size: 15px;
+}
+
+npc {
+	/*npc*/
+	color: #00FF7F;
+	font-size: 15px;
+}
+
+monster {
+	/*怪物*/
+	color: #FF7F50;
+	font-size: 15px;
+}
+
+animal {
+	/*动物*/
+	color: #FFE4B5;
+	font-size: 15px;
+}
+
+condition {
+	color: #FFFF00;
+	font-size: 15px;
+}
+p, blockquote, ul, ol, dl, li, table, pre {
+	margin: 15px 0;
+}
+
+p {
+	margin: 1em 0;
+}
+
+a {
+	color: #0645ad;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #0b0080;
+}
+
+a:hover {
+	color: #06e;
+}
+
+a:active {
+	color: #faa700;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+::-moz-selection {
+	background: rgba(255, 255, 0, 0.3);
+	color: #000
+}
+
+::selection {
+	background: rgba(255, 255, 0, 0.3);
+	color: #000
+}
+
+a::-moz-selection {
+	background: rgba(255, 255, 0, 0.3);
+	color: #0645ad
+}
+
+a::selection {
+	background: rgba(255, 255, 0, 0.3);
+	color: #0645ad
+}
+
+blockquote {
+	color: #666666;
+	margin: 0;
+	padding-left: 3em;
+	border-left: 0.5em #EEE solid;
+}
+
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 2em;
+}
+
+li p:last-child {
+	margin: 0
+}
+
+dd {
+	margin: 0 0 0 2em;
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	vertical-align: top;
+}
+
+@media only screen and (min-width: 480px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		font-size: 16px;
+	}
+}
+</style>
+<body id="content">
+
+</body>
+<script>
+	function append(data) {
+		var d = document.getElementById("content").innerHTML;
+		if (d.length > 100000)
+			document.getElementById("content").innerHTML = "";
+		else
+			document.getElementById("content").innerHTML = d + "</br>" + data;
+		window.scrollTo(0, document.body.scrollHeight);
+	}
+	window.onDeviceOneLoaded = function() {
+		//
+		sm("do_Page").fire("webivew_loaded");
+	}
+</script>
+</html>

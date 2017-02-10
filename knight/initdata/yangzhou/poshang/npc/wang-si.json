@@ -1,0 +1,53 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.wang-si",
+	"name": "王四",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "傻乎乎的小个子，常常跟在王老二后面跟班，是王老二的本家兄弟",
+		"ask": "“王四，你跑来跑去干啥了？”：{{source}}问道",
+		"init": "{{source}}手握着一根{{source.wield.right}}小跑了过来。",
+		"random": [
+			"{{source}}说：“二哥，我来了，今天玩啥了？”"
+		]
+	},
+	"defend": [0,0,0,0,0,0],
+	"exp": 8,
+	"ally": [
+		"yangzhou.poshang.npc.wang-laoer"
+	],
+	"HP": "80/80",
+	"MP": "50/50",
+	"skills": {
+		"skills.sword": 5
+	},
+	"wield": {
+		"right": "obj.weapon.bamboo-blade"
+	},
+	"spells": [
+		"spell.sword.attack",
+		"spell.sword.heavy",
+		"spell.sword.multi",
+		"spell.sword.repeat"
+	],
+	"battle": {
+	},
+	"lost_exp": "1/5",
+	"corpse": {
+		"coin": "0/3",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.wood-stick",
+				"random": 0.5
+			}
+		]
+	},
+	"allowFight": true,
+	"allowKill": true
+}

@@ -1,0 +1,60 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.wang-laosan",
+	"name": "王洪",
+	"role": "role.warrior",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "壮士",
+	"desc": {
+		"look": "王洪是这个村子土生土长的人，年轻的时候到外面去闯荡过一阵。在镖局当过趟子手，攒了点钱，回来後娶了房老婆，物农为生.村里人因他在外见过世面，又会些武功，就推他做了地保",
+		"ask": "“王地保好”：{{source}}问道",
+		"init": "{{source}}手提{{source.wield.right}}走了过来。",
+		"reply": "{{source}}一瞪眼：“来来来，我来教你几招”",
+		"random": [
+			"{{source}}说：“想当年，我在镖局也算有头有脸的人物了，你晓得不！”",
+			"{{source}}说：“王老二又跑哪里去浪去了，整天吊儿郎当”"
+		]
+	},
+	"exp": 80,
+	"ally": [
+	],
+	"HP": "120/120",
+	"MP": "150/150",
+	"defend": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"skills": {
+		"skills.stick": 90
+	},
+	"spells": [
+		"spell.stick.attack",
+		"spell.stick.multi",
+		"spell.stick.heavy"
+	],
+	"battle": {
+	},
+	"lost_exp": "2/6",
+	"corpse": {
+		"coin": "5/12",
+		"silver": "0/0",
+		"gold": "0/0",
+		"others": [
+			{
+				"id": "obj.weapon.wood-stick",
+				"random": 0.5
+			}
+		]
+	},
+	"wield": {
+		"right": "obj.weapon.wood-stick"
+	},
+	"allowFight": true,
+	"allowKill": true
+}

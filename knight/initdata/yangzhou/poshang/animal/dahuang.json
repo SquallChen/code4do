@@ -1,0 +1,48 @@
+{
+	"type": "animal",
+	"id": "yangzhou.poshang.animal.dahuang",
+	"role": "role.warrior",
+	"level": 1,
+	"name": "大黄",
+	"weight": 80,
+	"age": 4,
+	"speed": 2,
+	"desc": {
+		"look": "杨小寡妇家的大黄狗，强壮有力，极为护主，偶尔还会去后山抓几个野味，平常见人就摇尾巴，可别被它迷惑了，一旦攻击可不是好玩的。",
+		"init": "{{source}}耳朵竖起来，睁开眼睛看了看进来的人，然后继续睡了",
+		"random": [
+		]
+	},
+	"exp": 25,
+	"usable_exp": 0,
+	"money": {
+		"coin": 10,
+		"silver": 1,
+		"gold": 0
+	},
+	"ally": [
+	],
+	"wield": {
+	},
+	"HP": "80/80",
+	"MP": "10/10",
+	"defend": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
+	"skills": {
+		"skills.bite": 80
+	},
+	"spells": [
+		"spell.bite.attack"
+	],
+	"battle": {
+		"default_spell": "spell.bite.attack",
+		"selected_spell": "spell.bite.attack"
+	},
+	"allowKill": true
+}

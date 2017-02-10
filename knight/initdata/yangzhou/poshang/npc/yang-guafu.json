@@ -1,0 +1,36 @@
+{
+	"type": "npc",
+	"id": "yangzhou.poshang.npc.yang-guafu",
+	"name": "杨寡妇",
+	"weight": 120,
+	"age": 27,
+	"speed": 1,
+	"call": "老板娘",
+	"desc": {
+		"look": "穿着朴素，衣服上也有很多补丁，但是非常干净，皮肤白皙，面容略有憔悴，杨寡妇在附近也算是美女了，可惜丈夫死的早，和婆婆相依为命，守着茶摊勉强度日",
+		"init": "{{source}}笑吟吟冲我们说道：“来了，几位，要点什么？”",
+		"ask":"杨大姐，忙吗？：{{source}}问道",
+		"reply": "{{source}}:“是你啊，看你整天不习文总练武，应该练的不错吧，能否帮大姐我一个忙了？”",
+		"fight": "{{source}}叫到：“大黄，大黄”",
+		"kill": "",
+		"random": [
+			"{{source}}自言自语：“幸亏有大黄保护，但是长期也不是个事啊，得找个人教训教训那帮痞子”",
+			"{{source}}送走一拨客人，忙着麻利的收拾桌子，时不时擦擦额头上的汗",
+			"{{source}}叹口气：“你走的太早了，可害苦我了。”"
+		]
+	},
+	"exp": 10,
+	"ally": [
+		"yangzhou.poshang.animal.dahuang"
+	],
+	"HP": "60/60",
+	"MP": "50/50",
+	"skills": {
+	},
+	"spells": [
+	],
+	"wield": {
+	},
+	"allowFight": false,
+	"allowKill": false
+}

@@ -1,0 +1,32 @@
+{
+	"id": "yangzhou.poshang.scene.road1",
+	"type": "scene",
+	"name": "碎石路",
+	"desc": {
+		"look": "走几步，就到了村中心了，路上一个人没有，就看见一只野狗在附近溜达。"
+	},
+	"creatures": [
+		{
+			"type": "animal",
+			"id": "yangzhou.poshang.animal.dog",
+			"status": "normal",
+			"appear": 0,
+			"die": 20,
+			"revival": 0
+		}
+	],
+	"exits": {
+		"east": {
+			"id": "yangzhou.poshang.scene.road1"
+		},
+		"north": {
+			"id": "yangzhou.poshang.scene.myhouse"
+		},
+		"south": {
+			"id": "yangzhou.poshang.scene.house2"
+		},
+		"west": {
+			"id": "yangzhou.poshang.scene.road3"
+		}
+	}
+}

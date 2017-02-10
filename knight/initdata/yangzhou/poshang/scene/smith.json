@@ -1,0 +1,23 @@
+{
+	"id": "yangzhou.poshang.scene.smith",
+	"type": "scene",
+	"name": "铁匠铺",
+	"desc": {
+		"look": "这是一间甚是简陋的铁匠铺，入门正中是个大铁砧，满地煤渣碎铁，墙上挂着几张犁头，屋子的角落里堆着几把破锄头、镰刀，靠墙放着几把新出炉的铁锤。"
+	},
+	"creatures": [
+		{
+			"type": "npc",
+			"id": "yangzhou.poshang.npc.smith",
+			"status": "normal",
+			"appear": 0,
+			"die": 20,
+			"revival": 0
+		}
+	],
+	"exits": {
+		"north": {
+			"id": "yangzhou.poshang.scene.road3"
+		}
+	}
+}

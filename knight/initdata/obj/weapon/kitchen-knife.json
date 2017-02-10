@@ -1,0 +1,14 @@
+{
+	"id": "obj.weapon.kitchen-knife",
+	"type": "weapon",
+	"match": "skills.sword",
+	"wield": "right",
+	"level": 1,
+	"name": "菜刀",
+	"weight": 2,
+	"damage": "1/6",
+	"range": 1,
+	"desc": {
+		"look": "厨房里用的菜刀，磨得很亮，只不过豁口不少。功夫再高，也怕菜刀，可别瞧不起哦。"
+	}
+}

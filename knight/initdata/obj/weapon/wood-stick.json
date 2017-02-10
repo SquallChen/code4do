@@ -1,0 +1,14 @@
+{
+	"id": "obj.weapon.wood-stick",
+	"type": "weapon",
+	"match": "skills.stick",
+	"wield": "right&left",
+	"level": 1,
+	"name": "长木棍",
+	"weight": 2,
+	"range": 2,
+	"damage": "3/4",
+	"desc": {
+		"look": "树枝简单处理了一下，前头简单磨尖了一点，可做枪，可做棍，被戳中还是有点痛的"
+	}
+}

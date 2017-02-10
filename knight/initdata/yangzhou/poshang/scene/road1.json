@@ -1,0 +1,24 @@
+{
+	"id": "yangzhou.poshang.scene.road1",
+	"type": "scene",
+	"name": "碎石路",
+	"desc": {
+		"look": "这是一个宁静的小村子，稀稀落落的分布着几十间土坯泥房，村中人家不多，主要姓氏是王。这是一条东西向的碎石路，往东就是村子的出口，北面是村里的破庙。"
+	},
+	"creatures": [
+	],
+	"exits": {
+		"east": {
+			"id": "yangzhou.poshang.scene.entry"
+		},
+		"north": {
+			"id": "yangzhou.poshang.scene.temple"
+		},
+		"south": {
+			"id": "yangzhou.poshang.scene.house1"
+		},
+		"west": {
+			"id": "yangzhou.poshang.scene.road2"
+		}
+	}
+}

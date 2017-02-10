@@ -1,0 +1,38 @@
+{
+	"id": "spell.stick.heavy",
+	"skill": "skills.stick",
+	"type": "physical_attack",
+	"name": "雷霆一击",
+	"damage_type": "瘀伤",
+	"cast": 30,
+	"condition": {
+		"id": "condition.faint",
+		"rate": 0.09
+	},
+	"extra_rate": 0.06,
+	"range": 0,
+	"desc": "重击能发挥武器的最大力量对敌人造成伤害，还有可能对敌人造成眩晕效果",
+	"random": {
+		"attack": [
+			"{{source}}吸气，纵身跃起，用尽全力，手中{{source.wield.right}}，一个{{spell}}直指{{target}}的{{part}}",
+			"{{source}}腰部发力，{{source.wield.right}}对着{{target}}的{{part}}一个{{spell}}用力的横扫过去"
+		],
+		"damage": [
+			[
+				"{{target}}的{{part}}被轻轻的碰到，"
+			],
+			[
+				"{{target}}的{{part}}马上青了一块，"
+			],
+			[
+				"{{target}}的{{part}}淤青一大块，"
+			],
+			[
+				"{{target}}的{{part}}咔的一声，骨头都要断了，"
+			],
+			[
+				"{{target}}被打的像风筝一样倒飞出去，骨断筋折，"
+			]
+		]
+	}
+}

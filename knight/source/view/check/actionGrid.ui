@@ -1,0 +1,10 @@
+{
+	"RootView":{
+		"templates":"source://view/check/actionButton.ui",
+		"width":"480",
+		"type":"do_GridView",
+		"selectedColor":"00000000",
+		"numColumns":"3",
+		"height":"-1"
+	}
+}

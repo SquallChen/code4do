@@ -1,0 +1,14 @@
+{
+	"id": "obj.weapon.bamboo-blade",
+	"type": "weapon",
+	"match": "skills.sword",
+	"wield": "right",
+	"level": 1,
+	"name": "竹刀",
+	"weight": 2,
+	"damage": "1/2",
+	"range": 1,
+	"desc": {
+		"look": "竹片简单处理了一下，基本算玩具而不是武器"
+	}
+}
