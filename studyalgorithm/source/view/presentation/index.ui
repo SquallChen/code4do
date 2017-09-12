@@ -34,24 +34,39 @@
 								"height":"60"
 							}
 						]
+					},
+					{
+						"x":"650",
+						"id":"do_ALayout_8",
+						"type":"do_ALayout",
+						"views":[
+							{
+								"width":"60",
+								"x":"10",
+								"y":"10",
+								"id":"do_ImageView_7",
+								"source":"source://image/github.png",
+								"type":"do_ImageView",
+								"height":"60"
+							}
+						]
 					}
 				],
 				"height":"88"
 			},
 			{
-				"x":"2",
-				"width":"748",
-				"y":"89",
+				"width":"750",
+				"y":"88",
 				"id":"do_Canvas_1",
 				"type":"do_Canvas",
-				"height":"1072"
+				"height":"900"
 			},
 			{
 				"x":"321",
 				"width":"98",
 				"y":"1200",
 				"id":"playButton",
-				"source":"source://image/play.png",
+				"source":"source://image/stop.png",
 				"type":"do_ImageView",
 				"enabled":"true",
 				"height":"98"
@@ -101,20 +116,41 @@
 				"views":[
 					{
 						"border":"0080C0FF,1,30",
-						"textAlign":"center",
-						"type":"do_Label",
-						"fontStyle":"bold",
 						"bgColor":"0080C0FF",
+						"textAlign":"center",
 						"width":"60",
 						"x":"20",
 						"y":"20",
 						"fontSize":"20",
 						"id":"indexLabel",
+						"type":"do_Label",
+						"fontStyle":"bold",
 						"fontColor":"FFFFFFFF",
 						"height":"60"
 					}
 				],
 				"height":"100"
+			},
+			{
+				"border":"CCCCCCFF,1,0",
+				"width":"748",
+				"x":"1",
+				"y":"990",
+				"id":"do_ALayout_9",
+				"type":"do_ALayout",
+				"views":[
+					{
+						"width":"737",
+						"x":"2",
+						"maxLines":"-1",
+						"y":"2",
+						"fontSize":"32",
+						"id":"do_Label_2",
+						"type":"do_Label",
+						"height":"-1"
+					}
+				],
+				"height":"180"
 			}
 		],
 		"height":"1334"

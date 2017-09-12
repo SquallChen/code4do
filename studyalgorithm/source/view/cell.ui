@@ -11,7 +11,7 @@
 					{
 						"width":"50",
 						"x":"700",
-						"y":"14",
+						"y":"19",
 						"id":"do_ImageView_1",
 						"source":"source://image/arrow-right.png",
 						"type":"do_ImageView",
@@ -22,14 +22,16 @@
 						"x":"25",
 						"fontSize":"32",
 						"id":"do_Label_1",
-						"type":"do_Label"
+						"type":"do_Label",
+						"height":"90"
 					}
-				]
+				],
+				"height":"90"
 			},
 			{
 				"bgColor":"CCCCCCCC",
 				"width":"750",
-				"y":"80",
+				"y":"90",
 				"id":"do_ALayout_2",
 				"type":"do_ALayout",
 				"height":"1"

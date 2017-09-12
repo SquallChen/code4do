@@ -17,7 +17,12 @@ if (initdata.fileExist(json_path)) {
 	});
 }
 
-listview.on("touch",function(row){
+listview.on("touch", function(row) {
 	var algData = listdata.getRange(0)[row];
-	sm("do_App").openPage("source://view/presentation/index.ui",algData);
+	sm("do_App").openPage({
+		source : "source://view/presentation/index.ui",
+		data : algData,
+		animationType : "push_r2l_1",
+		statusBarBgColor : "22282CFF"
+	});
 });

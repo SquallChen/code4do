@@ -39,9 +39,9 @@
 				"height":"88"
 			},
 			{
-				"x":"2",
-				"width":"748",
-				"y":"89",
+				"allowDeviceOne":"false",
+				"width":"750",
+				"y":"88",
 				"id":"do_WebView_1",
 				"type":"do_WebView",
 				"height":"1072"
@@ -56,6 +56,15 @@
 				"id":"do_Button_1",
 				"text":"运行算法",
 				"type":"do_Button"
+			},
+			{
+				"bgColor":"CCCCCCCC",
+				"x":"1",
+				"width":"750",
+				"y":"1160",
+				"id":"do_ALayout_8",
+				"type":"do_ALayout",
+				"height":"2"
 			}
 		],
 		"height":"1334"
