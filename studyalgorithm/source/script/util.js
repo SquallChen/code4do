@@ -2,28 +2,7 @@
  * New DeviceOne File
  */
 var d1 = require("deviceone");
-module.exports.paintExpression = function(canvas, data, position) {
-	canvas.strokeColor = "000000FF";
-	canvas.defineText({
-		text : data,
-		coord : position,
-		fontStyle : "normal",
-		textFlag : "normal",
-		textAlign:"center",
-		fontSize : 32,
-	});
-};
-module.exports.paintComment = function(canvas, data, position) {
-	canvas.strokeColor = "000000FF";
-	canvas.defineText({
-		text : data,
-		coord : position,
-		fontStyle : "normal",
-		textFlag : "normal",
-		textAlign:"left",
-		fontSize : 30,
-	});
-};
+
 module.exports.paintStack = function(canvas, name, data, position, size) {
 	canvas.strokeColor = "000000FF";
 	var x = position.x;

@@ -59,27 +59,17 @@
 				"y":"88",
 				"id":"do_Canvas_1",
 				"type":"do_Canvas",
-				"height":"900"
+				"height":"944"
 			},
 			{
-				"x":"321",
-				"width":"98",
-				"y":"1200",
-				"id":"playButton",
-				"source":"source://image/stop.png",
-				"type":"do_ImageView",
-				"enabled":"true",
-				"height":"98"
-			},
-			{
-				"x":"508",
-				"y":"1200",
+				"x":"650",
+				"y":"596",
 				"id":"nextButton",
 				"type":"do_ALayout",
 				"views":[
 					{
 						"width":"48",
-						"x":"26",
+						"x":"43",
 						"y":"35",
 						"id":"do_ImageView_4",
 						"source":"source://image/next.png",
@@ -90,14 +80,13 @@
 				"height":"100"
 			},
 			{
-				"x":"142",
-				"y":"1200",
+				"y":"596",
 				"id":"prevButton",
 				"type":"do_ALayout",
 				"views":[
 					{
 						"width":"48",
-						"x":"26",
+						"x":"5",
 						"y":"35",
 						"id":"do_ImageView_6",
 						"source":"source://image/prev_no.png",
@@ -105,7 +94,6 @@
 						"height":"29"
 					}
 				],
-				"enabled":"false",
 				"height":"100"
 			},
 			{
@@ -134,8 +122,7 @@
 			{
 				"border":"CCCCCCFF,1,0",
 				"width":"748",
-				"x":"1",
-				"y":"990",
+				"y":"1037",
 				"id":"do_ALayout_9",
 				"type":"do_ALayout",
 				"views":[
@@ -150,7 +137,7 @@
 						"height":"-1"
 					}
 				],
-				"height":"180"
+				"height":"288"
 			}
 		],
 		"height":"1334"
