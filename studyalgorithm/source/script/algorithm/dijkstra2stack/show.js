@@ -3,7 +3,7 @@
  */
 var d1 = require("deviceone");
 var util = require("util");
-var MAX_COUNT = 10;
+var MAX_COUNT = 11;
 
 module.exports.getCount = function() {
 	return MAX_COUNT;
@@ -45,19 +45,19 @@ module.exports.play = function(canvas, label, index) {
 		break;
 	case 7:
 		comment = " 加号和3继续压入操作数栈和运算符栈";
-		paintBase(canvas, "(1+((5*4)+3", "))", [ "1", "20", "3" ],
-				[ "+", "+" ], label, comment);
+		paintBase(canvas, "(1+((5*4)+3", "))", [ "1", "20", "3" ], [ "+", "+" ],
+				label, comment);
 		break;
 	case 8:
-		comment = " 碰到右括号 ),,操作数栈出栈2个数:20和3,运算符出栈 + ,计算20+3=23,把23再压栈道操作数栈";
+		comment = " 碰到右括号 ) ,操作数栈出栈2个数:20和3,运算符出栈 + ,计算20+3=23,把23再压栈道操作数栈";
 		paintBase(canvas, "(1+((5*4)+3)", ")", [ "1", "23" ], [ "+" ], label,
 				comment);
 		break;
-	case 8:
+	case 9:
 		comment = " 最后一个碰到右括号 ),操作数栈出栈2个数:23和1,运算符出栈 + ,计算23+1=24,把24再压栈道操作数栈";
 		paintBase(canvas, "(1+((5*4)+3)", ")", [ "24" ], [], label, comment);
 		break;
-	case 9:
+	case 10:
 		comment = " 最后操作数栈出栈1个数:24就是最后结果,运算完毕!";
 		paintBase(canvas, "(1+((5*4)+3))", ")", [], [], label, comment);
 		break;
@@ -67,6 +67,7 @@ module.exports.play = function(canvas, label, index) {
 	canvas.paint();
 };
 function paintBase(canvas, express1, express2, oa, va, label, comment) {
+	util.paintBg(canvas);
 	paintExpression(canvas, express1, express2, {
 		x : 375,
 		y : 120

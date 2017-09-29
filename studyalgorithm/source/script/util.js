@@ -3,6 +3,27 @@
  */
 var d1 = require("deviceone");
 
+module.exports.paintBg= function(canvas) {
+	canvas.strokeColor = "CCCCCC44";
+	for(var i =0;i<16;i++){
+		canvas.defineLine({
+			x : 0,
+			y : i*59
+		}, {
+			x : 750,
+			y : i*59
+		});
+	}
+	for(var j =0;j<15;j++){
+		canvas.defineLine({
+			x : j*50,
+			y : 0
+		}, {
+			x : j*50,
+			y : 944
+		});
+	}
+};
 module.exports.paintStack = function(canvas, name, data, position, size) {
 	canvas.strokeColor = "000000FF";
 	var x = position.x;

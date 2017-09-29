@@ -2,5 +2,9 @@
 	{
 		"id": "dijkstra2stack",
 		"name": "Dijkstra双栈算法"
+	},
+	{
+		"id": "unionfind_quickfind",
+		"name": "union-find算法的quick-find实现"
 	}
 ]
